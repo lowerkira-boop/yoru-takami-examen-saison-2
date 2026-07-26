@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le dernier examen — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.note {
+  color: var(--muted);
+  font-weight: 400;
+  font-style: italic;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.sfx {
+  text-align: center;
+  color: var(--accent);
+  font-weight: 900;
+  letter-spacing: .08em;
+  margin: 17px 0;
+  font-size: 1.08rem;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 2 · Examen de fin de semestre</div>
+    <h1>Le dernier examen</h1>
+    <div class="subtitle">Une épreuve individuelle face à Shota Aizawa</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Examen de fin de semestre</div>
+      <div><strong>📍 Lieu</strong><br>Terrain d'entraînement Gamma</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Shota Aizawa · Classe 1-A</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title observation">📺 Salle d'observation</div>
+    <p class="narration">Les élèves viennent d&#x27;applaudir la réussite de Midoriya et Bakugo. Certains discutent déjà de leurs vacances d&#x27;été, d&#x27;autres soufflent enfin, soulagés que cette longue journée soit terminée.</p>
+<p class="narration">Aizawa consulte une dernière fois sa feuille d&#x27;évaluation.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Il reste un dernier examen.</div></div>
+<p class="narration">Les conversations cessent presque instantanément.</p>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Hein ?</div></div>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Un dernier ?</div></div>
+<p class="narration">Aizawa relève les yeux.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Yoru Takami.</div></div>
+<p class="narration">Yoru, qui s&#x27;apprêtait à quitter la salle avec les autres, s&#x27;arrête et se retourne.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(avec un sourire amusé)</span></div><div class="speech">— Ah... moi ?</div></div>
+<p class="narration">Quelques élèves échangent un regard surpris.</p>
+<div class="dialogue"><div class="speaker">Iida </div><div class="speech">— Attendez... Yoru n&#x27;a pas encore passé son examen.</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(surpris)</span></div><div class="speech">— C&#x27;est vrai...</div></div>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Mais... elle n&#x27;avait pas de partenaire.</div></div>
+<p class="narration">Yoru hausse les épaules avec un sourire.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Vous comptiez partir sans moi ?</div></div>
+<p class="narration">Quelques rires se font entendre.</p>
+<p class="narration">Aizawa ne réagit pas.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu passeras cette épreuve seule.</div></div>
+<p class="narration">Le silence retombe dans la salle.</p>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— En solo ?</div></div>
+<div class="dialogue"><div class="speaker">Momo </div><div class="speech">— Les examens sont pourtant prévus par équipes...</div></div>
+<p class="narration">Aizawa referme son carnet.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— C&#x27;est une exception.</div></div>
+<p class="narration">Il se tourne vers Yoru.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Prépare-toi.</div></div>
+<p class="narration">Yoru incline légèrement la tête.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(toujours aussi détendue)</span></div><div class="speech">— Compris, Sensei.</div></div>
+<p class="narration">Elle quitte la salle sous le regard intrigué de ses camarades.</p>
+<p class="narration">Quelques secondes plus tard, l&#x27;un des grands écrans s&#x27;allume de nouveau.</p>
+<p class="narration">La caméra montre le terrain d&#x27;entraînement.</p>
+<p class="narration">Les élèves reprennent instinctivement place devant les écrans.</p>
+<div class="dialogue"><div class="speaker">Kaminari <span class="note">(à voix basse)</span></div><div class="speech">— J&#x27;ai un mauvais pressentiment...</div></div>
+<p class="narration">L&#x27;image révèle le terrain d&#x27;entraînement, encore vide.</p>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Elle va affronter qui, au juste ?</div></div>
+<div class="dialogue"><div class="speaker">Sero </div><div class="speech">— Peut-être Present Mic ?</div></div>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Ou Cementoss ?</div></div>
+<p class="narration">Midoriya reste silencieux, les yeux rivés sur l&#x27;écran.</p>
+<p class="narration">Le portail situé à l&#x27;opposé du terrain s&#x27;ouvre lentement.</p>
+<div class="sfx">🔊 — Grrrrrr...</div>
+<p class="narration">Une silhouette s&#x27;avance dans l&#x27;encadrement.</p>
+<p class="narration">Une longue écharpe grise flotte doucement derrière elle.</p>
+<p class="narration">Un léger murmure parcourt immédiatement la salle.</p>
+<div class="dialogue"><div class="speaker">Jirō </div><div class="speech">— Aizawa...?</div></div>
+<div class="dialogue"><div class="speaker">Kirishima </div><div class="speech">— Attends... C&#x27;est lui ?</div></div>
+<p class="narration">L&#x27;écran montre Aizawa marcher calmement jusqu&#x27;au centre du terrain.</p>
+<p class="narration">Sans un mot, il s&#x27;arrête face à Yoru.</p>
+<p class="narration">Cette dernière garde les mains dans les poches, affichant toujours ce même sourire tranquille.</p>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Sérieusement...?!</div></div>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Il va vraiment se battre contre elle ?</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(à voix basse)</span></div><div class="speech">— ...</div></div>
+<p class="narration">Il ne quitte pas l&#x27;écran des yeux.</p>
+<p class="narration">Quelque chose lui paraît étrange.</p>
+<p class="narration">Aizawa sort calmement son chronomètre.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Les règles sont simples.</div></div>
+<p class="narration">Yoru penche légèrement la tête.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(souriante)</span></div><div class="speech">— Je vous écoute.</div></div>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu disposes de trente minutes.<br>— Comme les autres examens...</div></div>
+<p class="narration">Il range le chronomètre dans sa poche.</p>
+<p class="narration">— Tu réussis si tu m&#x27;échappes ou si tu me neutralises.</p>
+<p class="narration">Yoru laisse échapper un petit rire.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Vous neutraliser ?</div></div>
+<p class="narration">Elle esquisse une révérence exagérée.</p>
+<p class="narration">— Vous me donnez beaucoup de responsabilités, Sensei.</p>
+<p class="narration">Aucun sourire du côté d&#x27;Aizawa.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Ce n&#x27;est pas une plaisanterie.</div></div>
+<p class="narration">Yoru relève la tête.</p>
+<p class="narration">Son sourire est toujours là.</p>
+<p class="narration">Mais cette fois...</p>
+<p class="narration">Son regard devient un peu plus attentif.</p>
+<p class="narration">Au lieu de lancer immédiatement le combat, il pourrait attendre quelques secondes.</p>
+<p class="narration">Il regarde simplement Yoru.</p>
+<p class="narration">Puis il dit :</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu peux retirer tes mains de tes poches.</div></div>
+<p class="narration">Yoru baisse les yeux vers son uniforme.</p>
+<p class="narration">Puis relève la tête avec un sourire amusé.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Ah...<br>— Ça vous dérange ?</div></div>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Oui.</div></div>
+<p class="narration">Elle retire lentement ses mains.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— C&#x27;est mieux ?</div></div>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Beaucoup.</div></div>
+<p class="narration">Aizawa reste parfaitement immobile.</p>
+<p class="narration">Ses yeux ne quittent pas Yoru un seul instant.</p>
+<p class="narration">Ses bandages de capture reposent autour de son cou, prêts à être utilisés au moindre mouvement.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu parles beaucoup.</div></div>
+<p class="narration">Yoru laisse échapper un petit rire.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— C&#x27;est mauvais signe ?</div></div>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Généralement.</div></div>
+<p class="narration">Un léger silence retombe.</p>
+<p class="narration">Yoru recule d&#x27;un pas, puis fait doucement craquer sa nuque.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(avec un sourire malicieux)</span></div><div class="speech">— Dans ce cas...<br>— J&#x27;espère vous faire mentir.</div></div>
+<p class="narration">Aizawa sort son chronomètre.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Début de l&#x27;épreuve.</div></div>
+<div class="sfx">🔊 Bip.</div>
+<p class="narration">Pendant une fraction de seconde, aucun des deux ne bouge.</p>
+<p class="narration">Dans la salle d&#x27;observation, les élèves retiennent leur souffle.</p>
+<div class="sfx">💨 FWHIP !</div>
+<p class="narration">Les bandages de capture d&#x27;Aizawa jaillissent brusquement vers Yoru, filant à toute vitesse.</p>
+<p class="narration">Mais au lieu de reculer...</p>
+<p class="narration">Elle avance.</p>
+<p class="narration">D&#x27;un simple mouvement de tête, elle laisse le premier bandage passer à quelques centimètres de son visage.</p>
+<p class="narration">Le second balaie le sol.</p>
+<p class="narration">Elle prend appui dessus d&#x27;un pied avant de bondir légèrement en arrière.</p>
+<p class="narration">Ses deux pieds retrouvent le béton avec une étonnante légèreté.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(souriante)</span></div><div class="speech">— Ouh...<br>— C&#x27;était moins une.</div></div>
+<p class="narration">Dans la salle d&#x27;observation, plusieurs élèves écarquillent les yeux.</p>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Elle... elle vient de marcher dessus ?</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(les yeux rivés sur l&#x27;écran)</span></div><div class="speech">— Non...<br>— Elle s&#x27;en est servie comme appui...</div></div>
+<p class="narration">Les bandages reviennent aussitôt vers Aizawa.</p>
+<p class="narration">Il ne change pas d&#x27;expression.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pour lui-même)</span></div><div class="speech">— ...</div></div>
+<p class="narration">Yoru replace tranquillement une mèche de cheveux derrière son oreille.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Vous n&#x27;alliez quand même pas espérer que ça fonctionne du premier coup.</div></div>
+<p class="narration">Sans répondre, Aizawa disparaît brusquement de son champ de vision.</p>
+<div class="sfx">💨</div>
+<p class="narration">Les yeux de Yoru s&#x27;ouvrent légèrement.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(pensée)</span></div><div class="speech">&quot;Rapide.&quot;</div></div>
+<p class="narration">Elle pivote instinctivement.</p>
+<p class="narration">Trop tard.</p>
+<div class="sfx">BAM !</div>
+<p class="narration">L&#x27;écharpe de capture passe à quelques centimètres de son épaule.</p>
+<p class="narration">Elle se laisse tomber en arrière pour éviter la prise, roulant sur le béton avant de reprendre appui sur une main.</p>
+<p class="narration">Elle se redresse d&#x27;un mouvement fluide.</p>
+<p class="narration">Son sourire est toujours là.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(avec un petit rire)</span></div><div class="speech">— Vous êtes beaucoup plus rapide en vrai.</div></div>
+<p class="narration">Aizawa ne répond pas.</p>
+<p class="narration">Son regard reste fixé sur elle.</p>
+<p class="narration">Il ne bouge pas.</p>
+<p class="narration">Quelques secondes passent.</p>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Pourquoi il attaque plus ?</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(sans quitter l&#x27;écran des yeux)</span></div><div class="speech">— Non...<br>— Il l&#x27;observe.</div></div>
+<p class="narration">Yoru penche légèrement la tête.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Qu&#x27;est-ce qu&#x27;il y a ?<br>— Vous attendez que je fasse le premier pas ?</div></div>
+<p class="narration">Aucune réponse.</p>
+<p class="narration">Elle soupire théâtralement.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— C&#x27;est dommage...<br>— Je commençais à croire que vous étiez pressé.</div></div>
+<p class="narration">Elle fait un pas en avant.</p>
+<p class="narration">Puis un deuxième.</p>
+<p class="narration">Toujours avec ce sourire insolent.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Si vous ne venez pas...</div></div>
+<p class="narration">Elle lève une main vers lui.</p>
+<p class="narration">— Alors c&#x27;est moi qui vais venir.</p>
+<div class="sfx">💨</div>
+<p class="narration">En une impulsion, elle disparaît de sa position.</p>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Elle est rapide !</div></div>
+<p class="narration">Yoru surgit sur le flanc droit d&#x27;Aizawa.</p>
+<p class="narration">Son poing file vers son épaule.</p>
+<div class="sfx">BAM !</div>
+<p class="narration">Aizawa bloque le coup avec son avant-bras.</p>
+<p class="narration">L&#x27;impact est sec.</p>
+<p class="narration">Aucun des deux ne recule.</p>
+<p class="narration">Leurs regards se croisent un bref instant.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(souriante)</span></div><div class="speech">— Pas mal.</div></div>
+<p class="narration">Sans prévenir, elle enchaîne avec un coup de pied circulaire.</p>
+<p class="narration">Aizawa se baisse juste assez pour l&#x27;éviter.</p>
+<p class="narration">Les mèches blondes de Yoru balayent son visage.</p>
+<div class="sfx">💨 FWHIP !</div>
+<p class="narration">Les bandages repartent immédiatement à l&#x27;attaque.</p>
+<p class="narration">Yoru saute en arrière pour prendre ses distances.</p>
+<p class="narration">Elle atterrit quelques mètres plus loin.</p>
+<p class="narration">Ses mains retrouvent naturellement la position de garde.</p>
+<p class="narration">Son sourire, lui, n&#x27;a toujours pas disparu.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Vous profitez de la moindre ouverture...</div></div>
+<p class="narration">Elle laisse échapper un petit rire.</p>
+<p class="narration">— J&#x27;aime bien.</p>
+<p class="narration">Dans la salle d&#x27;observation, Midoriya fronce légèrement les sourcils.</p>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(à voix basse)</span></div><div class="speech">— Elle attaque fort...<br>— Mais Aizawa-sensei ne cherche même pas à riposter…</div></div>
+<p class="narration">Le vent soulève doucement les plumes noires des ailes de Yoru.</p>
+<p class="narration">Pourtant... elles restent soigneusement repliées contre son dos.</p>
+<p class="narration">Aizawa ne quitte pas son élève des yeux.</p>
+<p class="narration">Son regard glisse brièvement vers ses ailes.</p>
+<p class="narration">Une simple fraction de seconde.</p>
+<p class="narration">Puis il revient aussitôt sur son visage.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pensée)</span></div><div class="speech">&quot;Elle ne les utilise pas…”</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(fronçant les sourcils)</span></div><div class="speech">— Attendez...</div></div>
+<div class="dialogue"><div class="speaker">Momo </div><div class="speech">— Ses ailes...</div></div>
+<div class="dialogue"><div class="speaker">Tokoyami <span class="note">(sans quitter l&#x27;écran des yeux)</span></div><div class="speech">— Elles sont toujours repliées.</div></div>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— C&#x27;est vrai...<br>— Pourquoi elle ne vole pas ?</div></div>
+<div class="dialogue"><div class="speaker">Kirishima </div><div class="speech">— Pourtant, ce serait son plus gros avantage.</div></div>
+<p class="narration">Les élèves continuent d&#x27;observer les écrans, intrigués.</p>
+<p class="narration">Yoru garde son sourire habituel.</p>
+<p class="narration">Elle effectue un léger pas de côté, sans jamais déployer ses ailes.</p>
+<p class="narration">Aizawa ne bouge toujours pas.</p>
+<p class="narration">Il continue simplement de l&#x27;observer.</p>
+<p class="narration">Chaque mouvement.</p>
+<p class="narration">Chaque appui.</p>
+<p class="narration">Chaque hésitation.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pensée)</span></div><div class="speech">&quot;Elle combat comme si elles n&#x27;existaient pas…”</div></div>
+<p class="narration">Le silence retombe une nouvelle fois.</p>
+<p class="narration">Aizawa ajuste légèrement sa position.</p>
+<p class="narration">Son regard reste fixé sur Yoru.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pensée)</span></div><div class="speech">&quot;Elle privilégie systématiquement ses appuis au sol...&quot;<br>&quot;Même lorsqu&#x27;elle pourrait prendre l&#x27;avantage dans les airs.&quot;</div></div>
+<p class="narration">Sans le moindre avertissement...</p>
+<div class="sfx">💨 FWHIP !</div>
+<p class="narration">Les bandages de capture fusent une nouvelle fois.</p>
+<p class="narration">Cette fois, ils arrivent de deux directions différentes.</p>
+<p class="narration">Yoru esquive le premier d&#x27;un simple pivot.</p>
+<p class="narration">Le second balaie le sol juste devant elle.</p>
+<p class="narration">Elle bondit sur le côté, prenant appui contre un mur avant de retomber au sol avec souplesse.</p>
+<p class="narration">Ses ailes s&#x27;entrouvrent un bref instant pour stabiliser sa réception...</p>
+<p class="narration">Puis se referment aussitôt.</p>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(surpris)</span></div><div class="speech">— Encore...</div></div>
+<div class="dialogue"><div class="speaker">Momo <span class="note">(les bras croisés)</span></div><div class="speech">— Elle aurait pu décoller...</div></div>
+<div class="dialogue"><div class="speaker">Tokoyami <span class="note">(calmement)</span></div><div class="speech">— Mais elle refuse toujours.</div></div>
+<div class="dialogue"><div class="speaker">Kaminari <span class="note">(perdu)</span></div><div class="speech">— C&#x27;est quoi son plan... ?</div></div>
+<p class="narration">Aizawa récupère ses bandages sans quitter Yoru des yeux.</p>
+<p class="narration">Aucun mot.</p>
+<p class="narration">Aucune émotion.</p>
+<p class="narration">Seulement cette manière d&#x27;observer qui semble analyser le moindre détail.</p>
+<p class="narration">Yoru laisse échapper un petit rire.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Vous espérez vraiment m&#x27;attraper comme ça ?</div></div>
+<p class="narration">Aizawa reste silencieux.</p>
+<p class="narration">Elle incline légèrement la tête.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(toujours aussi souriante)</span></div><div class="speech">— Vous pourriez au moins essayer de me surprendre.</div></div>
+<p class="narration">Cette fois...</p>
+<p class="narration">Aizawa disparaît de son champ de vision.</p>
+<div class="sfx">💨</div>
+<p class="narration">Les yeux de Yoru s&#x27;ouvrent légèrement.</p>
+<p class="narration">— Hein...?</p>
+<p class="narration">Elle tourne la tête au dernier instant.</p>
+<div class="sfx">BAM !</div>
+<p class="narration">L&#x27;avant-bras d&#x27;Aizawa percute le sien.</p>
+<p class="narration">Yoru glisse de plusieurs mètres sur le béton avant de retrouver son équilibre.</p>
+<p class="narration">Elle secoue doucement son bras, comme pour faire passer le choc.</p>
+<p class="narration">Un court silence s&#x27;installe.</p>
+<p class="narration">Puis, presque machinalement, elle tire brièvement la langue avec un sourire espiègle.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Ah...</div></div>
+<p class="narration">Elle laisse échapper un léger rire.</p>
+<p class="narration">— Là, c&#x27;était déjà plus intéressant.</p>
+<p class="narration">Aizawa ne répond pas.</p>
+<p class="narration">Son regard s&#x27;attarde une fraction de seconde sur cette mimique.</p>
+<p class="narration">Un tic.</p>
+<p class="narration">Puis il reprend aussitôt sa garde.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Une question.</div></div>
+<p class="narration">Yoru incline légèrement la tête, toujours souriante.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Je vous écoute.</div></div>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Pourquoi refuses-tu d&#x27;utiliser tes ailes ?</div></div>
+<p class="narration">Le sourire de Yoru ne disparaît pas.</p>
+<p class="narration">Elle garde le silence un instant.</p>
+<p class="narration">Le vent fait doucement frémir les plumes noires dans son dos.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(avec un petit sourire)</span></div><div class="speech">— Qui vous dit que je les refuse ?</div></div>
+<p class="narration">Aizawa ne détourne pas le regard.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Depuis le début de ce combat, tu pourrais avoir pris l&#x27;avantage à plusieurs reprises.<br>— Tu ne l&#x27;as jamais fait.</div></div>
+<p class="narration">Un nouveau silence s&#x27;installe.</p>
+<p class="narration">Yoru baisse un instant les yeux vers ses ailes.</p>
+<p class="narration">Un léger sourire étire le coin de ses lèvres.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Elles sont... pratiques.</div></div>
+<p class="narration">Elle relève les yeux vers Aizawa.</p>
+<p class="narration">— Mais je préfère savoir ce que je vaux sans elles.</p>
+<p class="narration">Le silence retombe.</p>
+<p class="narration">Aizawa ne semble ni surpris, ni convaincu.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Un héros n&#x27;a pas ce luxe.</div></div>
+<p class="narration">Yoru laisse échapper un petit « hm » amusé.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Peut-être.<br>— Mais si je compte sur elles à chaque combat... le jour où je ne pourrai plus les utiliser, je serai déjà en train de perdre.</div></div>
+<p class="narration">Aizawa reste immobile.</p>
+<p class="narration">Son regard ne quitte pas celui de son élève.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu te crées volontairement un handicap.</div></div>
+<p class="narration">Yoru hausse doucement les épaules.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Ou je me prépare au pire.</div></div>
+<p class="narration">Le vent balaie une nouvelle fois le terrain.</p>
+<p class="narration">Sans un mot de plus, Aizawa disparaît de nouveau dans un nuage de poussière.</p>
+<p class="narration">Yoru réagit aussitôt, son sourire réapparaissant alors qu&#x27;elle pivote pour faire face à cette nouvelle attaque.</p>
+<p class="narration">Yoru pivote immédiatement, persuadée d&#x27;avoir anticipé son déplacement.</p>
+<p class="narration">Personne.</p>
+<p class="narration">Son sourire vacille une fraction de seconde.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(à voix basse)</span></div><div class="speech">— ...Où—</div></div>
+<div class="sfx">FWHIP !</div>
+<p class="narration">Les bandages surgissent d&#x27;en haut.</p>
+<p class="narration">Yoru lève instinctivement les bras, mais il est déjà trop tard.</p>
+<p class="narration">Ils s&#x27;enroulent autour de son poignet et de l&#x27;une de ses ailes, déséquilibrant complètement sa posture.</p>
+<p class="narration">Ses yeux s&#x27;écarquillent.</p>
+<p class="narration">— Hein ?!</p>
+<p class="narration">Elle est projetée en avant avant de réussir à poser un genou au sol.</p>
+<p class="narration">Aizawa atterrit silencieusement derrière elle.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu regardes là où tu crois que je vais être.</div></div>
+<p class="narration">Un court silence.</p>
+<p class="narration">— Pas là où je suis.</p>
+<p class="narration">Yoru reste immobile une seconde.</p>
+<p class="narration">Puis... un sourire revient lentement sur son visage.</p>
+<p class="narration">Elle tire brièvement la langue, presque malgré elle.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(dans un petit rire)</span></div><div class="speech">— D&#x27;accord...<br>— Celle-là, je ne l&#x27;avais vraiment pas vue venir.</div></div>
+<p class="narration">Yoru reste un instant à genou.</p>
+<p class="narration">Ses bandages glissent finalement au sol lorsqu&#x27;elle parvient à s&#x27;en libérer.</p>
+<p class="narration">Elle se redresse lentement.</p>
+<p class="narration">Son sourire est toujours là... mais moins assuré qu&#x27;au début du combat.</p>
+<p class="narration">Aizawa la fixe sans bouger.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Une dernière question.</div></div>
+<p class="narration">Yoru relève les yeux vers lui.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(avec un léger sourire)</span></div><div class="speech">— Encore ?</div></div>
+<p class="narration">Un silence.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Qui es-tu... quand tu cesses de jouer ?</div></div>
+<p class="narration">Le sourire de Yoru se fige imperceptiblement.</p>
+<p class="narration">Le vent traverse le terrain.</p>
+<p class="narration">Pour la première fois depuis le début de l&#x27;épreuve... elle ne répond pas immédiatement</p>
+<p class="narration">Ses doigts se crispent légèrement.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(à voix basse)</span></div><div class="speech">— Je...</div></div>
+<p class="narration">Elle s&#x27;interrompt.</p>
+<p class="narration">Un léger rire nerveux lui échappe, comme pour effacer cet instant de flottement.</p>
+<p class="narration">— Quelle drôle de question...</p>
+<p class="narration">Aizawa ne détourne pas le regard.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu n&#x27;y réponds pas.</div></div>
+<p class="narration">Yoru retrouve son sourire, mais il paraît moins naturel.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Ce n&#x27;est pas une question qui a sa place pendant un examen.</div></div>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Au contraire.</div></div>
+<p class="narration">Un silence.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Un héros doit savoir qui il est.</div></div>
+<p class="narration">Pas le rôle qu&#x27;il joue.</p>
+<p class="narration">Pas l&#x27;image qu&#x27;il donne.</p>
+<p class="narration">Lui.</p>
+<p class="narration">Les yeux de Yoru vacillent un bref instant.</p>
+<p class="narration">Puis elle baisse légèrement la tête.</p>
+<div class="dialogue"><div class="speaker">Yoru <span class="note">(dans un souffle)</span></div><div class="speech">— ...</div></div>
+<p class="narration">Ses ailes frémissent doucement dans son dos.</p>
+<p class="narration">Pour la première fois depuis le début du combat... elles se déploient légèrement, presque malgré elle.</p>
+<p class="narration">Aizawa remarque immédiatement ce changement.</p>
+<p class="narration">Il comprend qu&#x27;il vient de toucher quelque chose de bien plus profond qu&#x27;une simple stratégie de combat.</p>
+<p class="narration">Le silence qui s&#x27;installe est plus lourd que tous les échanges précédents.</p>
+<p class="narration">Le silence s&#x27;étire.</p>
+<p class="narration">Yoru ferme doucement les yeux.</p>
+<p class="narration">Puis elle laisse échapper un léger soupir.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— D&#x27;accord...</div></div>
+<p class="narration">Elle relève lentement la tête.</p>
+<p class="narration">Son sourire est revenu.</p>
+<p class="narration">— Si c&#x27;est ce que vous vouliez voir...</p>
+<p class="narration">Dans un souffle, ses ailes se déploient enfin.</p>
+<div class="sfx">FWOOSH.</div>
+<p class="narration">Les immenses plumes noires s&#x27;ouvrent de toute leur envergure.</p>
+<p class="narration">Une bourrasque balaie le terrain, soulevant poussière et gravats.</p>
+<p class="narration">Les élèves restent figés devant les écrans.</p>
+<div class="dialogue"><div class="speaker">Midoriya </div><div class="speech">— Enfin...</div></div>
+<div class="dialogue"><div class="speaker">Momo <span class="note">(les yeux écarquillés)</span></div><div class="speech">— Elles sont beaucoup plus grandes que je ne l&#x27;imaginais...</div></div>
+<div class="dialogue"><div class="speaker">Tokoyami <span class="note">(sans détourner le regard)</span></div><div class="speech">— Voilà son véritable Alter.</div></div>
+<p class="narration">Yoru replie légèrement les genoux.</p>
+<p class="narration">En une fraction de seconde...</p>
+<div class="sfx">BOOM !</div>
+<p class="narration">Elle disparaît du sol.</p>
+<p class="narration">Une onde de poussière éclate à l&#x27;endroit où elle se trouvait.</p>
+<p class="narration">Elle fend l&#x27;air à une vitesse que les élèves n&#x27;avaient encore jamais vue.</p>
+<p class="narration">Aizawa suit son mouvement du regard...</p>
+<p class="narration">Mais il comprend immédiatement.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pensée)</span></div><div class="speech">&quot;Elle était capable de ça... depuis le début.&quot;</div></div>
+<p class="narration">Yoru apparaît devant lui dans un battement d&#x27;ailes, un sourire malicieux aux lèvres.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Désolée, Aizawa-sensei...</div></div>
+<p class="narration">Elle tire brièvement la langue, comme un réflexe.</p>
+<p class="narration">— Mais cette fois...</p>
+<p class="narration">Ses ailes se rabattent brusquement.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— ...j&#x27;aimerais en finir rapidement.</div></div>
+<p class="narration">Yoru fend l&#x27;air dans un puissant battement d&#x27;ailes.</p>
+<p class="narration">En un instant, elle disparaît du champ de vision d&#x27;Aizawa.</p>
+<div class="scene-title observation">📺 Salle d&#x27;observation</div>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Elle est où ?!</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(les yeux rivés à l&#x27;écran)</span></div><div class="speech">— Sa vitesse...</div></div>
+<div class="scene-title terrain">🎬 Terrain</div>
+<div class="sfx">FWOOSH !</div>
+<p class="narration">Une ombre traverse le ciel.</p>
+<p class="narration">Aizawa pivote aussitôt.</p>
+<p class="narration">Les plumes noires fondent sur lui.</p>
+<div class="sfx">CLANG !</div>
+<p class="narration">Il croise son arme de capture juste à temps pour dévier le coup.</p>
+<p class="narration">Le choc le fait reculer de plusieurs mètres.</p>
+<p class="narration">Ses pieds labourent le béton avant qu&#x27;il ne retrouve son équilibre.</p>
+<p class="narration">Un mince nuage de poussière s&#x27;élève autour de lui.</p>
+<p class="narration">Yoru, elle, est déjà revenue dans les airs.</p>
+<p class="narration">Elle flotte quelques mètres au-dessus du sol, portée par un lent battement d&#x27;ailes.</p>
+<p class="narration">Son sourire n&#x27;a pas changé.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Vous avez suivi...<br>— Impressionnant.</div></div>
+<p class="narration">Aizawa relève lentement la tête.</p>
+<p class="narration">Son regard reste parfaitement calme.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Voilà...<br>— Ton véritable niveau.</div></div>
+<p class="narration">Yoru ne répond pas.</p>
+<p class="narration">Pendant une seconde, leurs regards se croisent.</p>
+<p class="narration">Puis...</p>
+<div class="sfx">BOOM !</div>
+<p class="narration">Elle replonge comme une flèche.</p>
+<p class="narration">Aizawa s&#x27;élance au même instant.</p>
+<p class="narration">L&#x27;un depuis le ciel.</p>
+<p class="narration">L&#x27;autre depuis le sol.</p>
+<p class="narration">Leur rencontre fait résonner tout le terrain d&#x27;entraînement.</p>
+<p class="narration">Yoru replonge à toute vitesse.</p>
+<p class="narration">Aizawa anticipe sa trajectoire et fait claquer son arme de capture.</p>
+<p class="narration">Les bandages sifflent dans les airs.</p>
+<p class="narration">Mais, cette fois...</p>
+<p class="narration">Yoru replie brusquement une aile et change d&#x27;angle au dernier instant.</p>
+<p class="narration">Elle passe juste sous les bandages.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pensée)</span></div><div class="speech">&quot;Elle a modifié sa trajectoire...&quot;</div></div>
+<p class="narration">En une fraction de seconde, elle se retrouve dans son dos.</p>
+<div class="sfx">CLIC.</div>
+<p class="narration">Une menotte se referme autour du poignet d&#x27;Aizawa.</p>
+<p class="narration">Puis la seconde.</p>
+<div class="sfx">CLAC.</div>
+<p class="narration">Le verrou se referme.</p>
+<div class="scene-title observation">📺 Salle d&#x27;observation</div>
+<div class="dialogue"><div class="speaker">Kaminari </div><div class="speech">— Elle l&#x27;a eu !!</div></div>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Incroyable !</div></div>
+<div class="dialogue"><div class="speaker">Midoriya <span class="note">(retenant son souffle)</span></div><div class="speech">— Attendez...</div></div>
+<div class="scene-title terrain">🎬 Terrain</div>
+<p class="narration">Yoru recule d&#x27;un pas, essoufflée mais souriante.</p>
+<p class="narration">Elle laisse échapper un petit rire de satisfaction.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Je crois que...<br>— J&#x27;ai réussi.</div></div>
+<p class="narration">Un silence.</p>
+<p class="narration">Aizawa ne tente même pas de retirer les menottes.</p>
+<p class="narration">Il la regarde simplement.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Vraiment ?</div></div>
+<p class="narration">Le sourire de Yoru vacille.</p>
+<p class="narration">— Hein...?</p>
+<p class="narration">Elle baisse instinctivement les yeux.</p>
+<p class="narration">Autour de sa cheville...</p>
+<p class="narration">L&#x27;un des bandages d&#x27;Aizawa s&#x27;était discrètement enroulé pendant leur échange.</p>
+<p class="narration">Il se tend brusquement.</p>
+<div class="sfx">FWHIP !</div>
+<p class="narration">Yoru perd l&#x27;équilibre et se retrouve immobilisée au sol dans un souffle de surprise.</p>
+<p class="narration">Ses yeux s&#x27;écarquillent.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Ah...!</div></div>
+<p class="narration">Aizawa reste debout devant elle, toujours menotté.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu regardes toujours le résultat.</div></div>
+<p class="narration">Il marque une courte pause.</p>
+<p class="narration">— Pas ce qu&#x27;il te coûte.</p>
+<p class="narration">Yoru fixe un instant le bandage autour de sa cheville.</p>
+<p class="narration">Puis... malgré sa défaite, un petit rire lui échappe.</p>
+<p class="narration">Elle tire brièvement la langue, presque par réflexe.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— J&#x27;aurais dû vérifier jusqu&#x27;au bout...</div></div>
+<p class="narration">Pour la première fois depuis le début du combat...</p>
+<p class="narration">Un très léger sourire apparaît au coin des lèvres d&#x27;Aizawa.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Exactement.</div></div>
+<p class="narration">Le bandage d&#x27;Aizawa se desserre lentement autour de la cheville de Yoru.</p>
+<p class="narration">Elle se redresse en silence.</p>
+<p class="narration">Les menottes sont toujours verrouillées autour des poignets d&#x27;Aizawa.</p>
+<p class="narration">Le chronomètre continue de défiler.</p>
+<div class="sfx">BIP.</div>
+<p class="narration">Le temps est écoulé.</p>
+<p class="narration">Un silence retombe sur le terrain.</p>
+<div class="scene-title observation">📺 Salle d&#x27;observation</div>
+<p class="narration">Les élèves restent suspendus au verdict.</p>
+<div class="dialogue"><div class="speaker">Kaminari <span class="note">(à voix basse)</span></div><div class="speech">— Elle... elle a gagné, non ?</div></div>
+<p class="narration">Midoriya ne répond pas.</p>
+<p class="narration">Son regard reste fixé sur l&#x27;écran.</p>
+<div class="scene-title terrain">🎬 Terrain</div>
+<p class="narration">Aizawa retire calmement les menottes de ses poignets.</p>
+<p class="narration">Il les tend à Yoru.</p>
+<p class="narration">Elle les récupère sans un mot.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Épreuve terminée.</div></div>
+<p class="narration">Un court silence.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Yoru Takami...<br>— Échec.</div></div>
+<div class="scene-title observation">📺 Salle d&#x27;observation</div>
+<div class="dialogue"><div class="speaker">Mina </div><div class="speech">— Hein ?!</div></div>
+<div class="dialogue"><div class="speaker">Sero </div><div class="speech">— Sérieusement ?</div></div>
+<div class="dialogue"><div class="speaker">Kirishima </div><div class="speech">— Mais elle l&#x27;avait capturé !</div></div>
+<div class="scene-title terrain">🎬 Terrain</div>
+<p class="narration">Yoru garde les yeux sur Aizawa.</p>
+<p class="narration">Son sourire s&#x27;est légèrement effacé.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu as rempli l&#x27;objectif.</div></div>
+<p class="narration">Il marque une courte pause.</p>
+<p class="narration">— Puis tu as cessé d&#x27;observer.</p>
+<p class="narration">Yoru baisse un instant les yeux.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Tu as considéré le combat comme terminé...<br>— Alors qu&#x27;il ne l&#x27;était pas.</div></div>
+<p class="narration">Le vent fait doucement frémir les plumes noires de ses ailes.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— Un héros ne baisse jamais sa garde avant la fin.</div></div>
+<p class="narration">Un silence.</p>
+<p class="narration">Yoru inspire discrètement.</p>
+<p class="narration">Puis un léger sourire revient sur son visage.</p>
+<p class="narration">Comme toujours.</p>
+<p class="narration">Elle tire brièvement la langue, presque malgré elle.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Compris.</div></div>
+<p class="narration">Aizawa la regarde quelques secondes.</p>
+<div class="dialogue"><div class="speaker">Aizawa </div><div class="speech">— C&#x27;est tout.</div></div>
+<p class="narration">Yoru incline légèrement la tête.</p>
+<div class="dialogue"><div class="speaker">Yoru </div><div class="speech">— Merci pour cet examen, Aizawa-sensei.</div></div>
+<p class="narration">Elle se retourne et se dirige vers la sortie du terrain.</p>
+<p class="narration">Le portail métallique s&#x27;ouvre lentement devant elle.</p>
+<p class="narration">Sans un regard en arrière, elle disparaît derrière les portes.</p>
+<p class="narration">Celles-ci se referment dans un grondement sourd.</p>
+<p class="narration">Aizawa reste seul quelques instants sur le terrain.</p>
+<p class="narration">Son regard se pose sur les menottes qu&#x27;il tient encore dans la main.</p>
+<div class="dialogue"><div class="speaker">Aizawa <span class="note">(pensée)</span></div><div class="speech">« Elle est douée... »<br>« Beaucoup trop douée pour se contenter de jouer un rôle. »</div></div>
+<p class="narration">Il range silencieusement les menottes avant de quitter le terrain à son tour.</p>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
