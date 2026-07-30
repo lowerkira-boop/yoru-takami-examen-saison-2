@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une enfant utile — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content { margin-top: 20px; }
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech { line-height: 1.65; }
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer { margin-bottom: 0; }
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Une enfant utile</h1>
+    <div class="subtitle">Une démonstration révèle le potentiel de Yoru… et les véritables intentions de la Commission</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Salle d'entraînement de la Commission</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami · Instructeur · Agents</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🎯 Une démonstration différente</div>
+
+    <p class="narration">La salle d'entraînement était plus grande que d'habitude.</p>
+    <p class="narration">Yoru s'arrêta quelques pas après l'entrée.</p>
+    <p class="narration">Face à elle, plusieurs cibles mécaniques étaient disposées à différentes hauteurs. Certaines étaient immobiles. D'autres se déplaçaient lentement le long de rails fixés aux murs.</p>
+    <p class="narration">Derrière une vitre teintée, plusieurs agents observaient la pièce.</p>
+    <p class="narration">Yoru leva les yeux vers eux.</p>
+    <p class="narration">Elle ne distinguait que leurs silhouettes.</p>
+    <p class="narration">L'instructeur referma la porte derrière lui.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Aujourd'hui, nous allons faire quelque chose d'un peu différent.</div>
+    </div>
+
+    <p class="narration">Yoru reporta son attention sur les cibles.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je dois les toucher ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Oui.</div>
+    </div>
+
+    <p class="narration">Il désigna une ligne tracée sur le sol.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Mais tu n'as pas le droit de la dépasser.</div>
+    </div>
+
+    <p class="narration">Yoru observa la distance qui la séparait des premières cibles.</p>
+    <p class="narration">Puis les rails.</p>
+    <p class="narration">Puis les petits voyants lumineux disposés au centre de chaque disque.</p>
+    <p class="narration">Ses ailes noires frémirent légèrement dans son dos.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Combien de plumes je peux utiliser ?</div>
+    </div>
+
+    <p class="narration">L'instructeur haussa un sourcil.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Autant que tu veux.</div>
+    </div>
+
+    <p class="narration">Yoru resta silencieuse quelques secondes.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Alors ce serait trop facile.</div>
+    </div>
+
+    <p class="narration">Derrière la vitre, l'une des silhouettes se pencha légèrement en avant.</p>
+    <p class="narration">L'instructeur croisa les bras.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Très bien. Trois plumes.</div>
+    </div>
+
+    <p class="narration">Yoru inclina la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Pour toutes les cibles ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Pour toutes les cibles.</div>
+    </div>
+
+    <p class="narration">Il y en avait douze.</p>
+    <p class="narration">Un silence s'installa dans la salle.</p>
+    <p class="narration">Puis les mécanismes se mirent en marche.</p>
+    <p class="narration">Les cibles commencèrent à se déplacer.</p>
+    <p class="narration">Certaines montaient.</p>
+    <p class="narration">D'autres descendaient.</p>
+    <p class="narration">Deux d'entre elles disparaissaient régulièrement derrière des panneaux métalliques.</p>
+    <p class="narration">Yoru ne bougea pas.</p>
+
+    <div class="quote">Elle observait.</div>
+
+    <p class="narration">Le rythme des rails.</p>
+    <p class="narration">La vitesse des cibles.</p>
+    <p class="narration">Le léger délai entre chaque changement de direction.</p>
+    <p class="narration">L'instructeur attendit.</p>
+    <p class="narration">Dix secondes passèrent.</p>
+    <p class="narration">Puis vingt.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Tu peux commencer quand tu veux.</div>
+    </div>
+
+    <p class="narration">Yoru ne répondit pas.</p>
+    <p class="narration">Une première plume noire se détacha doucement de son aile.</p>
+    <p class="narration">Puis une deuxième.</p>
+    <p class="narration">Et une troisième.</p>
+    <p class="narration">Elles restèrent suspendues autour d'elle.</p>
+    <p class="narration">Immobiles.</p>
+    <p class="narration">Les cibles continuaient leur course.</p>
+    <p class="narration">Soudain...</p>
+    <p class="narration">La première plume partit.</p>
+    <p class="narration">Elle frappa une cible sur le côté avant de dévier vers la suivante.</p>
+    <p class="narration">Un voyant s'alluma.</p>
+    <p class="narration">Puis un deuxième.</p>
+    <p class="narration">La plume poursuivit sa trajectoire, portée par l'élan, et atteignit une troisième cible.</p>
+    <p class="narration">Au même instant, les deux autres plumes s'élancèrent dans des directions opposées.</p>
+    <p class="narration">Elles ne volaient pas en ligne droite.</p>
+    <p class="narration">Elles rebondissaient contre les bords métalliques.</p>
+    <p class="narration">Changeaient brusquement de direction.</p>
+    <p class="narration">Passaient entre les panneaux quelques secondes avant qu'ils ne se referment.</p>
+    <p class="narration">Les voyants s'allumèrent les uns après les autres.</p>
+    <p class="narration">Trois.</p>
+    <p class="narration">Cinq.</p>
+    <p class="narration">Huit.</p>
+    <p class="narration">Onze.</p>
+    <p class="narration">La dernière cible disparut derrière une plaque.</p>
+    <p class="narration">La troisième plume ralentit.</p>
+    <p class="narration">Pendant un instant, elle sembla rester immobile dans les airs.</p>
+    <p class="narration">Puis la cible réapparut.</p>
+    <p class="narration">La plume frappa son centre.</p>
+
+    <div class="quote">Le douzième voyant devint vert.</div>
+
+    <p class="narration">Tous les mécanismes s'arrêtèrent.</p>
+    <p class="narration">Le silence retomba dans la salle.</p>
+    <p class="narration">Yoru rappela les trois plumes.</p>
+    <p class="narration">Elles revinrent doucement se glisser parmi les autres.</p>
+    <p class="narration">L'instructeur regarda les cibles.</p>
+    <p class="narration">Puis la jeune fille.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Tu avais mémorisé leurs déplacements.</div>
+    </div>
+
+    <p class="narration">Yoru acquiesça.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Elles répétaient toujours le même mouvement.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Tu l'as compris aussi vite ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Le moteur de la troisième cible faisait un bruit différent avant de changer de direction.</div>
+    </div>
+
+    <p class="narration">Elle désigna ensuite le mur de droite.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Et celle-là ralentissait quand elle arrivait près du panneau.</div>
+    </div>
+
+    <p class="narration">L'instructeur suivit son regard.</p>
+    <p class="narration">Même lui ne semblait pas l'avoir remarqué.</p>
+    <p class="narration">Derrière la vitre, plusieurs agents échangeaient déjà quelques mots.</p>
+
+    <div class="scene-title">⚫ Prévoir avant d'agir</div>
+
+    <p class="narration">L'exercice suivant fut plus difficile.</p>
+    <p class="narration">Des balles en mousse furent lancées depuis différentes ouvertures dans les murs.</p>
+    <p class="narration">Yoru devait les intercepter avant qu'elles ne touchent le sol.</p>
+    <p class="narration">Elle en manqua deux.</p>
+    <p class="narration">Puis une seule.</p>
+    <p class="narration">À la troisième tentative...</p>
+    <p class="narration">Aucune.</p>
+    <p class="narration">Ses plumes ne se contentaient pas de suivre les projectiles.</p>
+    <p class="narration">Elles se plaçaient à l'endroit exact où ils allaient passer.</p>
+    <p class="narration">Yoru observait les mécanismes avant chaque tir.</p>
+    <p class="narration">La position des ouvertures.</p>
+    <p class="narration">Le bruit des ressorts.</p>
+    <p class="narration">L'orientation presque imperceptible des canons.</p>
+    <p class="narration">Elle ne réagissait pas lorsque les balles partaient.</p>
+
+    <div class="quote">Elle avait déjà commencé à bouger avant.</div>
+
+    <p class="narration">Lorsque la démonstration prit fin, l'instructeur nota quelque chose dans son carnet.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">C'est suffisant pour aujourd'hui.</div>
+    </div>
+
+    <p class="narration">Yoru rappela ses plumes.</p>
+    <p class="narration">Ses ailes retombèrent légèrement dans son dos.</p>
+    <p class="narration">L'exercice l'avait fatiguée, même si elle refusait de le montrer.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">J'ai réussi ?</div>
+    </div>
+
+    <p class="narration">L'homme releva les yeux vers elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Bien mieux que prévu.</div>
+    </div>
+
+    <p class="narration">Yoru baissa légèrement la tête.</p>
+    <p class="narration">Mais un petit sourire apparut malgré elle sur son visage.</p>
+
+    <div class="scene-title">🚪 Derrière la porte</div>
+
+    <p class="narration">En quittant la salle, elle entendit les agents discuter derrière la porte voisine.</p>
+    <p class="narration">Elle aurait normalement continué son chemin.</p>
+    <p class="narration">Cependant...</p>
+    <p class="narration">Un mot attira son attention.</p>
+    <p class="narration">Son prénom.</p>
+    <p class="narration">Yoru s'arrêta.</p>
+    <p class="narration">La porte n'était pas complètement fermée.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Son contrôle est encore limité, mais sa précision est remarquable.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Elle possède surtout une capacité d'analyse inhabituelle pour son âge.</div>
+    </div>
+
+    <p class="narration">Des feuilles furent déplacées sur une table.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Elle reproduit déjà certains réflexes de Keigo.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Pas exactement.</div>
+    </div>
+
+    <p class="narration">Un court silence suivit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Lui agit principalement grâce à sa vitesse. Elle, elle attend de comprendre toute la situation avant de bouger.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Ce qui pourrait la rendre plus efficace sur des missions demandant davantage de discrétion.</div>
+    </div>
+
+    <p class="narration">Yoru resta immobile dans le couloir.</p>
+    <p class="narration">Ses doigts se refermèrent doucement sur le tissu de sa manche.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Elle est encore jeune.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Justement. Nous avons le temps de la former correctement.</div>
+    </div>
+
+    <p class="narration">Une autre voix, plus froide, répondit :</p>
+
+    <div class="quote">« Avec un tel potentiel, cette enfant pourrait devenir extrêmement utile à la Commission. »</div>
+
+    <p class="narration">Utile.</p>
+    <p class="narration">Le mot resta suspendu dans l'esprit de Yoru.</p>
+    <p class="narration">Elle baissa les yeux vers ses mains.</p>
+    <p class="narration">Pendant longtemps, elle avait cru que la Commission l'avait simplement accueillie parce que sa mère ne pouvait plus s'occuper d'elle.</p>
+    <p class="narration">Parce que Keigo était ici.</p>
+    <p class="narration">Parce qu'elle n'avait nulle part où aller.</p>
+    <p class="narration">Mais peut-être que ce n'était pas la seule raison.</p>
+    <p class="narration">Son regard se posa sur l'une de ses plumes noires.</p>
+    <p class="narration">Ils avaient remarqué son Alter.</p>
+    <p class="narration">Sa mémoire.</p>
+    <p class="narration">Sa façon d'observer les autres.</p>
+    <p class="narration">Ils n'avaient pas seulement vu une petite fille qui avait besoin d'un foyer.</p>
+
+    <div class="quote">Ils avaient vu quelque chose qui pouvait servir.</div>
+
+    <p class="narration">Des pas résonnèrent au bout du couloir.</p>
+    <p class="narration">Yoru se remit aussitôt à marcher.</p>
+
+    <div class="scene-title">🪶 Le choix</div>
+
+    <p class="narration">Lorsqu'elle rentra dans leur chambre, Keigo était assis sur son lit.</p>
+    <p class="narration">Il releva immédiatement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Alors ?</div>
+    </div>
+
+    <p class="narration">Yoru referma la porte derrière elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Alors quoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ton grand exercice secret.<br><br>Je parie que tu as encore traumatisé un instructeur.</div>
+    </div>
+
+    <p class="narration">Habituellement, elle aurait répondu.</p>
+    <p class="narration">Peut-être même souri.</p>
+    <p class="narration">Cette fois, elle resta silencieuse.</p>
+    <p class="narration">Keigo le remarqua immédiatement.</p>
+    <p class="narration">Son expression changea légèrement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Qu'est-ce qu'il s'est passé ?</div>
+    </div>
+
+    <p class="narration">Yoru observa son visage.</p>
+    <p class="narration">Son sourire avait disparu.</p>
+    <p class="narration">Ses ailes s'étaient légèrement redressées.</p>
+    <p class="narration">Il était inquiet.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">J'ai réussi l'exercice.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">D'accord...</div>
+    </div>
+
+    <p class="narration">Il attendit la suite.</p>
+    <p class="narration">Yoru baissa les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Ils ont dit que je pouvais être utile.</div>
+    </div>
+
+    <p class="narration">Keigo se figea.</p>
+    <p class="narration">Ce ne fut qu'une seconde.</p>
+    <p class="narration">Une réaction presque invisible.</p>
+    <p class="narration">Mais Yoru la vit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Qui a dit ça ?</div>
+    </div>
+
+    <p class="narration">Sa voix était toujours calme.</p>
+    <p class="narration">Trop calme.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Des agents.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ils savaient que tu les écoutais ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Non.</div>
+    </div>
+
+    <p class="narration">Keigo détourna légèrement le regard.</p>
+    <p class="narration">Ses plumes frémirent dans son dos.</p>
+    <p class="narration">Yoru l'observa quelques secondes.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">C'est mal ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Quoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">D'être utile.</div>
+    </div>
+
+    <p class="narration">Il la regarda de nouveau.</p>
+    <p class="narration">Elle ne semblait ni triste ni effrayée.</p>
+    <p class="narration">Seulement confuse.</p>
+    <p class="narration">Comme si elle tentait de résoudre un nouvel exercice.</p>
+    <p class="narration">Keigo s'accroupit devant elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Non. Ce n'est pas mal.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Alors pourquoi tu es inquiet ?</div>
+    </div>
+
+    <p class="narration">Il ouvrit la bouche.</p>
+    <p class="narration">Puis la referma.</p>
+    <p class="narration">Yoru attendit.</p>
+    <p class="narration">Finalement, il posa une main sur sa tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Parce que tu n'as pas besoin d'être utile pour mériter de rester ici.</div>
+    </div>
+
+    <p class="narration">Elle fronça légèrement les sourcils.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je sais.</div>
+    </div>
+
+    <p class="narration">Mais sa réponse manquait de certitude.</p>
+    <p class="narration">Keigo le comprit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Yoru...</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Toi aussi, tu es utile à la Commission.<br><br>C'est pour ça qu'ils t'entraînent, parce que tu peux sauver des gens.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ce n'est pas aussi simple.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Pourquoi ?</div>
+    </div>
+
+    <p class="narration">Le silence s'installa entre eux.</p>
+    <p class="narration">Keigo connaissait la réponse.</p>
+    <p class="narration">Mais il ne savait pas comment l'expliquer à une enfant.</p>
+    <p class="narration">Comment lui dire que certaines cages ne ressemblaient pas à des cages ?</p>
+    <p class="narration">Qu'on pouvait offrir un toit, des repas et une éducation...</p>
+    <p class="narration">Tout en attendant quelque chose en retour ?</p>
+    <p class="narration">Il laissa échapper un léger soupir.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je veux simplement que tu aies le choix.</div>
+    </div>
+
+    <p class="narration">Yoru inclina la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Le choix de quoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">De décider toi-même ce que tu veux devenir.</div>
+    </div>
+
+    <p class="narration">Elle regarda ses ailes noires.</p>
+    <p class="narration">Puis les siennes.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Et si je veux aider ?</div>
+    </div>
+
+    <p class="narration">Keigo resta silencieux quelques secondes.</p>
+    <p class="narration">Son expression s'adoucit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Alors aide.</div>
+    </div>
+
+    <p class="narration">Il lui tapota doucement le front.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Mais ne laisse jamais quelqu'un te faire croire que c'est la seule raison pour laquelle tu comptes.</div>
+    </div>
+
+    <p class="narration">Yoru ne répondit pas tout de suite.</p>
+    <p class="narration">Elle ne comprenait pas encore complètement ses paroles.</p>
+    <p class="narration">Mais elle les mémorisa.</p>
+    <p class="narration">Comme elle mémorisait le mouvement des cibles.</p>
+    <p class="narration">Le bruit des mécanismes.</p>
+    <p class="narration">Les détails que les autres ne remarquaient pas.</p>
+    <p class="narration">Elle finit par acquiescer.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">D'accord.</div>
+    </div>
+
+    <p class="narration">Keigo lui adressa un sourire.</p>
+    <p class="narration">Pourtant, lorsque Yoru détourna les yeux...</p>
+    <p class="narration">Son regard se posa sur la porte.</p>
+    <p class="narration">Sur les couloirs parfaitement propres de la Commission.</p>
+    <p class="narration">Sur les caméras installées à chaque étage.</p>
+    <p class="narration">Il avait toujours su que ce jour finirait par arriver.</p>
+    <p class="narration">Le jour où les agents cesseraient de voir Yoru comme la petite sœur de Keigo.</p>
+    <p class="narration">Le jour où ils commenceraient à observer son potentiel.</p>
+    <p class="narration">Pour Yoru...</p>
+    <p class="narration">Être utile ressemblait encore à une façon de trouver sa place.</p>
+    <p class="narration">Pour Keigo...</p>
+
+    <div class="quote">Cela ressemblait au bruit discret d'une serrure qui venait de se refermer.</div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
