@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une inquiétude silencieuse — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Une inquiétude silencieuse</h1>
+    <div class="subtitle">En voyant le potentiel de Yoru attirer l'attention, Keigo reconnaît un chemin qu'il connaît trop bien</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Commission de sécurité publique</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami · Agent · Instructeur</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🧩 Un entraînement différent</div>
+
+    <p class="narration">Les semaines s'écoulèrent.</p>
+    <p class="narration">Les matinées de Yoru ne ressemblaient déjà plus à celles des autres enfants.</p>
+    <p class="narration">Chaque jour, elle retrouvait le même instructeur.</p>
+    <p class="narration">Il ne lui apprenait pas encore à combattre.</p>
+    <p class="narration">À la place, il lui faisait résoudre des situations.</p>
+    <p class="narration">Observer une pièce pendant quelques secondes.</p>
+    <p class="narration">Retrouver un objet déplacé.</p>
+    <p class="narration">Repérer une personne dans une foule.</p>
+    <p class="narration">Ou simplement écouter.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">« Que remarques-tu ? »</div>
+    </div>
+
+    <p class="narration">Au début, Yoru répondait timidement.</p>
+    <p class="narration">Puis ses réponses devinrent de plus en plus précises.</p>
+    <p class="narration">Les rapports s'accumulaient.</p>
+
+    <div class="quote">
+      « Excellente mémoire visuelle. »<br>
+      « Capacité d'analyse remarquable. »<br>
+      « Garde son calme sous pression. »
+    </div>
+
+    <p class="narration">Même les instructeurs commençaient à être impressionnés.</p>
+
+    <div class="scene-title">⚠️ Un potentiel inexploité</div>
+
+    <p class="narration">Un soir, alors que Keigo terminait son propre entraînement, un agent l'interpella.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Ta sœur s'adapte vite.</div>
+    </div>
+
+    <p class="narration">Keigo esquissa un sourire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je m'en doutais.</div>
+    </div>
+
+    <p class="narration">L'agent continua.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Elle apprend plus rapidement que prévu.<br><br>Elle pourrait suivre un programme plus avancé.</div>
+    </div>
+
+    <p class="narration">Pendant un instant...</p>
+    <p class="narration">Le sourire de Keigo disparut.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Plus avancé ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Oui. Ce serait dommage de laisser un tel potentiel inexploité.</div>
+    </div>
+
+    <p class="narration">Keigo resta silencieux.</p>
+    <p class="narration">Il connaissait parfaitement cette phrase.</p>
+    <p class="narration">Il l'avait déjà entendue.</p>
+    <p class="narration">On la lui avait dite des années auparavant.</p>
+    <p class="narration">L'agent reprit sa route sans remarquer le changement d'expression du jeune garçon.</p>
+    <p class="narration">Keigo demeura seul dans le couloir.</p>
+    <p class="narration">Son regard se perdit quelques instants sur le sol.</p>
+    <p class="narration">Il finit par souffler discrètement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">... Pas si vite.</div>
+    </div>
+
+    <div class="scene-title">📚 Une promesse</div>
+
+    <p class="narration">Le soir, en rentrant dans leur chambre, il trouva Yoru installée près de la fenêtre.</p>
+    <p class="narration">Elle lisait un livre que l'un des instructeurs lui avait prêté.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu fais quoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je lis.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu sors encore des trucs compliqués...</div>
+    </div>
+
+    <p class="narration">Yoru referma doucement le livre.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Ils disent que ça m'aidera à réfléchir.</div>
+    </div>
+
+    <p class="narration">Keigo s'assit à côté d'elle.</p>
+    <p class="narration">Il resta silencieux quelques instants avant de lui ébouriffer les cheveux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Fais-moi une promesse.</div>
+    </div>
+
+    <p class="narration">Elle leva les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Laquelle ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Peu importe ce qu'ils te demanderont un jour...<br><br>Reste une enfant le plus longtemps possible.</div>
+    </div>
+
+    <p class="narration">Yoru inclina légèrement la tête.</p>
+    <p class="narration">Elle ne comprenait pas vraiment cette demande.</p>
+    <p class="narration">Mais elle répondit malgré tout.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">D'accord.</div>
+    </div>
+
+    <p class="narration">Keigo lui adressa un sourire.</p>
+    <p class="narration">Un sourire sincère.</p>
+    <p class="narration">Mais au fond de lui...</p>
+    <p class="narration">Une inquiétude venait de naître.</p>
+    <p class="narration">Il avait la désagréable impression que la Commission regardait désormais Yoru avec les mêmes yeux qu'autrefois...</p>
+
+    <div class="quote">Lorsqu'elle l'avait regardé, lui.</div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
