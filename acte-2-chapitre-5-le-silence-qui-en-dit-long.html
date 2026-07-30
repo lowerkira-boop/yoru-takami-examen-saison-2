@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le silence qui en dit long — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Le silence qui en dit long</h1>
+    <div class="subtitle">Derrière le sourire de Keigo, Yoru remarque une fatigue que personne d'autre ne voit</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Chambre de Yoru et Keigo</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🌙 Un retour différent</div>
+
+    <p class="narration">Les jours passaient.</p>
+    <p class="narration">Les entraînements de Keigo devenaient de plus en plus exigeants.</p>
+    <p class="narration">Chaque soir, il rentrait un peu plus tard.</p>
+    <p class="narration">Un peu plus fatigué.</p>
+    <p class="narration">Mais il poussait toujours la porte avec le même sourire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je suis rentré !</div>
+    </div>
+
+    <p class="narration">Comme si tout allait bien.</p>
+    <p class="narration">Ce soir-là pourtant...</p>
+    <p class="narration">Yoru remarqua immédiatement quelque chose.</p>
+    <p class="narration">Son sourire était le même.</p>
+    <p class="narration">Mais ses ailes étaient plus basses qu'à l'habitude.</p>
+    <p class="narration">Il marchait plus lentement.</p>
+    <p class="narration">Sa manche gauche était légèrement déchirée.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Bon...<br><br>On mange ?</div>
+    </div>
+
+    <p class="narration">demanda-t-il en déposant deux plateaux sur la table.</p>
+    <p class="narration">Yoru ne répondit pas tout de suite.</p>
+    <p class="narration">Elle s'assit en face de lui.</p>
+    <p class="narration">Puis observa discrètement ses mains.</p>
+    <p class="narration">Elles tremblaient.</p>
+    <p class="narration">Très légèrement.</p>
+    <p class="narration">Assez pour que n'importe qui passe à côté.</p>
+
+    <div class="quote">Pas elle.</div>
+
+    <div class="scene-title">🍽️ Ce qu'il cachait</div>
+
+    <p class="narration">Le repas se déroula dans le silence.</p>
+    <p class="narration">Keigo racontait quelques anecdotes de sa journée.</p>
+    <p class="narration">Des histoires amusantes.</p>
+    <p class="narration">Des héros maladroits.</p>
+    <p class="narration">Des instructeurs trop sévères.</p>
+    <p class="narration">Yoru écoutait.</p>
+    <p class="narration">Mais elle savait.</p>
+    <p class="narration">Il cachait quelque chose.</p>
+    <p class="narration">Lorsque le repas fut terminé, Keigo commença à débarrasser.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je vais—</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu as mal.</div>
+    </div>
+
+    <p class="narration">Il s'immobilisa.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Hein ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">À l'épaule.<br><br>Tu évites de lever le bras depuis que tu es rentré.</div>
+    </div>
+
+    <p class="narration">Le silence retomba.</p>
+    <p class="narration">Keigo esquissa un petit sourire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu remarques vraiment tout...</div>
+    </div>
+
+    <p class="narration">Yoru baissa les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Désolée.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Pourquoi tu t'excuses ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Parce que... je regarde trop.</div>
+    </div>
+
+    <p class="narration">Keigo posa doucement une main sur sa tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Non.<br><br>Tu regardes juste les bonnes choses.</div>
+    </div>
+
+    <div class="scene-title">🪟 Près de la fenêtre</div>
+
+    <p class="narration">Il s'assit à côté d'elle.</p>
+    <p class="narration">Pendant quelques instants, aucun des deux ne parla.</p>
+    <p class="narration">Puis Keigo souffla doucement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Aujourd'hui...<br><br>C'était difficile.</div>
+    </div>
+
+    <p class="narration">Sa voix était calme.</p>
+    <p class="narration">Sans tristesse.</p>
+    <p class="narration">Simplement fatiguée.</p>
+    <p class="narration">Yoru tourna lentement la tête vers lui.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu peux me le dire.</div>
+    </div>
+
+    <p class="narration">Keigo sourit.</p>
+    <p class="narration">Un vrai sourire.</p>
+    <p class="narration">Pas celui qu'il montrait aux autres.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Merci.</div>
+    </div>
+
+    <p class="narration">Ils restèrent assis près de la fenêtre.</p>
+    <p class="narration">La ville brillait sous les lumières du soir.</p>
+    <p class="narration">Ils ne parlaient presque pas.</p>
+    <p class="narration">Ils n'en avaient pas besoin.</p>
+    <p class="narration">Pour la première fois...</p>
+    <p class="narration">Keigo comprit qu'il n'avait pas toujours besoin de faire semblant d'aller bien.</p>
+    <p class="narration">Et Yoru comprit qu'observer quelqu'un...</p>
+
+    <div class="quote">C'était aussi apprendre à prendre soin de lui.</div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
