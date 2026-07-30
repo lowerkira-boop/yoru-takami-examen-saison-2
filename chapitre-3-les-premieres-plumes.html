@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les premières plumes — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Les premières plumes</h1>
+    <div class="subtitle">Le jour où l'Alter de Yoru commence à s'éveiller</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Une enfance silencieuse</div>
+      <div><strong>📍 Lieu</strong><br>Appartement · Parc du quartier</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Tomie Takami</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">⏳ Quelques années plus tard...</div>
+
+    <p class="narration">Yoru avait grandi.</p>
+    <p class="narration">Les journées étaient devenues plus légères qu'autrefois. Tomie souriait un peu plus souvent et les silences pesaient moins lourd dans l'appartement.</p>
+    <p class="narration">Pourtant, certaines habitudes n'avaient jamais disparu.</p>
+    <p class="narration">Avant de sortir, Tomie vérifiait toujours deux fois que la porte était verrouillée.</p>
+    <p class="narration">Elle baissait instinctivement les yeux lorsqu'un héros apparaissait à la télévision.</p>
+    <p class="narration">Et chaque fois qu'elle croisait le regard d'un inconnu, une même inquiétude semblait traverser son visage.</p>
+    <p class="narration">Yoru ne posait jamais de questions.</p>
+    <p class="narration">Elle se contentait d'observer.</p>
+
+    <div class="scene-title">🪶 Les plumes</div>
+
+    <p class="narration">Un après-midi.</p>
+    <p class="narration">Le soleil traverse les rideaux du salon.</p>
+    <p class="narration">Yoru est allongée sur le tapis.</p>
+    <p class="narration">Autour d'elle sont éparpillés des crayons de couleur et des feuilles de dessin.</p>
+    <p class="narration">Tomie prépare le thé dans la cuisine.</p>
+    <p class="narration">Le silence règne.</p>
+    <p class="narration">Soudain...</p>
+    <p class="narration">Une petite plume noire tombe doucement de l'épaule de Yoru.</p>
+    <p class="narration">Puis une deuxième.</p>
+    <p class="narration">Yoru s'arrête de dessiner.</p>
+    <p class="narration">Elle attrape la plume entre ses doigts.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« ...C'est joli. »</div>
+    </div>
+
+    <p class="narration">Elle souffle dessus.</p>
+    <p class="narration">La plume flotte quelques secondes.</p>
+    <p class="narration">Puis...</p>
+    <p class="narration">Au lieu de retomber normalement...</p>
+    <p class="narration">Elle reste suspendue.</p>
+    <p class="narration">Comme si quelque chose la maintenait.</p>
+    <p class="narration">Yoru ouvre de grands yeux.</p>
+    <p class="narration">La plume tourne lentement autour d'elle.</p>
+    <p class="narration">Elle éclate de rire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Maman ! Regarde ! »</div>
+    </div>
+
+    <p class="narration">Tomie arrive en essuyant ses mains.</p>
+    <p class="narration">Au moment où elle entre dans le salon...</p>
+    <p class="narration">La plume tombe au sol.</p>
+    <p class="narration">Tomie s'accroupit.</p>
+    <p class="narration">Elle ramasse la plume.</p>
+    <p class="narration">Elle reste immobile quelques secondes.</p>
+    <p class="narration">Son regard change.</p>
+    <p class="narration">Elle reconnaît immédiatement ce qu'elle tient.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Tes ailes... »</div>
+    </div>
+
+    <p class="narration">Yoru tourne légèrement la tête.</p>
+    <p class="narration">Sous son pull, quelques petites plumes dépassent timidement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Elles poussent ? »</div>
+    </div>
+
+    <p class="narration">Tomie ne répond pas tout de suite.</p>
+    <p class="narration">Elle force un sourire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Oui... ça arrive quand on grandit. »</div>
+    </div>
+
+    <p class="narration">Yoru sourit de toutes ses dents.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Est-ce que je volerai un jour ? »</div>
+    </div>
+
+    <p class="narration">Tomie baisse les yeux vers la plume qu'elle tient encore.</p>
+    <p class="narration">Ses doigts tremblent presque imperceptiblement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Peut-être. »</div>
+    </div>
+
+    <div class="scene-title">🔇 Quelques jours plus tard</div>
+
+    <p class="narration">Yoru joue dans sa chambre.</p>
+    <p class="narration">Elle remarque quelque chose.</p>
+    <p class="narration">Quand elle déplace ses petites plumes...</p>
+    <p class="narration">Le bruit de son jouet disparaît presque complètement.</p>
+    <p class="narration">Elle recommence.</p>
+    <p class="narration">Le silence revient.</p>
+    <p class="narration">Encore.</p>
+    <p class="narration">Elle penche la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Hein... ? »</div>
+    </div>
+
+    <p class="narration">Elle rapproche son oreille.</p>
+    <p class="narration">Même le tic-tac de l'horloge semble plus discret.</p>
+    <p class="narration">Elle ne comprend pas encore.</p>
+    <p class="narration">Mais quelque chose vient de naître.</p>
+
+    <div class="scene-title">🌱 Depuis ce jour...</div>
+
+    <p class="narration">Les plumes continuaient d'apparaître.</p>
+    <p class="narration">Au début, elles n'étaient qu'une curiosité.</p>
+    <p class="narration">Puis elles devinrent une habitude.</p>
+    <p class="narration">Chaque semaine, quelques nouvelles plumes venaient couvrir les épaules de Yoru. Son Alter grandissait en même temps qu'elle.</p>
+    <p class="narration">Tomie observait ce changement avec une inquiétude grandissante.</p>
+    <p class="narration">Elle n'en parlait presque jamais.</p>
+    <p class="narration">Mais son regard se posait toujours un peu trop longtemps sur les ailes de sa fille.</p>
+
+    <div class="scene-title">🤫 « Garde-les près de toi. »</div>
+
+    <p class="narration">Par une après-midi ensoleillée, Yoru jouait seule dans le parc de leur quartier.</p>
+    <p class="narration">Les quelques enfants présents couraient dans tous les sens.</p>
+    <p class="narration">Assise sur une balançoire, Yoru faisait doucement tourner une plume entre ses doigts.</p>
+    <p class="narration">Elle remarqua quelque chose.</p>
+    <p class="narration">Le bruit des enfants semblait s'étouffer lorsqu'elle rapprochait la plume de son oreille.</p>
+    <p class="narration">Curieuse, elle recommença.</p>
+    <p class="narration">Le monde devenait plus silencieux.</p>
+    <p class="narration">Puis revenait à la normale.</p>
+    <p class="narration">Elle sourit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« C'est drôle... »</div>
+    </div>
+
+    <p class="narration">Au loin, Tomie observait la scène.</p>
+    <p class="narration">Son sourire s'effaça immédiatement.</p>
+    <p class="narration">Elle s'approcha rapidement.</p>
+    <p class="narration">Sans hausser le ton.</p>
+    <p class="narration">Sans la gronder.</p>
+    <p class="narration">Elle s'agenouilla devant elle.</p>
+    <p class="narration">Ses mains se posèrent doucement sur les épaules de Yoru.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Écoute-moi bien... »</div>
+    </div>
+
+    <p class="narration">Yoru releva les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Tes plumes... garde-les toujours près de toi. »</div>
+    </div>
+
+    <p class="narration">Yoru pencha légèrement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Pourquoi ? »</div>
+    </div>
+
+    <p class="narration">Tomie hésita.</p>
+    <p class="narration">Une seconde.</p>
+    <p class="narration">Deux secondes.</p>
+    <p class="narration">Puis elle répondit avec un sourire qui sonnait presque faux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Parce que... tout le monde n'aime pas ce qui est différent. »</div>
+    </div>
+
+    <p class="narration">Yoru baissa les yeux vers ses petites ailes.</p>
+    <p class="narration">Elle hocha simplement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« D'accord. »</div>
+    </div>
+
+    <p class="narration">Elle ne posa pas d'autres questions.</p>
+    <p class="narration">À partir de ce jour, Yoru prit l'habitude de replier instinctivement ses ailes lorsqu'elle croisait des inconnus.</p>
+    <p class="narration">Elle ne savait pas exactement pourquoi.</p>
+
+    <div class="quote">
+      Elle savait seulement que cela semblait rassurer sa mère.<br>
+      Et cela lui suffisait.
+    </div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
