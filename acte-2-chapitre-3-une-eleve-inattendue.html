@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une élève inattendue — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Une élève inattendue</h1>
+    <div class="subtitle">Les responsables de la Commission mettent pour la première fois les capacités de Yoru à l'épreuve</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Salle d'entraînement de la Commission</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Instructeur</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🥎 Le premier exercice</div>
+
+    <p class="narration">Quelques jours plus tard, Yoru fut convoquée dans une petite salle d'entraînement.</p>
+    <p class="narration">La pièce était presque vide.</p>
+    <p class="narration">Quelques tapis recouvraient le sol, tandis que plusieurs cibles en bois étaient disposées contre les murs.</p>
+    <p class="narration">Un homme d'une quarantaine d'années l'attendait, les bras croisés.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Tu es Yoru, c'est bien ça ?</div>
+    </div>
+
+    <p class="narration">Elle acquiesça timidement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Les agents disent que tu observes beaucoup.</div>
+    </div>
+
+    <p class="narration">Elle ne répondit pas.</p>
+    <p class="narration">L'homme attrapa une balle en mousse posée sur une étagère.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Attrape.</div>
+    </div>
+
+    <p class="narration">Sans prévenir, il la lança.</p>
+    <p class="narration">Yoru leva simplement la main.</p>
+    <p class="narration">La balle s'arrêta contre sa paume.</p>
+    <p class="narration">L'instructeur haussa légèrement un sourcil.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Tu t'y attendais ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Oui.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Comment ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Vous regardiez la balle depuis tout à l'heure.</div>
+    </div>
+
+    <p class="narration">L'homme esquissa un sourire.</p>
+    <p class="narration">Il lança une deuxième balle.</p>
+    <p class="narration">Puis une troisième.</p>
+    <p class="narration">À chaque fois, Yoru les attrapa sans difficulté.</p>
+    <p class="narration">Non pas parce qu'elle était rapide.</p>
+
+    <div class="quote">Mais parce qu'elle avait déjà compris ce qui allait arriver.</div>
+
+    <div class="scene-title">🔍 Observer, mémoriser, comprendre</div>
+
+    <p class="narration">Pendant plusieurs minutes, l'instructeur multiplia les exercices.</p>
+    <p class="narration">Reconnaître des sons.</p>
+    <p class="narration">Retrouver des objets déplacés.</p>
+    <p class="narration">Mémoriser une pièce.</p>
+    <p class="narration">Yoru ne brillait ni par sa force, ni par sa vitesse.</p>
+    <p class="narration">En revanche...</p>
+    <p class="narration">Elle remarquait toujours ce que les autres oubliaient.</p>
+
+    <div class="scene-title">📓 Un potentiel important</div>
+
+    <p class="narration">Lorsque la séance prit fin, l'instructeur resta silencieux quelques instants.</p>
+    <p class="narration">Puis il griffonna quelques mots sur son carnet.</p>
+
+    <div class="quote">
+      « Excellent sens de l'observation.<br>
+      Analyse instinctive.<br>
+      Potentiel important. »
+    </div>
+
+    <p class="narration">En refermant son carnet, il adressa un léger sourire à la jeune fille.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Je crois qu'on va bien s'entendre, toi et moi.</div>
+    </div>
+
+    <p class="narration">Yoru inclina légèrement la tête.</p>
+    <p class="narration">Elle ignorait encore pourquoi on lui faisait passer tous ces exercices.</p>
+    <p class="narration">Pour elle...</p>
+    <p class="narration">Elle ne faisait qu'observer le monde comme elle l'avait toujours fait.</p>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
