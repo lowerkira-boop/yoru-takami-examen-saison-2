@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les premières leçons — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Les premières leçons</h1>
+    <div class="subtitle">Dans les couloirs de la Commission, l'observation de Yoru attire l'attention</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Commission de sécurité publique</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami · Instructeur</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🌅 Chaque matin</div>
+
+    <p class="narration">Les jours passèrent lentement.</p>
+    <p class="narration">Yoru commençait à s'habituer aux immenses couloirs de la Commission. Chaque matin, Keigo partait suivre son entraînement avant même le lever du soleil.</p>
+    <p class="narration">Avant de quitter la chambre, il passait toujours la tête par la porte.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je reviens tout à l'heure.</div>
+    </div>
+
+    <p class="narration">Yoru répondait d'un simple signe de tête.</p>
+    <p class="narration">Puis elle se retrouvait seule.</p>
+    <p class="narration">Au début, les agents lui proposaient de jouer, de dessiner ou de regarder la télévision.</p>
+    <p class="narration">Mais très vite, ils remarquèrent une chose.</p>
+
+    <div class="quote">Yoru préférait observer.</div>
+
+    <div class="scene-title">👁️ Toujours regarder</div>
+
+    <p class="narration">Assise dans un coin du hall, elle regardait les héros entrer et sortir.</p>
+    <p class="narration">Elle observait les conversations.</p>
+    <p class="narration">Les habitudes de chacun.</p>
+    <p class="narration">Le bruit des ascenseurs.</p>
+    <p class="narration">Les horaires des changements d'équipe.</p>
+    <p class="narration">Elle ne disait presque rien.</p>
+    <p class="narration">Elle regardait.</p>
+    <p class="narration">Toujours.</p>
+    <p class="narration">Un matin, un instructeur s'approcha d'elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Qu'est-ce que tu fais ?</div>
+    </div>
+
+    <p class="narration">Yoru leva les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">J'observe.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Depuis combien de temps ?</div>
+    </div>
+
+    <p class="narration">Elle réfléchit quelques secondes.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je sais pas...</div>
+    </div>
+
+    <p class="narration">Depuis que Keigo est parti.</p>
+    <p class="narration">L'homme regarda autour de lui.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Instructeur</div>
+      <div class="speech">Et alors ? Qu'est-ce que tu as vu ?</div>
+    </div>
+
+    <p class="narration">Yoru répondit presque immédiatement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">
+        Le monsieur avec la cravate bleue oublie toujours son badge.<br><br>
+        Le héros qui a une cicatrice au menton boite légèrement de la jambe droite.<br><br>
+        Le café du troisième étage est livré tous les mardis.<br><br>
+        Et les caméras du couloir nord tournent toutes au même moment.
+      </div>
+    </div>
+
+    <p class="narration">Un silence s'installa.</p>
+    <p class="narration">L'instructeur cligna plusieurs fois des yeux.</p>
+    <p class="narration">Il n'avait jamais posé cette question avec autant de sérieux.</p>
+    <p class="narration">Il voulait simplement occuper une enfant.</p>
+    <p class="narration">Mais Yoru venait de lui réciter des détails que même certains agents n'avaient jamais remarqués.</p>
+
+    <div class="scene-title">📋 Le premier rapport</div>
+
+    <p class="narration">Le soir même, un rapport fut transmis aux responsables de la Commission.</p>
+    <p class="narration">Une simple phrase y figurait.</p>
+
+    <div class="quote">
+      « Cette enfant possède un sens de l'observation hors du commun. Il serait dommage de ne pas développer cette aptitude. »
+    </div>
+
+    <p class="narration">Sans le savoir...</p>
+    <p class="narration">Yoru venait de faire son premier pas vers la formation que la Commission lui réservait.</p>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
