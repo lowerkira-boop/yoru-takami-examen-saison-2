@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les pancakes — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Les pancakes</h1>
+    <div class="subtitle">Un petit-déjeuner pour faire sourire Tomie</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Une enfance silencieuse</div>
+      <div><strong>📍 Lieu</strong><br>Appartement de Tomie et Yoru</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Tomie Takami</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🥞 Un matin dans la cuisine</div>
+
+    <p class="narration">Le soleil entre dans la cuisine.</p>
+    <p class="narration">Yoru, six ans, est déjà réveillée.</p>
+    <p class="narration">Elle grimpe sur une chaise pour attraper un saladier presque aussi grand qu'elle.</p>
+    <p class="narration">Elle mélange la pâte avec beaucoup trop d'énergie.</p>
+    <p class="narration">Une partie éclabousse le plan de travail.</p>
+    <p class="narration">À ce moment-là, Tomie apparaît dans l'encadrement de la porte.</p>
+    <p class="narration">Elle semble surprise.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Qu'est-ce que tu fabriques ? »</div>
+    </div>
+
+    <p class="narration">Yoru se retourne, le visage couvert d'un peu de farine.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Des pancakes ! »</div>
+    </div>
+
+    <p class="narration">Tomie fronce légèrement les sourcils.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Tu n'es pas obligée de faire ça... »</div>
+    </div>
+
+    <p class="narration">Yoru lui adresse un immense sourire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Mais les pancakes, ça rend les gens heureux ! »</div>
+    </div>
+
+    <p class="narration">Un silence s'installe.</p>
+    <p class="narration">Tomie baisse les yeux.</p>
+    <p class="narration">Puis...</p>
+    <p class="narration">Un très léger sourire apparaît.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Alors je vais t'aider. »</div>
+    </div>
+
+    <p class="narration">Pendant quelques minutes...</p>
+    <p class="narration">Elles cuisinent ensemble.</p>
+    <p class="narration">Yoru parle sans arrêt.</p>
+    <p class="narration">Tomie répond peu.</p>
+    <p class="narration">Mais elle répond.</p>
+
+    <div class="quote">
+      Pour Yoru... c'est largement suffisant.
+    </div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
