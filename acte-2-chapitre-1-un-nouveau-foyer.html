@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un nouveau foyer — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Un nouveau foyer</h1>
+    <div class="subtitle">Yoru découvre la Commission et commence une nouvelle vie auprès de Keigo</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Commission de sécurité publique</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🏢 Les portes de la Commission</div>
+
+    <p class="narration">Les portes automatiques de la Commission se refermèrent dans un léger souffle métallique.</p>
+    <p class="narration">Yoru leva lentement les yeux.</p>
+    <p class="narration">Le bâtiment était immense.</p>
+    <p class="narration">Les couloirs semblaient ne jamais finir, baignés d'une lumière blanche presque irréelle. Des héros entraient et sortaient sans s'arrêter, des agents échangeaient des dossiers, des écrans diffusaient les dernières interventions en temps réel.</p>
+    <p class="narration">Personne ne faisait vraiment attention à la petite fille qui avançait timidement derrière un adolescent aux ailes rouges.</p>
+    <p class="narration">Keigo ralentit volontairement le pas.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Impressionnant, hein ? »</div>
+    </div>
+
+    <p class="narration">Yoru hocha simplement la tête.</p>
+    <p class="narration">Ses doigts serraient encore le tissu de sa veste.</p>
+    <p class="narration">Elle n'avait jamais vu un endroit aussi grand.</p>
+    <p class="narration">Keigo posa doucement une main sur sa tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Ne t'inquiète pas... tu vas voir, on finit par s'y perdre beaucoup moins qu'au début. »</div>
+    </div>
+
+    <p class="narration">Elle leva enfin les yeux vers lui.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Tu connais tout ici ? »</div>
+    </div>
+
+    <p class="narration">Il rit doucement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Pas encore... mais je fais semblant. »</div>
+    </div>
+
+    <p class="narration">Un très léger sourire apparut sur le visage de Yoru.</p>
+    <p class="narration">Le premier depuis longtemps.</p>
+
+    <div class="scene-title">🔍 Rien ne lui échappe</div>
+
+    <p class="narration">Les jours suivants passèrent rapidement.</p>
+    <p class="narration">La Commission leur attribua une chambre commune tant que Yoru était encore trop jeune pour vivre seule.</p>
+    <p class="narration">Elle observait absolument tout.</p>
+    <p class="narration">Les horaires affichés sur les murs.</p>
+    <p class="narration">Les badges des agents.</p>
+    <p class="narration">Le bruit des ascenseurs.</p>
+    <p class="narration">Le nombre exact de caméras à chaque étage.</p>
+    <p class="narration">Rien ne semblait lui échapper.</p>
+    <p class="narration">Keigo le remarqua dès la première semaine.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Tu regardes toujours tout comme ça ? »</div>
+    </div>
+
+    <p class="narration">Yoru cligna des yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Si je regarde pas... je peux rien comprendre. »</div>
+    </div>
+
+    <p class="narration">Il resta silencieux quelques secondes.</p>
+    <p class="narration">Puis il éclata de rire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« T'es vraiment bizarre... »</div>
+    </div>
+
+    <p class="narration">Elle baissa la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Désolée... »</div>
+    </div>
+
+    <p class="narration">Il secoua aussitôt la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Hé, j'ai jamais dit que c'était un défaut. »</div>
+    </div>
+
+    <p class="narration">Il lui tapota doucement le front.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Continue de regarder. Tu verras sûrement des choses que même moi je rate. »</div>
+    </div>
+
+    <p class="narration">Pour la première fois depuis longtemps...</p>
+    <p class="narration">Yoru eut la sensation que cette manière étrange de voir le monde n'était peut-être pas un problème.</p>
+    <p class="narration">Peut-être même...</p>
+
+    <div class="quote">Que c'était une force.</div>
+
+    <div class="scene-title">🍽️ Apprendre à vivre ensemble</div>
+
+    <p class="narration">Le soir venu, Keigo revint avec deux plateaux de la cafétéria.</p>
+    <p class="narration">Il les posa sur la petite table de la chambre.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Bon... je te préviens, c'est pas incroyable.</div>
+    </div>
+
+    <p class="narration">Yoru s'assit timidement en face de lui.</p>
+    <p class="narration">Pendant plusieurs minutes, seul le bruit des couverts résonna dans la pièce.</p>
+    <p class="narration">Keigo finit par soupirer.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est toujours aussi gênant quand personne parle ?</div>
+    </div>
+
+    <p class="narration">Yoru leva la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je... je sais pas quoi dire.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Moi non plus.</div>
+    </div>
+
+    <p class="narration">Un silence.</p>
+    <p class="narration">Puis Keigo éclata de rire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Bon, ça nous fait déjà un point commun.</div>
+    </div>
+
+    <p class="narration">Yoru le regarda, surprise.</p>
+    <p class="narration">Quelques secondes passèrent.</p>
+    <p class="narration">Puis, presque malgré elle...</p>
+    <p class="narration">Un tout petit sourire apparut sur son visage.</p>
+    <p class="narration">Keigo le remarqua immédiatement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ah !</div>
+    </div>
+
+    <p class="narration">Elle releva brusquement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Quoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu souris.</div>
+    </div>
+
+    <p class="narration">Yoru porta instinctivement une main à sa bouche.</p>
+    <p class="narration">Comme si elle ne s'en était même pas rendu compte.</p>
+    <p class="narration">Keigo continua de manger avec un sourire satisfait.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ça te va mieux.</div>
+    </div>
+
+    <p class="narration">Yoru baissa les yeux vers son assiette.</p>
+    <p class="narration">Personne ne lui avait dit cela auparavant.</p>
+    <p class="narration">Le repas continua tranquillement.</p>
+    <p class="narration">Ils parlèrent de choses sans importance.</p>
+    <p class="narration">Des ailes de Keigo.</p>
+    <p class="narration">De la vue depuis la fenêtre.</p>
+    <p class="narration">De la nourriture de la cafétéria.</p>
+    <p class="narration">De tout...</p>
+    <p class="narration">Et de rien.</p>
+
+    <div class="quote">Sans vraiment s'en rendre compte, ils apprenaient simplement à se connaître.</div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
