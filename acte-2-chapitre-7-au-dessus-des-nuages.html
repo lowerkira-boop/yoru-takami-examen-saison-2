@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Au-dessus des nuages — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Au-dessus des nuages</h1>
+    <div class="subtitle">Dans le ciel nocturne, Yoru questionne la lumière des héros et ceux qui agissent dans l'ombre</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Commission · Ciel de Musutafu</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">📺 Le Symbole de la Paix</div>
+
+    <p class="narration">Les années avaient passé.</p>
+    <p class="narration">Les couloirs de la Commission lui étaient devenus familiers.</p>
+    <p class="narration">Le collège avait commencé quelques mois plus tôt.</p>
+    <p class="narration">Yoru grandissait.</p>
+    <p class="narration">Et avec elle...</p>
+    <p class="narration">Ses questions.</p>
+    <p class="narration">Ce soir-là, la chambre était silencieuse.</p>
+    <p class="narration">Seule la télévision brisait le calme.</p>
+
+    <div class="quote">« Une nouvelle intervention spectaculaire du Symbole de la Paix ! »</div>
+
+    <p class="narration">Les images montraient All Might sous les applaudissements de la foule.</p>
+    <p class="narration">Des enfants agitaient des pancartes.</p>
+    <p class="narration">Les journalistes parlaient de lui comme du plus grand héros de tous les temps.</p>
+    <p class="narration">Yoru observait l'écran sans un mot.</p>
+    <p class="narration">La porte s'ouvrit doucement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je suis rentré.</div>
+    </div>
+
+    <p class="narration">Keigo entra dans la chambre avec son sourire habituel.</p>
+    <p class="narration">Mais Yoru remarqua immédiatement le bandage qui dépassait sous sa veste.</p>
+    <p class="narration">Elle remarqua aussi la légère raideur de son épaule.</p>
+    <p class="narration">Et la fatigue cachée derrière son sourire.</p>
+    <p class="narration">Il suivit son regard jusqu'à la télévision.</p>
+    <p class="narration">Puis jusqu'à elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu réfléchis trop.</div>
+    </div>
+
+    <p class="narration">Yoru détourna les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Peut-être.</div>
+    </div>
+
+    <p class="narration">Keigo resta silencieux quelques secondes.</p>
+    <p class="narration">Puis un sourire malicieux apparut sur son visage.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Allez.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Où ça ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Surprise.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Il est presque vingt-deux heures.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Justement.</div>
+    </div>
+
+    <p class="narration">Elle fronça légèrement les sourcils.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu devrais te reposer.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Exactement.</div>
+    </div>
+
+    <p class="narration">Yoru soupira.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu ne réponds jamais aux questions.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est pour entretenir le mystère.</div>
+    </div>
+
+    <div class="scene-title">🪽 Dans le ciel</div>
+
+    <p class="narration">Quelques minutes plus tard...</p>
+    <p class="narration">Ils se tenaient sur le toit de la Commission.</p>
+    <p class="narration">Le vent soufflait doucement.</p>
+    <p class="narration">Keigo retira sa veste.</p>
+    <p class="narration">Ses grandes ailes rouges se déployèrent dans un bruissement familier.</p>
+    <p class="narration">Il s'accroupit devant elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu montes ?</div>
+    </div>
+
+    <p class="narration">Yoru sourit discrètement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu n'abandonneras jamais cette habitude ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Jamais.</div>
+    </div>
+
+    <p class="narration">Elle passa ses bras autour de son cou.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Prête ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Toujours.</div>
+    </div>
+
+    <p class="narration">Ils s'élancèrent.</p>
+    <p class="narration">La ville s'éloigna rapidement sous leurs pieds.</p>
+    <p class="narration">Les immeubles devinrent de simples silhouettes.</p>
+    <p class="narration">Les rues disparurent sous un océan de lumières.</p>
+    <p class="narration">Puis...</p>
+    <p class="narration">Il n'y eut plus que le ciel.</p>
+    <p class="narration">Keigo ralentit jusqu'à presque planer.</p>
+    <p class="narration">Le silence était paisible.</p>
+    <p class="narration">Yoru observait les nuages glisser autour d'eux.</p>
+    <p class="narration">Puis elle murmura :</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Keigo...</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Mmh ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Pourquoi ils parlent toujours de lui ?</div>
+    </div>
+
+    <p class="narration">Il savait immédiatement de qui elle parlait.</p>
+    <p class="narration">Il regarda simplement l'horizon.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Parce qu'il rassure les gens.</div>
+    </div>
+
+    <p class="narration">Yoru resta silencieuse.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Et toi ?</div>
+    </div>
+
+    <p class="narration">Keigo esquissa un léger sourire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Moi...<br><br>Je fais juste mon travail.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">
+        Pourtant...<br><br>
+        Tu rentres souvent blessé.<br><br>
+        Tu pars pendant des jours.<br><br>
+        Tu sauves aussi des gens.<br><br>
+        Pourquoi personne ne parle de toi ?
+      </div>
+    </div>
+
+    <p class="narration">Le vent continua de souffler.</p>
+    <p class="narration">Keigo prit quelques secondes avant de répondre.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Parce que ce n'est pas ce qui compte.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu le penses vraiment ?</div>
+    </div>
+
+    <p class="narration">Il hocha lentement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Si les gens peuvent rentrer chez eux avec le sourire...<br><br>Alors peu importe qu'ils connaissent mon nom.</div>
+    </div>
+
+    <p class="narration">Yoru baissa les yeux vers la ville.</p>
+    <p class="narration">Des milliers de fenêtres étaient encore éclairées.</p>
+    <p class="narration">Des milliers de familles vivaient paisiblement.</p>
+    <p class="narration">Sans savoir combien de héros avaient travaillé dans l'ombre pour protéger cette tranquillité.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je trouve ça injuste...</div>
+    </div>
+
+    <p class="narration">souffla-t-elle.</p>
+    <p class="narration">Keigo tourna légèrement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Pourquoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Parce qu'on dirait...<br><br>qu'il n'existe qu'un seul héros.</div>
+    </div>
+
+    <div class="scene-title">🪶 Chaque plume porte une partie du ciel</div>
+
+    <p class="narration">Keigo la regarda quelques instants.</p>
+    <p class="narration">Puis il leva doucement une main.</p>
+    <p class="narration">Une plume rouge se détacha de son aile.</p>
+    <p class="narration">Elle dériva lentement dans le vent.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">
+        Regarde cette plume.<br><br>
+        Toute seule...<br><br>
+        elle ne transporte presque rien.<br><br>
+        Mais avec toutes les autres...<br><br>
+        elles me permettent de voler.
+      </div>
+    </div>
+
+    <p class="narration">Il marqua une pause.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">
+        Les héros, c'est pareil.<br><br>
+        On ne peut pas tous être le symbole.<br><br>
+        Mais chacun porte une partie du ciel.
+      </div>
+    </div>
+
+    <p class="narration">Yoru resta silencieuse.</p>
+    <p class="narration">Elle comprenait les mots.</p>
+    <p class="narration">Mais son regard retourna malgré tout vers les lumières de la ville.</p>
+    <p class="narration">Au fond de son cœur...</p>
+    <p class="narration">Une question demeurait.</p>
+
+    <div class="quote">
+      Pourquoi le monde semblait-il remercier une seule plume...<br><br>
+      Alors que tant d'autres se brisaient en silence ?
+    </div>
+
+    <div class="scene-title">🌃 Rien ne reste jamais pareil</div>
+
+    <p class="narration">La nuit était tombée depuis longtemps.</p>
+    <p class="narration">Sur le toit de la Commission, deux silhouettes observaient les lumières de la ville.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu crois que tout restera toujours comme ça ?</div>
+    </div>
+
+    <p class="narration">Keigo réfléchit quelques secondes.</p>
+    <p class="narration">Puis il haussa les épaules.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Rien ne reste jamais pareil.</div>
+    </div>
+
+    <p class="narration">Le vent souleva doucement leurs ailes.</p>
+    <p class="narration">Yoru regarda l'horizon.</p>
+    <p class="narration">Elle ignorait encore que, quelque part au Japon...</p>
+    <p class="narration">Une nouvelle génération de héros venait tout juste de faire son entrée à Yuei.</p>
+    <p class="narration">Et qu'un seul événement...</p>
+
+    <div class="quote">Allait bientôt changer le cours de sa propre vie.</div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
