@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La lettre — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>La lettre</h1>
+    <div class="subtitle">Une enveloppe suffit à faire renaître les peurs de Tomie</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Une enfance silencieuse</div>
+      <div><strong>📍 Lieu</strong><br>Appartement · Commission</div>
+      <div><strong>👥 Personnages</strong><br>Yoru · Tomie · Keigo · Agents de la Commission</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">⏳ Quelques années plus tard...</div>
+
+    <p class="narration">Les plumes de Yoru continuaient de grandir.</p>
+    <p class="narration">Tomie faisait tout pour que leur vie reste discrète.</p>
+    <p class="narration">De son côté, Yoru continuait d'observer le monde avec la même curiosité silencieuse.</p>
+    <p class="narration">Pendant ce temps...</p>
+    <p class="narration">Quelqu'un d'autre ne les avait jamais oubliées.</p>
+
+    <div class="scene-title">📩 Une lettre</div>
+
+    <p class="narration">Un matin.</p>
+    <p class="narration">Tomie ouvre discrètement sa boîte aux lettres.</p>
+    <p class="narration">À l'intérieur...</p>
+    <p class="narration">Une simple enveloppe blanche.</p>
+    <p class="narration">Aucun expéditeur.</p>
+    <p class="narration">Elle se fige.</p>
+    <p class="narration">Ses mains tremblent légèrement.</p>
+    <p class="narration">Elle regarde rapidement autour d'elle avant de rentrer.</p>
+    <p class="narration">Yoru l'observe depuis l'entrée.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« C'est qui ? »</div>
+    </div>
+
+    <p class="narration">Tomie cache presque instinctivement l'enveloppe derrière son dos.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Personne. »</div>
+    </div>
+
+    <p class="narration">Elle monte directement dans sa chambre.</p>
+    <p class="narration">La porte se referme.</p>
+    <p class="narration">Quelques minutes plus tard.</p>
+    <p class="narration">Yoru passe devant la porte.</p>
+    <p class="narration">Elle entend des sanglots étouffés.</p>
+    <p class="narration">Elle reste immobile.</p>
+    <p class="narration">Sa main se lève...</p>
+    <p class="narration">Puis s'arrête avant de frapper.</p>
+    <p class="narration">Elle retourne silencieusement dans sa chambre.</p>
+    <p class="narration">Yoru ne savait pas ce que contenait cette lettre.</p>
+    <p class="narration">Mais après ce jour...</p>
+    <p class="narration">Sa mère recommença à regarder souvent par la fenêtre.</p>
+    <p class="narration">Comme si elle attendait quelqu'un.</p>
+
+    <div class="scene-title">🚪 Les visites</div>
+
+    <p class="narration">Au fil des mois, quelques adultes commencèrent à passer plus souvent à l'appartement.</p>
+    <p class="narration">Ils disaient venir s'assurer que tout allait bien.</p>
+    <p class="narration">Ils parlaient avec Tomie.</p>
+    <p class="narration">Posaient quelques questions.</p>
+    <p class="narration">Observaient discrètement Yoru.</p>
+    <p class="narration">Cette dernière restait toujours polie.</p>
+    <p class="narration">Discrète.</p>
+    <p class="narration">Presque effacée.</p>
+    <p class="narration">Elle donnait l'impression de ne pas écouter.</p>
+
+    <div class="scene-title">✏️ « Tu dessines quoi ? »</div>
+
+    <p class="narration">Un homme en costume attend dans le salon pendant que Tomie prépare du thé.</p>
+    <p class="narration">Yoru est assise par terre, un carnet sur les genoux.</p>
+    <p class="narration">L'homme lui sourit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">« Tu aimes dessiner ? »</div>
+    </div>
+
+    <p class="narration">Sans lever les yeux, Yoru hoche la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Oui. »</div>
+    </div>
+
+    <p class="narration">L'homme s'approche.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">« Je peux voir ? »</div>
+    </div>
+
+    <p class="narration">Yoru lui tend son carnet.</p>
+    <p class="narration">Il s'attend à voir des fleurs ou des animaux.</p>
+    <p class="narration">À la place...</p>
+    <p class="narration">Le dessin représente le salon.</p>
+    <p class="narration">Très précisément.</p>
+    <p class="narration">Chaque meuble.</p>
+    <p class="narration">Chaque cadre.</p>
+    <p class="narration">Chaque tasse.</p>
+    <p class="narration">Même les plis des rideaux.</p>
+    <p class="narration">L'homme sourit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">« Tu as une bonne mémoire. »</div>
+    </div>
+
+    <p class="narration">Yoru relève enfin les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Ce n'est pas de la mémoire. »<br>« Je l'ai regardé. »</div>
+    </div>
+
+    <p class="narration">Un silence.</p>
+    <p class="narration">L'homme esquisse un sourire amusé.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">« Ah bon ? »</div>
+    </div>
+
+    <p class="narration">Yoru pointe alors le revers de sa veste.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Votre bouton est décousu. »</div>
+    </div>
+
+    <p class="narration">L'homme baisse les yeux.</p>
+    <p class="narration">Effectivement.</p>
+    <p class="narration">Un fil dépasse.</p>
+    <p class="narration">Avant qu'il ne puisse répondre...</p>
+    <p class="narration">Yoru continue.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Vous boitez un peu aussi. »<br>« La pluie vous donne mal au genou, non ? »</div>
+    </div>
+
+    <p class="narration">L'agent se fige.</p>
+    <p class="narration">Cette fois...</p>
+    <p class="narration">Le sourire disparaît.</p>
+    <p class="narration">Tomie revient avec les tasses.</p>
+    <p class="narration">L'ambiance a changé.</p>
+    <p class="narration">L'agent remercie poliment.</p>
+    <p class="narration">Mais pendant tout le reste de la visite...</p>
+    <p class="narration">Son regard revient sans cesse vers Yoru.</p>
+    <p class="narration">En quittant l'appartement, il rédigea un rapport bien différent des précédents.</p>
+
+    <div class="quote">
+      « L'enfant présente des capacités d'observation exceptionnellement développées.<br>
+      Elle perçoit des détails que la plupart des adultes ignorent.<br>
+      Une évaluation plus approfondie est recommandée. »
+    </div>
+
+    <p class="narration">Pour la première fois...</p>
+    <p class="narration">Le nom de Yoru ne figurait plus seulement dans le dossier de Tomie.</p>
+    <p class="narration">Il avait désormais son propre dossier.</p>
+
+    <div class="scene-title">👁️ Les recommandations</div>
+
+    <p class="narration">Après cette visite, plus rien ne semblait avoir changé.</p>
+    <p class="narration">Les agents continuaient leurs passages.</p>
+    <p class="narration">Toujours polis.</p>
+    <p class="narration">Toujours souriants.</p>
+    <p class="narration">Toujours rassurants.</p>
+    <p class="narration">Mais Tomie remarquait désormais une chose.</p>
+    <p class="narration">Ils ne regardaient presque plus son visage.</p>
+    <p class="narration">Ils regardaient Yoru.</p>
+
+    <div class="scene-title">⚠️ « Fais attention. »</div>
+
+    <p class="narration">Le soir.</p>
+    <p class="narration">Tomie replie soigneusement le linge.</p>
+    <p class="narration">Yoru est assise à côté d'elle.</p>
+    <p class="narration">Ses ailes ont encore grandi.</p>
+    <p class="narration">Quelques plumes dépassent lorsqu'elle bouge.</p>
+    <p class="narration">Tomie s'interrompt.</p>
+    <p class="narration">Elle fixe les plumes pendant plusieurs secondes.</p>
+    <p class="narration">Puis, presque machinalement, elle les replace sous le vêtement de sa fille.</p>
+    <p class="narration">Délicatement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Évite de les montrer dehors. »</div>
+    </div>
+
+    <p class="narration">Yoru relève la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Pourquoi ? »</div>
+    </div>
+
+    <p class="narration">Tomie cherche ses mots.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Certaines personnes... deviennent curieuses. »</div>
+    </div>
+
+    <p class="narration">Yoru baisse les yeux vers ses ailes.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Les messieurs qui viennent ? »</div>
+    </div>
+
+    <p class="narration">Tomie s'immobilise.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Pourquoi tu dis ça ? »</div>
+    </div>
+
+    <p class="narration">Yoru réfléchit quelques secondes.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Avant, ils te regardaient beaucoup. »<br>« Maintenant... ils me regardent. »</div>
+    </div>
+
+    <p class="narration">Tomie sent un frisson lui parcourir le dos.</p>
+    <p class="narration">Parce que Yoru a raison.</p>
+    <p class="narration">À partir de ce jour...</p>
+    <p class="narration">Tomie commença à anticiper.</p>
+    <p class="narration">Elle choisissait les vêtements qui cachaient le mieux les ailes.</p>
+    <p class="narration">Elle évitait les lieux trop fréquentés.</p>
+    <p class="narration">Elle refusait parfois les invitations de voisins.</p>
+    <p class="narration">Chaque décision semblait anodine.</p>
+    <p class="narration">Mais toutes avaient la même raison.</p>
+    <p class="narration">Ne pas attirer l'attention.</p>
+
+    <div class="scene-title">📞 L'appel</div>
+
+    <p class="narration">Quelques jours plus tard.</p>
+    <p class="narration">Le téléphone sonne.</p>
+    <p class="narration">Tomie décroche.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Oui. »<br>« ...Je comprends. »<br>« ...Une évaluation ? »</div>
+    </div>
+
+    <p class="narration">Son visage pâlit.</p>
+    <p class="narration">Elle écoute.</p>
+    <p class="narration">Longtemps.</p>
+    <p class="narration">Yoru, dans le couloir, entend seulement quelques mots.</p>
+    <p class="narration">« ...potentiel... »</p>
+    <p class="narration">« ...développement... »</p>
+    <p class="narration">« ...centre... »</p>
+    <p class="narration">Le reste est trop faible.</p>
+    <p class="narration">Quand Tomie raccroche...</p>
+    <p class="narration">Elle reste immobile.</p>
+    <p class="narration">Le combiné encore dans la main.</p>
+    <p class="narration">Yoru s'approche.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« C'était qui ? »</div>
+    </div>
+
+    <p class="narration">Tomie sursaute presque.</p>
+    <p class="narration">Puis sourit.</p>
+    <p class="narration">Un sourire fatigué.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Personne d'important. »</div>
+    </div>
+
+    <p class="narration">Yoru ne répond pas.</p>
+    <p class="narration">Elle regarde simplement la main de sa mère.</p>
+    <p class="narration">Elle tremble.</p>
+    <p class="narration">Cette nuit-là...</p>
+    <p class="narration">Pour la première fois depuis longtemps...</p>
+    <p class="narration">Tomie ne dormit presque pas.</p>
+    <p class="narration">Et Yoru...</p>
+    <p class="narration">Fit semblant de dormir.</p>
+    <p class="narration">Parce qu'elle savait que sa mère avait besoin de croire qu'au moins l'une d'elles pouvait encore trouver le sommeil.</p>
+
+    <div class="scene-title">🌙 Une nuit</div>
+
+    <p class="narration">Les nuits devinrent plus longues...</p>
+    <p class="narration">Au début...</p>
+    <p class="narration">Ce n'était que de l'inquiétude.</p>
+    <p class="narration">Puis cette inquiétude devint de la peur.</p>
+    <p class="narration">Et la peur...</p>
+    <p class="narration">Finit par prendre toute la place.</p>
+    <p class="narration">Yoru se réveille.</p>
+    <p class="narration">Quelque chose l'a sortie de son sommeil.</p>
+    <p class="narration">Un bruit.</p>
+    <p class="narration">Très léger.</p>
+    <p class="narration">Elle ouvre doucement la porte de sa chambre.</p>
+    <p class="narration">Le salon est plongé dans l'obscurité.</p>
+    <p class="narration">Tomie est assise près de la fenêtre.</p>
+    <p class="narration">Les rideaux sont entrouverts de quelques centimètres.</p>
+    <p class="narration">Elle regarde dehors.</p>
+    <p class="narration">Sans bouger.</p>
+    <p class="narration">Yoru s'approche en silence.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Maman... ? »</div>
+    </div>
+
+    <p class="narration">Tomie sursaute violemment.</p>
+    <p class="narration">Comme si elle venait d'être surprise en train de faire quelque chose d'interdit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Tu... tu devrais dormir. »</div>
+    </div>
+
+    <p class="narration">Yoru regarde dehors.</p>
+    <p class="narration">La rue est vide.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Tu attends quelqu'un ? »</div>
+    </div>
+
+    <p class="narration">Tomie détourne immédiatement le regard.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Non... »<br>« Je vérifie juste... »</div>
+    </div>
+
+    <p class="narration">Un silence.</p>
+    <p class="narration">Elle ne termine pas sa phrase.</p>
+    <p class="narration">Les nuits suivantes...</p>
+    <p class="narration">Elle vérifia encore.</p>
+    <p class="narration">Puis encore.</p>
+    <p class="narration">Puis plusieurs fois dans la même nuit.</p>
+
+    <div class="scene-title">🚪 La goutte de trop</div>
+
+    <p class="narration">Quelques jours plus tard.</p>
+    <p class="narration">On frappe à la porte.</p>
+    <p class="narration">Trois coups.</p>
+    <p class="narration">Tomie se fige.</p>
+    <p class="narration">Son souffle s'accélère.</p>
+    <p class="narration">Yoru la regarde.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Je vais ouvrir ? »</div>
+    </div>
+
+    <p class="narration">Tomie attrape immédiatement son poignet.</p>
+    <p class="narration">Un peu trop fort.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« Non ! »</div>
+    </div>
+
+    <p class="narration">Le silence tombe.</p>
+    <p class="narration">Les deux se regardent.</p>
+    <p class="narration">Tomie réalise ce qu'elle vient de faire.</p>
+    <p class="narration">Elle relâche aussitôt sa main.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Tomie</div>
+      <div class="speech">« ...Pardon. »</div>
+    </div>
+
+    <p class="narration">Sa voix tremble.</p>
+    <p class="narration">On frappe de nouveau.</p>
+    <p class="narration">Tomie n'ouvre pas.</p>
+    <p class="narration">Elle attend.</p>
+    <p class="narration">Les coups cessent.</p>
+    <p class="narration">Des pas s'éloignent.</p>
+    <p class="narration">Elle reste debout.</p>
+    <p class="narration">Pendant de longues minutes.</p>
+    <p class="narration">Comme incapable de respirer normalement.</p>
+    <p class="narration">Ce soir-là...</p>
+    <p class="narration">Yoru comprit une chose.</p>
+    <p class="narration">Sa mère n'avait plus peur de quelque chose.</p>
+    <p class="narration">Elle avait peur de tout.</p>
+
+    <div class="scene-title">🪽 Pendant ce temps...</div>
+
+    <p class="narration">Dans un autre bâtiment.</p>
+    <p class="narration">Bien loin de cet appartement.</p>
+    <p class="narration">Keigo se tient face à un supérieur.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Je vous demande de revoir son dossier. »</div>
+    </div>
+
+    <p class="narration">Le responsable ne lève même pas les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Supérieur</div>
+      <div class="speech">« Les évaluations sont bonnes. »<br>« Sa mère est suivie. »<br>« Le foyer est stable. »</div>
+    </div>
+
+    <p class="narration">Keigo serre les dents.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Les rapports ne racontent pas tout. »<br>« J'ai grandi avec elle. »</div>
+    </div>
+
+    <p class="narration">Le silence.</p>
+    <p class="narration">Il ne parle pas de Yoru.</p>
+    <p class="narration">Il parle de Tomie.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Je sais reconnaître les signes. »</div>
+    </div>
+
+    <p class="narration">Le supérieur referme le dossier.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Supérieur</div>
+      <div class="speech">« Tu laisses tes émotions influencer ton jugement. »</div>
+    </div>
+
+    <p class="narration">Keigo baisse les yeux.</p>
+    <p class="narration">Puis répond sans hésiter.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Non. »</div>
+    </div>
+
+    <p class="narration">Il marque une pause.</p>
+
+    <div class="quote">
+      « C'est justement parce que je la connais que je peux être objectif. »
+    </div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
