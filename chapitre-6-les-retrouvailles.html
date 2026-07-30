@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les retrouvailles — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Les retrouvailles</h1>
+    <div class="subtitle">Après des années de séparation, Yoru rencontre enfin son grand frère</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Une enfance silencieuse</div>
+      <div><strong>📍 Lieu</strong><br>Bâtiment de la Commission</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami · Agent de la Commission</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">📁 Quelques jours plus tard...</div>
+
+    <p class="narration">La décision tomba.</p>
+    <p class="narration">Le suivi de Tomie allait être suspendu.</p>
+    <p class="narration">Yoru serait confiée à la Commission.</p>
+    <p class="narration">Officiellement...</p>
+    <p class="narration">Pour garantir son développement dans un environnement adapté à son Alter.</p>
+    <p class="narration">Officieusement...</p>
+    <p class="narration">Parce que plusieurs personnes avaient enfin admis ce que Keigo répétait depuis des années.</p>
+    <p class="narration">Il était déjà trop tard pour empêcher Tomie de sombrer.</p>
+
+    <div class="scene-title">🚪 Le couloir</div>
+
+    <p class="narration">Une petite valise repose à côté de Yoru.</p>
+    <p class="narration">Elle est assise.</p>
+    <p class="narration">Les pieds ne touchent pas le sol.</p>
+    <p class="narration">Elle regarde les personnes passer devant elle.</p>
+    <p class="narration">Elle écoute leurs pas.</p>
+    <p class="narration">Le rythme de leur respiration.</p>
+    <p class="narration">Leurs regards.</p>
+    <p class="narration">Elle attend.</p>
+    <p class="narration">Un agent s'approche.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">« Quelqu'un vient te chercher. »</div>
+    </div>
+
+    <p class="narration">Yoru hoche simplement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« D'accord. »</div>
+    </div>
+
+    <p class="narration">Quelques instants plus tard...</p>
+    <p class="narration">Des pas s'arrêtent devant elle.</p>
+    <p class="narration">Elle lève les yeux.</p>
+    <p class="narration">Un jeune homme.</p>
+    <p class="narration">De grandes ailes rouges.</p>
+    <p class="narration">Il ne parle pas tout de suite.</p>
+    <p class="narration">Elle non plus.</p>
+    <p class="narration">Pendant plusieurs secondes...</p>
+    <p class="narration">Ils s'observent.</p>
+    <p class="narration">Yoru remarque immédiatement plusieurs choses.</p>
+    <p class="narration">Les ailes.</p>
+    <p class="narration">La façon dont il se tient.</p>
+    <p class="narration">Ses mains.</p>
+    <p class="narration">Ses yeux.</p>
+    <p class="narration">Il paraît fatigué.</p>
+    <p class="narration">Mais il sourit quand même.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Bonjour... »</div>
+    </div>
+
+    <p class="narration">Yoru incline légèrement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Bonjour. »</div>
+    </div>
+
+    <p class="narration">Encore un silence.</p>
+    <p class="narration">Puis...</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Je m'appelle Keigo. »</div>
+    </div>
+
+    <p class="narration">Yoru répète mentalement ce prénom.</p>
+    <p class="narration">Puis répond très calmement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« C'est toi, mon grand frère. »</div>
+    </div>
+
+    <p class="narration">Ce n'est pas une question.</p>
+    <p class="narration">C'est une conclusion.</p>
+    <p class="narration">Keigo cligne des yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« ...Oui. »</div>
+    </div>
+
+    <p class="narration">Yoru continue de le regarder.</p>
+    <p class="narration">Puis demande très sérieusement :</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Tu es venu parce que maman ne pouvait plus le faire ? »</div>
+    </div>
+
+    <p class="narration">Cette phrase coupe le souffle de Keigo.</p>
+    <p class="narration">Elle ne pleure pas.</p>
+    <p class="narration">Elle ne demande pas où est sa mère.</p>
+    <p class="narration">Elle a déjà compris.</p>
+    <p class="narration">Keigo hésite.</p>
+    <p class="narration">Puis répond honnêtement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Oui. »</div>
+    </div>
+
+    <p class="narration">Yoru baisse légèrement les yeux.</p>
+    <p class="narration">Elle réfléchit quelques secondes.</p>
+    <p class="narration">Puis...</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Je pensais que ça finirait par arriver. »</div>
+    </div>
+
+    <p class="narration">L'agent, à côté d'eux, reste figé.</p>
+    <p class="narration">Pour lui...</p>
+    <p class="narration">Une enfant devrait être en train de pleurer.</p>
+    <p class="narration">De crier.</p>
+    <p class="narration">De réclamer sa mère.</p>
+    <p class="narration">À la place...</p>
+    <p class="narration">Elle analyse simplement la situation.</p>
+    <p class="narration">Puis Yoru regarde de nouveau Keigo.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">« Tu as attendu longtemps ? »</div>
+    </div>
+
+    <p class="narration">Cette fois...</p>
+    <p class="narration">Keigo ne répond pas tout de suite.</p>
+    <p class="narration">Parce qu'il comprend qu'elle ne parle pas du couloir.</p>
+    <p class="narration">Elle parle de toutes ces années.</p>
+    <p class="narration">Il laisse échapper un léger sourire.</p>
+
+    <div class="quote">
+      « Oui. »<br>
+      « Très longtemps. »
+    </div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
