@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une naissance dans le silence — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #9f89ff;
+  --accent-soft: rgba(159,137,255,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.note {
+  color: var(--muted);
+  font-weight: 400;
+  font-style: italic;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Saison 1 · Avant Yuei (Prologue)</div>
+    <h1>Une naissance dans le silence</h1>
+    <div class="subtitle">Le premier lien entre Yoru et Keigo</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Une enfance silencieuse</div>
+      <div><strong>📍 Lieu</strong><br>Maison familiale des Takami</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami · Tomie Takami</div>
+      <div><strong>🎵 Musique</strong><br>À définir</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🍼 Quelques mois après la naissance de Yoru</div>
+
+    <p class="narration">La maison est silencieuse.</p>
+    <p class="narration">On entend seulement les pleurs d'un nourrisson.</p>
+    <p class="narration">Dans une petite chambre mal éclairée, Tomie est assise au bord du lit, épuisée. Ses yeux sont cernés.</p>
+    <p class="narration">Dans le berceau, une toute petite fille agite maladroitement ses mains.</p>
+    <p class="narration">Keigo apparaît timidement dans l'encadrement de la porte.</p>
+    <p class="narration">Il ne doit pas avoir plus de six ou sept ans.</p>
+    <p class="narration">Il hésite.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« ...Je peux ? »</div>
+    </div>
+
+    <p class="narration">Tomie ne répond pas tout de suite.</p>
+    <p class="narration">Sans le regarder, elle hoche simplement la tête.</p>
+    <p class="narration">Keigo s'approche du berceau.</p>
+    <p class="narration">Il se penche.</p>
+    <p class="narration">Le bébé s'arrête de pleurer pendant quelques secondes.</p>
+    <p class="narration">Ses petites mains s'ouvrent.</p>
+    <p class="narration">L'une d'elles attrape maladroitement l'index de Keigo.</p>
+    <p class="narration">Il reste complètement immobile.</p>
+    <p class="narration">Ses yeux s'ouvrent un peu plus.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo <span class="note">(dans un souffle)</span></div>
+      <div class="speech">« Elle est toute petite... »</div>
+    </div>
+
+    <p class="narration">Un léger sourire apparaît sur son visage.</p>
+    <p class="narration">Pour la première fois depuis longtemps.</p>
+    <p class="narration">Puis...</p>
+    <p class="narration">Une voix retentit depuis une autre pièce.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Takami</div>
+      <div class="speech">« Keigo ! »</div>
+    </div>
+
+    <p class="narration">Le sourire disparaît.</p>
+    <p class="narration">Il retire doucement son doigt.</p>
+    <p class="narration">Avant de partir, il replace maladroitement la couverture sur sa petite sœur.</p>
+    <p class="narration">Il la regarde une dernière fois.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">« Dors bien... »</div>
+    </div>
+
+    <p class="narration">Il quitte la chambre.</p>
+    <p class="narration">La dernière image montre le bébé.</p>
+
+    <div class="quote">
+      Ses doigts sont encore tendus vers l'endroit où se trouvait la main de son frère.
+    </div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
