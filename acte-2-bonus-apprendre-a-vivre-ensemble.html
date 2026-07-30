@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apprendre à vivre ensemble — Yoru Takami</title>
+<style>
+:root {
+  --bg: #0e0e12;
+  --panel: #181820;
+  --panel-2: #22222d;
+  --text: #f2f2f4;
+  --muted: #b7b7c2;
+  --accent: #c99860;
+  --accent-soft: rgba(201,152,96,.16);
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.episode {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  background: var(--bg);
+  border-radius: 18px;
+}
+.header {
+  text-align: center;
+  padding: 28px 18px 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: 16px;
+}
+.kicker {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+.meta div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+}
+.content {
+  margin-top: 20px;
+}
+.scene-title {
+  margin: 30px 0 16px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+}
+.dialogue {
+  margin: 14px 0;
+  padding: 13px 15px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.speaker {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.speech {
+  line-height: 1.65;
+}
+.narration {
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 11px 6px;
+}
+.quote {
+  margin: 28px 0;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent-soft);
+}
+.footer {
+  margin-top: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+main,
+section,
+footer {
+  margin-bottom: 0;
+}
+@media (max-width: 650px) {
+  .episode { padding: 10px; border-radius: 12px; }
+  .header { padding: 22px 12px 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .dialogue { padding: 11px 12px; }
+}
+</style>
+</head>
+<body>
+<main class="episode">
+  <header class="header">
+    <div class="kicker">Acte II · Chapitre bonus</div>
+    <h1>Apprendre à vivre ensemble</h1>
+    <div class="subtitle">Quelques instants tendres, maladroits et chaotiques entre Yoru et Keigo</div>
+    <div class="meta">
+      <div><strong>📖 Arc</strong><br>Les Ailes de la Commission</div>
+      <div><strong>📍 Lieu</strong><br>Leur chambre à la Commission</div>
+      <div><strong>👥 Personnages</strong><br>Yoru Takami · Keigo Takami · Agents</div>
+      <div><strong>🎵 Ambiance</strong><br>Complicité fraternelle</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="scene-title">🪶 Petit moment n°1 — Les plumes</div>
+
+    <p class="narration">Yoru était assise sur son lit, un livre entre les mains.</p>
+    <p class="narration">Une plume rouge vint soudain se poser sur son nez.</p>
+    <p class="narration">Elle cligna des yeux.</p>
+    <p class="narration">Puis une deuxième.</p>
+    <p class="narration">Une troisième.</p>
+    <p class="narration">Elle leva lentement la tête.</p>
+    <p class="narration">Keigo affichait un sourire malicieux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu lis depuis une heure... fallait bien que je fasse quelque chose.</div>
+    </div>
+
+    <p class="narration">Yoru attrapa délicatement une plume.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu les contrôles vraiment toutes ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Bien sûr.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Même celle-là ?</div>
+    </div>
+
+    <p class="narration">La plume se mit à tournoyer autour d'elle avant de venir se poser dans ses cheveux.</p>
+    <p class="narration">Yoru la regarda quelques secondes.</p>
+    <p class="narration">Puis un petit rire lui échappa.</p>
+    <p class="narration">Keigo sourit à son tour.</p>
+
+    <div class="quote">Mission accomplie.</div>
+
+    <div class="scene-title">🔍 Petit moment n°2 — Le concours</div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ferme les yeux.</div>
+    </div>
+
+    <p class="narration">Yoru obéit.</p>
+    <p class="narration">Keigo déplaça plusieurs objets dans la chambre.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est bon.</div>
+    </div>
+
+    <p class="narration">Elle ouvrit les yeux.</p>
+    <p class="narration">Quelques secondes passèrent.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">
+        Tu as déplacé le livre.<br><br>
+        La tasse est plus à gauche.<br><br>
+        Et... tu caches quelque chose derrière ton dos.
+      </div>
+    </div>
+
+    <p class="narration">Keigo éclata de rire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est triché !</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Pourquoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Parce que tu gagnes tout le temps.</div>
+    </div>
+
+    <p class="narration">Yoru haussa simplement les épaules.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu fais trop de bruit quand tu marches.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Hé !<br><br>Je suis discret !</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Non.</div>
+    </div>
+
+    <div class="scene-title">🌙 Petit moment n°3 — Le cauchemar</div>
+
+    <p class="narration">Au milieu de la nuit, Yoru se réveilla en sursaut.</p>
+    <p class="narration">Sa respiration était courte.</p>
+    <p class="narration">Sans un mot, elle descendit de son lit.</p>
+    <p class="narration">Keigo était encore éveillé.</p>
+    <p class="narration">Il referma doucement le livre qu'il lisait.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Encore un cauchemar ?</div>
+    </div>
+
+    <p class="narration">Elle acquiesça.</p>
+    <p class="narration">Il écarta simplement un pan de sa couverture.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Viens.</div>
+    </div>
+
+    <p class="narration">Yoru hésita quelques secondes.</p>
+    <p class="narration">Puis elle vint se blottir contre lui.</p>
+    <p class="narration">Keigo déploya légèrement une aile pour les envelopper tous les deux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Dors.<br><br>Je suis là.</div>
+    </div>
+
+    <p class="narration">Quelques minutes plus tard...</p>
+    <p class="narration">La chambre retrouva son silence.</p>
+
+    <div class="scene-title">🙂 Petit moment — Souris un peu</div>
+
+    <p class="narration">Yoru lisait tranquillement.</p>
+    <p class="narration">Keigo passa derrière elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">T'es encore sérieuse.</div>
+    </div>
+
+    <p class="narration">Aucune réponse.</p>
+    <p class="narration">Il s'accroupit devant elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu sais sourire au moins ?</div>
+    </div>
+
+    <p class="narration">Yoru releva lentement les yeux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Oui.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ah ouais ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Oui.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Prouve-le.</div>
+    </div>
+
+    <p class="narration">Elle le regarda quelques secondes...</p>
+    <p class="narration">Puis afficha un sourire parfaitement droit, presque forcé.</p>
+    <p class="narration">Keigo resta silencieux.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est le sourire le plus inquiétant que j'ai vu de ma vie...</div>
+    </div>
+
+    <p class="narration">Yoru pencha légèrement la tête.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu avais demandé un sourire.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Pas un sourire de psychopathe !</div>
+    </div>
+
+    <p class="narration">Un petit rire échappa finalement à Yoru.</p>
+    <p class="narration">Keigo leva les bras au ciel.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Voilà ! Celui-là ! Garde celui-là !</div>
+    </div>
+
+    <div class="scene-title">😐 Petit moment — Le jeu des expressions</div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Aujourd'hui, mission.</div>
+    </div>
+
+    <p class="narration">Yoru leva les yeux de son livre.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Mission ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu dois faire dix expressions différentes.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Pourquoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Parce que t'en fais toujours qu'une.</div>
+    </div>
+
+    <p class="narration">Yoru réfléchit.</p>
+    <p class="narration">Puis...</p>
+
+    <div class="quote">😐　😐　😐</div>
+
+    <p class="narration">Keigo attendit.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">...Tu viens d'en faire trois identiques.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Non.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ah bon ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">J'ai cligné des yeux.</div>
+    </div>
+
+    <div class="scene-title">😂 Petit moment — Les chatouilles</div>
+
+    <p class="narration">Yoru était concentrée sur un puzzle.</p>
+    <p class="narration">Keigo arriva derrière elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu réfléchis trop.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Mmh.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu vas finir par fumer.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Mmh.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Bon...</div>
+    </div>
+
+    <p class="narration">Il posa soudain une plume dans son cou.</p>
+    <p class="narration">Yoru sursauta immédiatement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">K-Keigo !</div>
+    </div>
+
+    <p class="narration">Il éclata de rire.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Ah ! T'es chatouilleuse !</div>
+    </div>
+
+    <p class="narration">Yoru tenta de garder son sérieux.</p>
+    <p class="narration">Sans succès.</p>
+    <p class="narration">Quelques secondes plus tard, la chambre résonnait de ses rires.</p>
+
+    <div class="scene-title">🃏 Petit moment — La partie de cartes</div>
+
+    <p class="narration">La pluie frappait doucement contre les vitres de leur petite chambre.</p>
+    <p class="narration">Keigo était allongé sur son lit, les bras derrière la tête.</p>
+    <p class="narration">Yoru lisait tranquillement.</p>
+    <p class="narration">Il tourna la tête vers elle.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu lis encore ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Oui.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est nul.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Mmh.</div>
+    </div>
+
+    <p class="narration">Keigo soupira.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Bon.</div>
+    </div>
+
+    <p class="narration">Il se redressa d'un bond.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Partie de cartes.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Je préfère finir mon chapitre.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Trop tard.</div>
+    </div>
+
+    <p class="narration">Il venait déjà d'étaler un jeu de cartes sur la table.</p>
+    <p class="narration">Yoru referma lentement son livre.</p>
+    <p class="narration">Elle savait qu'il n'abandonnerait pas.</p>
+    <p class="narration">Quelques minutes plus tard...</p>
+    <p class="narration">Ils jouaient.</p>
+    <p class="narration">Au début, Keigo affichait un sourire confiant.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu vas voir.<br><br>Je suis imbattable.</div>
+    </div>
+
+    <p class="narration">Yoru posa simplement une carte.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu bluffes.</div>
+    </div>
+
+    <p class="narration">Keigo se figea.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Hein ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu souris toujours quand tu as un mauvais jeu.</div>
+    </div>
+
+    <p class="narration">Silence.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Continue.</div>
+    </div>
+
+    <p class="narration">Elle posa une deuxième carte.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Et tu tapotes la table avec ton index quand tu hésites.</div>
+    </div>
+
+    <p class="narration">Keigo regarda immédiatement sa main.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Tu... regardes mes doigts ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Oui.</div>
+    </div>
+
+    <p class="narration">Encore une carte.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu regardes aussi tes ailes quand tu pioches une bonne carte.</div>
+    </div>
+
+    <p class="narration">Le silence dura plusieurs secondes.</p>
+    <p class="narration">Puis...</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">MAIS TU M'ESPIONNES DEPUIS COMBIEN DE TEMPS ?!</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Depuis le début.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est interdit d'être aussi observatrice !</div>
+    </div>
+
+    <p class="narration">Quelques parties plus tard...</p>
+    <p class="narration">Résultat :</p>
+
+    <div class="quote">Yoru : 8 victoires.<br>Keigo : 0.</div>
+
+    <p class="narration">Il regarda les cartes.</p>
+    <p class="narration">Puis Yoru.</p>
+    <p class="narration">Puis les cartes.</p>
+    <p class="narration">Puis Yoru.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Refais une partie.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Pourquoi ?</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Parce que je refuse de perdre contre une enfant.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu viens déjà de perdre huit fois.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est de l'entraînement.</div>
+    </div>
+
+    <p class="narration">Ils recommencèrent.</p>
+    <p class="narration">Keigo tenta de changer complètement sa façon de jouer.</p>
+    <p class="narration">De cacher ses expressions.</p>
+    <p class="narration">De contrôler ses ailes.</p>
+    <p class="narration">Rien n'y faisait.</p>
+    <p class="narration">Yoru gagnait encore.</p>
+    <p class="narration">Il posa brutalement ses cartes sur la table.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">C'est officiel.<br><br>Tu triches.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Non.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Si.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Non.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">SI.</div>
+    </div>
+
+    <p class="narration">Dans un geste théâtral, Keigo attrapa un coussin.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je réclame un duel digne de ce nom !</div>
+    </div>
+
+    <p class="narration">Il lança l'oreiller.</p>
+    <p class="narration">Yoru l'attrapa au vol.</p>
+    <p class="narration">Elle le regarda.</p>
+    <p class="narration">Puis...</p>
+    <p class="narration">Le renvoya.</p>
+    <p class="narration">En plein visage.</p>
+    <p class="narration">Keigo resta figé une seconde.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">...<br><br>Tu viens de déclarer la guerre.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">C'est toi qui as commencé.</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Alors plus de règles !</div>
+    </div>
+
+    <p class="narration">En quelques instants, la chambre se transforma en véritable champ de bataille.</p>
+    <p class="narration">Les coussins volaient dans tous les sens.</p>
+    <p class="narration">Sous les impacts, plusieurs se déchirèrent.</p>
+    <p class="narration">Des nuages de plumes blanches envahirent la pièce.</p>
+    <p class="narration">Keigo battit des ailes pour les repousser...</p>
+    <p class="narration">Grave erreur.</p>
+    <p class="narration">Ses propres plumes rouges s'envolèrent à leur tour.</p>
+    <p class="narration">Bientôt, les plumes blanches des coussins se mélangeaient aux plumes écarlates de ses ailes.</p>
+    <p class="narration">On n'y voyait presque plus rien.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Je ne vois plus où tu es !</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Moi si.</div>
+    </div>
+
+    <p class="narration">Un coussin s'écrasa contre la tête de Keigo.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">Trahison !</div>
+    </div>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">Tu fais trop de bruit.</div>
+    </div>
+
+    <p class="narration">Ils riaient désormais tous les deux sans retenue.</p>
+    <p class="narration">Au même instant...</p>
+    <p class="narration">La porte s'ouvrit.</p>
+    <p class="narration">Deux agents restèrent figés sur le seuil.</p>
+    <p class="narration">La chambre ressemblait à une tempête.</p>
+    <p class="narration">Des cartes recouvraient le sol.</p>
+    <p class="narration">Les lits étaient renversés.</p>
+    <p class="narration">Des plumes rouges et blanches flottaient encore dans les airs.</p>
+    <p class="narration">Keigo tenait un coussin éventré comme un bouclier.</p>
+    <p class="narration">Yoru en serrait un autre contre elle.</p>
+    <p class="narration">Un long silence s'installa.</p>
+    <p class="narration">L'un des agents inspira profondément.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">...<br><br>Est-ce qu'on doit poser des questions ?</div>
+    </div>
+
+    <p class="narration">Keigo sourit nerveusement.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Keigo</div>
+      <div class="speech">On faisait... un exercice stratégique ?</div>
+    </div>
+
+    <p class="narration">Yoru réfléchit quelques secondes.</p>
+    <p class="narration">Puis ajouta très sérieusement :</p>
+
+    <div class="dialogue">
+      <div class="speaker">Yoru</div>
+      <div class="speech">J'ai gagné.</div>
+    </div>
+
+    <p class="narration">L'agent regarda Keigo.</p>
+    <p class="narration">Puis Yoru.</p>
+    <p class="narration">Puis le désastre autour d'eux.</p>
+    <p class="narration">Il referma simplement la porte.</p>
+
+    <div class="dialogue">
+      <div class="speaker">Agent</div>
+      <div class="speech">Je n'ai rien vu.</div>
+    </div>
+
+    <p class="narration">À peine les pas des agents s'étaient-ils éloignés que Keigo éclata de rire.</p>
+    <p class="narration">Yoru le regarda.</p>
+    <p class="narration">Puis, elle aussi, se remit à rire.</p>
+    <p class="narration">Ils passèrent le reste de la soirée à ramasser les plumes...</p>
+    <p class="narration">Sans jamais réussir à distinguer lesquelles appartenaient aux coussins...</p>
+
+    <div class="quote">Et lesquelles appartenaient à Keigo.</div>
+  </section>
+
+  <footer class="footer">Yoru Takami · Histoire non officielle inspirée de l'univers de My Hero Academia</footer>
+</main>
+</body>
+</html>
