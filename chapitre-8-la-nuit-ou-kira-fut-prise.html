@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prologue — Partie VIII : La nuit où Kira fut prise</title>
+
+  <style>
+    :root{
+      --fond:#070506;
+      --noir:#12090b;
+      --rouge:#a91f2c;
+      --rouge-clair:#e15561;
+      --blanc:#f5ecec;
+      --gris:#c9b9bb;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      position:relative;
+      margin:0;
+      min-height:100vh;
+      overflow-x:hidden;
+      color:var(--blanc);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(132,17,30,.28), transparent 32rem),
+        radial-gradient(circle at 10% 65%, rgba(87,9,18,.20), transparent 24rem),
+        var(--fond);
+    }
+
+    body::before{
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.25;
+      content:"";
+      background:
+        linear-gradient(108deg, transparent 0 18%, rgba(225,85,97,.35) 18.1% 18.25%, transparent 18.4%),
+        linear-gradient(74deg, transparent 0 68%, rgba(225,85,97,.25) 68.1% 68.2%, transparent 68.35%),
+        linear-gradient(128deg, transparent 0 82%, rgba(225,85,97,.2) 82.1% 82.22%, transparent 82.4%);
+    }
+
+    .page{
+      width:min(920px, calc(100% - 32px));
+      margin:auto;
+      padding:56px 0 90px;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:34px 28px;
+      text-align:center;
+      border:1px solid rgba(225,85,97,.75);
+      border-radius:20px;
+      background:linear-gradient(135deg, #240b10, #10080a 70%);
+      box-shadow:0 14px 36px rgba(0,0,0,.55);
+    }
+
+    .hero::after{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      opacity:.55;
+      content:"";
+      background:
+        linear-gradient(122deg, transparent 0 43%, rgba(225,85,97,.45) 43.1% 43.25%, transparent 43.4%),
+        linear-gradient(56deg, transparent 0 70%, rgba(225,85,97,.26) 70.1% 70.25%, transparent 70.4%);
+    }
+
+    .chapter-number{
+      position:relative;
+      z-index:1;
+      margin:0 0 10px;
+      color:#ff9aa2;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+    h1{
+      position:relative;
+      z-index:1;
+      margin:0;
+      font-size:clamp(2rem, 6vw, 3.7rem);
+      line-height:1.08;
+      text-shadow:0 0 18px rgba(225,85,97,.25);
+    }
+
+    .hero p{
+      position:relative;
+      z-index:1;
+      max-width:700px;
+      margin:20px auto 0;
+      color:#f5c5c8;
+      line-height:1.7;
+      font-style:italic;
+    }
+
+    .story{
+      position:relative;
+      overflow:hidden;
+      margin-top:24px;
+      padding:clamp(23px, 5vw, 48px);
+      border:1px solid rgba(225,85,97,.35);
+      border-radius:20px;
+      background:rgba(16,7,9,.94);
+      box-shadow:0 12px 28px rgba(0,0,0,.42);
+    }
+
+    .story::before{
+      position:absolute;
+      top:0;
+      right:12%;
+      width:2px;
+      height:100%;
+      content:"";
+      opacity:.28;
+      background:linear-gradient(
+        to bottom,
+        transparent,
+        #d23948 18%,
+        transparent 30%,
+        #d23948 49%,
+        transparent 68%,
+        #d23948 88%,
+        transparent
+      );
+      transform:rotate(8deg);
+    }
+
+    .story p{
+      position:relative;
+      margin:0 0 20px;
+      color:var(--gris);
+      font-size:1.04rem;
+      line-height:1.85;
+    }
+
+    .story h2{
+      position:relative;
+      margin:42px 0 18px;
+      color:#ff9aa2;
+      font-size:1.45rem;
+      text-shadow:0 0 12px rgba(225,85,97,.16);
+    }
+
+    .scene-break{
+      width:110px;
+      height:2px;
+      margin:42px auto;
+      background:linear-gradient(90deg, transparent, var(--rouge-clair), transparent);
+      box-shadow:0 0 10px rgba(225,85,97,.35);
+    }
+
+    .dialogue{
+      position:relative;
+      margin:17px 0;
+      padding:14px 18px;
+      border-left:3px solid var(--rouge-clair);
+      border-radius:0 12px 12px 0;
+      background:rgba(169,31,44,.12);
+    }
+
+    .dialogue p{margin:0}
+
+    .speaker{
+      color:#ffabb2;
+      font-weight:800;
+    }
+
+    .breaking{
+      color:#f7d7d9 !important;
+      font-weight:600;
+    }
+
+    .ending{
+      margin-top:36px !important;
+      padding-top:25px;
+      border-top:1px solid rgba(225,85,97,.4);
+      color:#f4aeb4 !important;
+      font-style:italic;
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:2px solid #e15561;
+      border-radius:50%;
+      color:#fff5f5;
+      background:linear-gradient(135deg,#981d29,#3b0c12);
+      cursor:pointer;
+      font-size:1.35rem;
+      box-shadow:0 8px 20px rgba(0,0,0,.5);
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px, calc(100% - 44px));
+      padding:12px;
+      border:1px solid rgba(225,85,97,.7);
+      border-radius:16px;
+      background:#18090c;
+      box-shadow:0 12px 28px rgba(0,0,0,.55);
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(12px);
+      transition:.22s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+
+    .music-panel p{
+      margin:0 0 10px;
+      color:#ffc5c9;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      border:0;
+      border-radius:10px;
+    }
+
+    @media (max-width:560px){
+      .page{width:min(100% - 22px, 920px); padding-top:24px}
+      .hero{padding:28px 18px}
+      .story{padding:23px 19px}
+      .story p{font-size:1rem}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="chapter-number">Prologue — Partie VIII</p>
+      <h1>🕯️ La nuit où Kira fut prise</h1>
+      <p>« Elle se souvient d’avoir été consciente. Elle ne se souvient simplement pas de tout ce qu’elle a vu. »</p>
+    </header>
+
+    <article class="story">
+      <p>Kira monta les escaliers sans réfléchir.</p>
+
+      <p>À chaque étage, les battements devenaient plus clairs. Ceux de Sayuri étaient irréguliers. Ceux de Masato trop rapides. Il y avait aussi deux autres cœurs dans l’appartement, froids et méthodiques, comme s’ils n’avaient jamais eu peur de rien.</p>
+
+      <p>Puis, juste devant la porte, une voix murmura :</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Voix inconnue :</span> — Kira… ne rentre pas.</p>
+      </div>
+
+      <p>Elle se figea.</p>
+
+      <p>La voix était basse. Étrangement proche. Pas tout à fait dans le couloir, pas tout à fait derrière la porte.</p>
+
+      <p>Kira regarda autour d’elle.</p>
+
+      <p>Il n’y avait personne.</p>
+
+      <p>Elle ne sut jamais d’où venait cette voix. D’un voisin ? D’une personne cachée ? De son Alter déjà en train de se briser avec elle ?</p>
+
+      <p>Mais, à l’intérieur, Sayuri étouffa un cri.</p>
+
+      <p>Alors Kira poussa la porte.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Les deux inconnus</h2>
+
+      <p>Le salon n’avait plus rien de familier.</p>
+
+      <p>Masato se tenait près de la fenêtre, le visage fermé. Sayuri était assise sur le canapé, les mains serrées contre elle. Deux hommes se trouvaient entre eux et la porte.</p>
+
+      <p>Lorsque Kira entra, l’un d’eux tourna la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Inconnu :</span> — C’est elle ?</p>
+      </div>
+
+      <p>Masato se plaça aussitôt devant sa fille.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Masato :</span> — Ne vous approchez pas.</p>
+      </div>
+
+      <p>L’homme eut un léger sourire.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Inconnu :</span> — Ton fils nous a parlé de la petite.</p>
+      </div>
+
+      <p>Kira ne comprit pas immédiatement.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Inconnu :</span> — Il a dit qu’elle entendait les gens derrière les murs. Qu’elle retrouvait ce que les autres cachent.</p>
+      </div>
+
+      <p>Le second homme s’accroupit devant elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Second inconnu :</span> — C’est vrai, ça ? Tu nous entends respirer ?</p>
+      </div>
+
+      <p>Kira recula.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Laissez-moi.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Second inconnu :</span> — Oh… elle a peur.</p>
+      </div>
+
+      <p>Il parlait doucement. Presque gentiment. C’était pire.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Second inconnu :</span> — Tu sais ce que ton frère nous doit ? Il nous a laissé entrer ici parce qu’il pensait pouvoir payer autrement.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Arrêtez.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Second inconnu :</span> — Peut-être que tu pourrais l’aider, petite. Tu veux protéger ta famille, non ?</p>
+      </div>
+
+      <p>Kira porta ses mains contre ses oreilles.</p>
+
+      <p>Elle entendait les cœurs de ses parents. Celui de Masato, rapide et furieux. Celui de Sayuri, tremblant. Les deux hommes, eux, étaient calmes. Trop calmes.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je veux rentrer chez moi.</p>
+      </div>
+
+      <p>L’homme devant elle inclina la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Second inconnu :</span> — Mais tu es chez toi.</p>
+      </div>
+
+      <p>Puis il frappa brusquement sa paume contre le mur, juste à côté d’elle.</p>
+
+      <p class="breaking">Le choc résonna dans tout le salon.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Aaah !</p>
+      </div>
+
+      <div class="scene-break"></div>
+
+      <h2>Le noir</h2>
+
+      <p>Elle se souvint du bruit.</p>
+
+      <p>Pas seulement du coup contre le mur.</p>
+
+      <p>Tous les bruits.</p>
+
+      <p>Le parquet qui vibrait sous les chaussures. La vaisselle dans les placards. Les tuyaux dans les murs. Les voisins à l’étage. Les voitures dans la rue. Les cœurs, les respirations, les pensées qu’elle n’entendait pas mais qu’elle croyait entendre quand tout devenait trop fort.</p>
+
+      <p>Puis la douleur.</p>
+
+      <p>Son bras gauche brûla jusqu’à l’épaule. Ses doigts devinrent froids. Ses pupilles se rétractèrent.</p>
+
+      <p>Elle vit Masato courir vers elle.</p>
+      <p>Elle vit Sayuri tendre les bras.</p>
+      <p>Elle vit les inconnus reculer.</p>
+
+      <p>Puis il y eut des images sans ordre.</p>
+
+      <p class="breaking">Un mur qui ondulait.<br>
+      Le sol qui se fendait.<br>
+      Une lampe qui tombait.<br>
+      La voix de sa mère qui criait son prénom.<br>
+      Un homme qui jurait.<br>
+      La poussière.<br>
+      Le vide.</p>
+
+      <p>Kira était consciente.</p>
+
+      <p>Mais son esprit n’arrivait plus à retenir ce qu’il voyait.</p>
+
+      <p>Le choc était trop violent. Son Alter s’était ouvert d’un coup, sans limite, sans filtre, et le monde entier passa à travers elle.</p>
+
+      <p>Pendant quelques minutes, il n’y eut plus que du noir.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Reprendre conscience</h2>
+
+      <p>Lorsqu’elle revint à elle, Kira était à genoux au milieu du salon détruit.</p>
+
+      <p>La poussière collait à ses cheveux et à son visage. Son bras gauche était translucide, traversé de fumée lavande. Sa main tremblait comme si elle ne lui appartenait plus.</p>
+
+      <p>Elle ne comprit pas tout de suite ce qui s’était passé.</p>
+
+      <p>Puis elle chercha les battements de cœur de ses parents.</p>
+
+      <p>Rien.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Maman ?</p>
+      </div>
+
+      <p>Sa voix était presque inaudible.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Papa ?</p>
+      </div>
+
+      <p>Toujours rien.</p>
+
+      <p>Kira se tourna.</p>
+
+      <p>Sous les décombres, elle aperçut Masato et Sayuri. Trop loin. Trop immobiles. Elle voulut ramper jusqu’à eux, poser une main sur leur joue, attraper leurs doigts, leur dire qu’elle était désolée.</p>
+
+      <p>Son bras passa à travers un morceau de mur brisé lorsqu’elle essaya de prendre appui.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Non… non, attendez…</p>
+      </div>
+
+      <p>Elle n’eut pas le temps de les atteindre.</p>
+
+      <p>Une main attrapa brutalement son épaule.</p>
+
+      <p>Kira se retourna, paniquée.</p>
+
+      <p>Les deux hommes étaient encore là.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Inconnu :</span> — On l’emmène.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Non !</p>
+      </div>
+
+      <p>Elle se débattit, tenta de ramper vers ses parents, mais ses jambes tremblaient trop. Elle appelait Sayuri. Elle appelait Masato. Elle répétait qu’elle n’avait pas voulu, qu’elle allait réparer, qu’il suffisait de lui laisser une minute.</p>
+
+      <p>Personne ne répondit.</p>
+
+      <p>Les sirènes commencèrent à retentir au loin.</p>
+
+      <p>Les hommes échangèrent un regard.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Inconnu :</span> — Vite.</p>
+      </div>
+
+      <p>Ils emportèrent Kira avant l’arrivée des autorités.</p>
+
+      <p>Elle entendit la porte de l’appartement se refermer. Les voisins dans le couloir. Les secours qui approchaient. La structure de l’immeuble qui continuait de craquer.</p>
+
+      <p>Puis elle fut entraînée dans l’escalier, loin du salon, loin de ses parents.</p>
+
+      <p>Le badge d’Akari était toujours serré dans sa main.</p>
+
+      <p class="ending">Kira n’eut jamais la chance de leur dire au revoir.</p>
+
+      <p class="ending">Et cette nuit-là, le monde la retint comme responsable avant même qu’elle puisse comprendre qu’elle était aussi une victime.</p>
+    </article>
+  </main>
+
+  <aside class="music-panel" id="musicPanel">
+    <p>🎵 Musique d’ambiance</p>
+    <iframe
+      title="Musique d’ambiance"
+      src="https://www.youtube.com/embed/KTT8TkTa_yc?enablejsapi=1&loop=1&playlist=KTT8TkTa_yc"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </aside>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir la musique">🎵</button>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
