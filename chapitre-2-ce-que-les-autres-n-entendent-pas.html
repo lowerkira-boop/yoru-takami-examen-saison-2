@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ce que les autres n'entendent pas — Mue</title>
+
+  <style>
+    :root {
+      --night: #090d18;
+      --blue: #155b92;
+      --blue-light: #2588c7;
+      --gold: #f4c542;
+      --text: #f5f7ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #12375b 0%, transparent 36%),
+        linear-gradient(180deg, #080d17 0%, #101827 100%);
+    }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 70px;
+    }
+
+    .hero {
+      padding: 34px 28px;
+      text-align: center;
+      background: linear-gradient(135deg, #082743, #1768a1);
+      border: 2px solid var(--gold);
+      border-radius: 18px 18px 0 0;
+    }
+
+    .hero .arc {
+      margin: 0 0 10px;
+      color: #ffe99b;
+      font-weight: 700;
+      letter-spacing: .7px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(27px, 5vw, 42px);
+    }
+
+    .hero .quote {
+      max-width: 650px;
+      margin: 18px auto 0;
+      color: #e8f5ff;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .story {
+      padding: 34px clamp(20px, 5vw, 52px);
+      background: rgba(18, 26, 41, .97);
+      border: 2px solid var(--gold);
+      border-top: 0;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .story h2 {
+      margin: 42px 0 16px;
+      padding: 10px 14px;
+      font-size: 23px;
+      background: linear-gradient(90deg, #0a3157, transparent);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .story h2:first-child { margin-top: 0; }
+
+    .story p { margin: 0 0 20px; }
+
+    .scene-break {
+      width: 95px;
+      height: 2px;
+      margin: 38px auto;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .dialogue {
+      margin: 26px 0;
+      padding: 17px 20px;
+      background: #0b1320;
+      border-left: 4px solid var(--blue-light);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .dialogue p {
+      margin: 0 0 12px;
+      color: #edf7ff;
+      font-style: italic;
+    }
+
+    .dialogue p:last-child { margin-bottom: 0; }
+
+    .speaker {
+      color: #ffe99b;
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .ending {
+      margin-top: 38px;
+      padding: 22px;
+      color: #ffe99b;
+      text-align: center;
+      font-style: italic;
+      background: linear-gradient(135deg, #0a2948, #111726);
+      border: 1px solid rgba(244, 197, 66, .7);
+      border-radius: 12px;
+    }
+
+    .music-button {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 56px;
+      height: 56px;
+      color: white;
+      font-size: 23px;
+      background: linear-gradient(135deg, #0a3157, #2588c7);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 7px 19px rgba(0, 0, 0, .4);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .music-button:hover {
+      transform: scale(1.07);
+      background: var(--gold);
+    }
+
+    .music-panel {
+      position: fixed;
+      right: 22px;
+      bottom: 88px;
+      display: none;
+      width: 280px;
+      padding: 10px;
+      background: #0b1320;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .45);
+      z-index: 10;
+    }
+
+    .music-panel.open { display: block; }
+
+    .music-panel p {
+      margin: 0 0 8px;
+      color: #ffe99b;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .music-panel iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 920px);
+        padding-top: 22px;
+      }
+
+      .story { font-size: 16px; }
+
+      .music-panel {
+        right: 14px;
+        width: min(280px, calc(100% - 28px));
+      }
+
+      .music-button {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="arc">🎬 Arc : Avant Yuei — Prologue</p>
+      <h1>👂 Chapitre II — Ce que les autres n’entendent pas</h1>
+      <p class="quote">« Les battements ne disparurent pas. »</p>
+    </header>
+
+    <article class="story">
+      <h2>Les battements ne disparurent pas</h2>
+
+      <p>Au début, Kira pensait simplement qu’elle avait mal rêvé. Puis elle recommença à les entendre le lendemain, et le jour suivant. Le cœur de Sayuri lorsqu’elle préparait le petit déjeuner. Celui de Masato derrière la porte de la salle de bain. Ceux d’Akari et de Rei, plus rapides lorsqu’ils se disputaient pour une bêtise.</p>
+
+      <p>Elle n’en parlait pas beaucoup.</p>
+
+      <p>Quand elle le faisait, les adultes souriaient doucement, comme si elle inventait une histoire.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — C’est peut-être ton imagination.</p>
+      </div>
+
+      <p>Kira hochait la tête, même si elle savait que ce n’était pas ça.</p>
+
+      <p>Elle entendait aussi les pas dans le couloir de l’immeuble. Les tuyaux qui vibraient dans les murs. Les voisins qui rentraient tard. Une porte qui se fermait trois étages plus bas. Le soir, elle restait parfois assise contre le mur de sa chambre, les mains sur ses oreilles, en attendant que le bruit s’arrête.</p>
+
+      <p>Mais le bruit ne s’arrêtait jamais vraiment.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Le premier rendez-vous</h2>
+
+      <p>Sayuri et Masato finirent par l’emmener chez un médecin spécialisé dans les Alters infantiles.</p>
+
+      <p>Kira n’aimait pas la salle d’attente. Il y avait trop de monde. Trop de respirations différentes. Trop de mouvements. Un petit garçon faisait rebondir sa jambe contre le sol, et chaque coup traversait le banc jusque dans ses pieds.</p>
+
+      <p>Elle se recroquevilla contre Sayuri.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Maman… il fait trop de bruit.</p>
+        <p><span class="speaker">Sayuri :</span> — Je sais, ma chérie. On va bientôt partir.</p>
+      </div>
+
+      <p>Le médecin parla longtemps avec ses parents. Il expliqua que certains Alters sensoriels pouvaient apparaître par étapes, que Kira avait sans doute besoin de repos et d’un environnement calme. Il ne prononça jamais le mot « danger ».</p>
+
+      <p>Personne ne savait encore ce qui allait arriver.</p>
+
+      <p>En sortant du cabinet, Kira serrait la main de Sayuri aussi fort qu’elle pouvait.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je suis malade ?</p>
+      </div>
+
+      <p>Sayuri s’arrêta immédiatement.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Non. Tu n’es pas malade.</p>
+        <p><span class="speaker">Kira :</span> — Alors pourquoi j’entends tout ?</p>
+      </div>
+
+      <p>Sa mère resta silencieuse une seconde, puis s’accroupit devant elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Parce que ton Alter est différent. Et on va apprendre à le comprendre ensemble.</p>
+      </div>
+
+      <p>Kira hocha la tête. Elle essaya de sourire, mais ses doigts ne lâchèrent pas ceux de sa mère.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Akari, la grande héroïne</h2>
+
+      <p>Akari avait alors commencé à parler plus sérieusement de devenir héroïne. Elle regardait les informations avec une attention absolue, collectionnait des cartes de héros et s’entraînait dans le salon jusqu’à ce que Masato lui demande d’arrêter de faire trembler les meubles.</p>
+
+      <p>Quand Kira faisait un cauchemar ou refusait de dormir seule, Akari venait s’asseoir près de son lit.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tu entends encore les murs ?</p>
+        <p><span class="speaker">Kira :</span> — Ils disent rien. Ils font juste du bruit.</p>
+      </div>
+
+      <p>Akari réfléchissait, très concentrée, puis glissait une petite lampe sous la couverture.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Alors regarde la lumière. Pas les murs.</p>
+        <p><span class="speaker">Kira :</span> — Ça marche ?</p>
+        <p><span class="speaker">Akari :</span> — Bien sûr. Je suis une future héroïne, moi.</p>
+      </div>
+
+      <p>Kira se rapprochait d’elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu vas vraiment sauver cent personnes ?</p>
+        <p><span class="speaker">Akari :</span> — Peut-être plus.</p>
+        <p><span class="speaker">Kira :</span> — Et moi ?</p>
+      </div>
+
+      <p>Akari tournait la tête vers elle, surprise.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Toi, je te sauverai toujours.</p>
+      </div>
+
+      <p>Kira ne comprenait pas encore qu’Akari disait cela avec une certitude d’enfant. Une promesse immense, faite sans connaître le prix qu’elle aurait un jour.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Rei, autrement</h2>
+
+      <p>Rei ne parlait pas des peurs de Kira comme Akari.</p>
+
+      <p>Il ne lui demandait pas si ça allait. Il ne promettait rien.</p>
+
+      <p>Mais lorsqu’elle restait trop longtemps seule dans le couloir ou dans le salon, il apparaissait presque toujours avec une excuse ridicule.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Maman a dit de venir manger.</p>
+        <p><span class="speaker">Kira :</span> — Elle a rien dit.</p>
+        <p><span class="speaker">Rei :</span> — Alors c’est moi qui te le dis.</p>
+      </div>
+
+      <p>Ou bien il déposait un casque audio sur son lit, sans un mot.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — C’est à toi ?</p>
+        <p><span class="speaker">Rei :</span> — Non. Mais tu peux l’utiliser.</p>
+        <p><span class="speaker">Kira :</span> — Pourquoi ?</p>
+        <p><span class="speaker">Rei :</span> — Parce que t’arrêtes pas de te boucher les oreilles avec tes mains. C’est stupide.</p>
+        <p><span class="speaker">Kira :</span> — Je suis pas stupide.</p>
+        <p><span class="speaker">Rei :</span> — J’ai pas dit ça.</p>
+      </div>
+
+      <p>Il restait parfois assis près de la porte, dos au mur, pendant qu’elle écoutait de la musique trop doucement pour couvrir les bruits de la maison.</p>
+
+      <p>C’était sa façon de rester.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>La cour de récréation</h2>
+
+      <p>À l’école, Kira restait le petit soleil de la cour.</p>
+
+      <p>Les autres enfants venaient lui parler lorsqu’ils avaient peur, lorsqu’ils avaient perdu quelque chose ou lorsqu’ils ne voulaient pas rentrer seuls dans la classe. Elle partageait ses bonbons, prêtait ses crayons et se mettait devant les plus petits sans réfléchir.</p>
+
+      <p>Mais, certains jours, tout devenait trop fort.</p>
+
+      <p>Un matin, l’alarme incendie se déclencha pendant le cours.</p>
+
+      <p>Le son traversa Kira comme une lame. Les cris de surprise, les chaises qui raclaient le sol, les pas précipités de la classe : tout se mélangea. Elle porta ses mains à ses oreilles et resta bloquée près de sa table, incapable de suivre les autres.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">L’institutrice :</span> — Kira ?</p>
+      </div>
+
+      <p>Elle ne répondit pas.</p>
+
+      <p>Son nez commença à saigner.</p>
+
+      <p>Une camarade, la même petite fille qu’elle avait défendue quelques mois plus tôt, prit timidement sa main.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">La petite élève :</span> — Viens… on doit sortir.</p>
+      </div>
+
+      <p>Kira tremblait tellement qu’elle avait du mal à marcher.</p>
+
+      <p>Dehors, dans la cour, elle ne pleura pas. Elle fixa seulement le bâtiment, les pupilles étrangement étroites, comme si elle écoutait quelque chose à l’intérieur.</p>
+
+      <p>Puis elle murmura :</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il y a quelqu’un qui a peur, là-haut.</p>
+      </div>
+
+      <p>L’institutrice regarda vers l’école.</p>
+
+      <p>Quelques secondes plus tard, un autre élève fut retrouvé caché dans les toilettes, paralysé par l’alarme.</p>
+
+      <div class="ending">
+        Ce jour-là, pour la première fois, les adultes cessèrent de penser que Kira imaginait les choses.<br><br>
+        Et Kira, elle, commença à comprendre qu’entendre les autres n’était peut-être pas toujours un cadeau.
+      </div>
+    </article>
+  </main>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir ou fermer la musique">🎵</button>
+
+  <aside class="music-panel" id="musicPanel">
+    <p>Musique d’ambiance — Chapitre II</p>
+    <iframe
+      title="Musique d’ambiance"
+      src="https://www.youtube.com/embed/t_CfWinEcus?enablejsapi=1&loop=1&playlist=t_CfWinEcus"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+   <iframe
+  title="Musique d’ambiance"
+  src="https://www.youtube.com/embed/u-hJ3plAUuk?enablejsapi=1&loop=1&playlist=u-hJ3plAUuk"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+</iframe>
+  </aside>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
