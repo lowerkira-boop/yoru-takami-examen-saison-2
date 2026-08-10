@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prologue — Partie VII : Le dernier après-midi</title>
+
+  <style>
+    :root{
+      --fond:#090d18;
+      --or:#f4c542;
+      --texte:#f5f7ff;
+      --texte-doux:#cbd5e1;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--texte);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(21,91,146,.24), transparent 34rem),
+        var(--fond);
+    }
+
+    .page{
+      width:min(920px, calc(100% - 32px));
+      margin:auto;
+      padding:56px 0 90px;
+    }
+
+    .hero{
+      padding:34px 28px;
+      text-align:center;
+      border:1px solid rgba(244,197,66,.72);
+      border-radius:20px;
+      background:linear-gradient(135deg, rgba(8,45,85,.95), rgba(16,27,46,.96));
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+
+    .chapter-number{
+      margin:0 0 10px;
+      color:var(--or);
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(2rem, 6vw, 3.7rem);
+      line-height:1.08;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:20px auto 0;
+      color:#f8e9a6;
+      line-height:1.7;
+      font-style:italic;
+    }
+
+    .story{
+      margin-top:24px;
+      padding:clamp(23px, 5vw, 48px);
+      border:1px solid rgba(244,197,66,.38);
+      border-radius:20px;
+      background:rgba(16,22,35,.9);
+      box-shadow:0 12px 25px rgba(0,0,0,.22);
+    }
+
+    .story p{
+      margin:0 0 20px;
+      color:var(--texte-doux);
+      font-size:1.04rem;
+      line-height:1.85;
+    }
+
+    .story h2{
+      margin:42px 0 18px;
+      color:var(--or);
+      font-size:1.45rem;
+    }
+
+    .scene-break{
+      width:90px;
+      height:2px;
+      margin:42px auto;
+      background:linear-gradient(90deg, transparent, var(--or), transparent);
+    }
+
+    .dialogue{
+      margin:17px 0;
+      padding:14px 18px;
+      border-left:3px solid var(--or);
+      border-radius:0 12px 12px 0;
+      background:rgba(21,91,146,.16);
+    }
+
+    .dialogue p{margin:0}
+
+    .speaker{
+      color:#fff1ae;
+      font-weight:800;
+    }
+
+    .ending{
+      margin-top:36px !important;
+      padding-top:25px;
+      border-top:1px solid rgba(244,197,66,.35);
+      color:#f8e9a6 !important;
+      font-style:italic;
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:2px solid var(--or);
+      border-radius:50%;
+      color:#101114;
+      background:linear-gradient(135deg,#ffe27a,#eeb62b);
+      cursor:pointer;
+      font-size:1.35rem;
+      box-shadow:0 8px 20px rgba(0,0,0,.35);
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px, calc(100% - 44px));
+      padding:12px;
+      border:1px solid rgba(244,197,66,.7);
+      border-radius:16px;
+      background:#101622;
+      box-shadow:0 12px 28px rgba(0,0,0,.42);
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(12px);
+      transition:.22s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+
+    .music-panel p{
+      margin:0 0 10px;
+      color:#f8e9a6;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      border:0;
+      border-radius:10px;
+    }
+
+    @media (max-width:560px){
+      .page{width:min(100% - 22px, 920px); padding-top:24px}
+      .hero{padding:28px 18px}
+      .story{padding:23px 19px}
+      .story p{font-size:1rem}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="chapter-number">Prologue — Partie VII</p>
+      <h1>🌱 Le dernier après-midi</h1>
+      <p>« Il y a des jours qui ressemblent à des souvenirs avant même d’être terminés. »</p>
+    </header>
+
+    <article class="story">
+      <p>Les jours suivants, rien n’arriva.</p>
+
+      <p>C’était presque pire.</p>
+
+      <p>Les deux hommes ne reparurent pas devant l’immeuble. Rei ne rentra pas. Masato vérifiait deux fois que la porte était fermée. Sayuri tentait de parler normalement, préparait les repas et demandait à Kira comment s’était passée sa journée, mais son cœur battait trop vite chaque fois que son téléphone vibrait.</p>
+
+      <p>Akari venait plus souvent à la maison entre deux journées de stage.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tout va bien.</p>
+      </div>
+
+      <p>Kira savait qu’elle mentait un peu.</p>
+
+      <p>Mais elle faisait semblant de la croire.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Avec les autres</h2>
+
+      <p>Ce vendredi-là, Kira sortit du collège avec quelques amies. Le soleil était encore haut, les rues semblaient tranquilles et personne ne parlait de cours, de héros ou de problèmes d’Alter.</p>
+
+      <p>Elles s’installèrent dans un petit parc près de l’école, avec des boissons trop sucrées et des paquets de biscuits qu’elles avaient achetés au distributeur du coin.</p>
+
+      <p>Kira riait.</p>
+
+      <p>Vraiment.</p>
+
+      <p>Elle se moqua d’une amie qui avait oublié son devoir de mathématiques, tira légèrement la langue lorsqu’une autre tenta de lui voler son goûter, puis resta assise dans l’herbe à écouter les conversations autour d’elle.</p>
+
+      <p>Les battements de cœur étaient là. Les pas aussi.</p>
+
+      <p>Mais, pour une fois, ils ne lui faisaient pas peur.</p>
+
+      <p>Près du banc, une petite plante avait été écrasée par quelqu’un. Sa tige était pliée, ses feuilles couvertes de terre. L’une des filles la regarda avec une grimace.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Amie :</span> — Elle est morte, celle-là. Faudrait juste l’enlever.</p>
+      </div>
+
+      <p>Kira se pencha doucement. Elle redressa la tige avec précaution, repoussa la terre autour de ses racines et sortit une petite bouteille d’eau de son sac.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Peut-être pas.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Amie :</span> — Kira, elle est toute cassée.</p>
+      </div>
+
+      <p>La jeune fille resta silencieuse un instant. Puis elle versa quelques gouttes d’eau sur la terre.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Continuer de raviver un cœur mort, c’est important, je pense.</p>
+      </div>
+
+      <p>Ses amies la regardèrent, surprises par le sérieux soudain de sa voix.</p>
+
+      <p>Kira haussa légèrement les épaules.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Et puis… même si quelque chose est cassé, ça ne veut pas forcément dire qu’il faut le jeter.</p>
+      </div>
+
+      <p>Personne ne trouva vraiment quoi répondre.</p>
+
+      <p>Alors une de ses amies lui sourit et s’accroupit près d’elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Amie :</span> — D’accord. Alors on va l’aider.</p>
+      </div>
+
+      <p>Pendant quelques minutes, elles furent toutes les quatre autour de cette petite plante abîmée, à lui faire de l’ombre avec leurs mains et à promettre de revenir vérifier si elle tenait encore debout.</p>
+
+      <p>Kira les regarda rire.</p>
+
+      <p>Elle aurait voulu que ce moment dure longtemps.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Le chemin du retour</h2>
+
+      <p>En rentrant, elle passa devant une vitrine et aperçut son propre reflet.</p>
+
+      <p>Ses cheveux étaient un peu désordonnés. Son sac glissait de son épaule. Elle avait encore du sucre au coin des lèvres, et le petit badge qu’elle avait fabriqué avec Akari dépassait légèrement de la poche intérieure de sa veste.</p>
+
+      <p>Kira le remit correctement en place.</p>
+
+      <p>Puis elle reprit son chemin.</p>
+
+      <p>À mesure qu’elle approchait de l’immeuble, son sourire disparut.</p>
+
+      <p>Quelque chose n’allait pas.</p>
+
+      <p>La rue était trop calme.</p>
+
+      <p>Pas silencieuse — Kira savait que le silence n’existait jamais vraiment — mais étrangement vide. Les pas des voisins avaient disparu. Les voix derrière les fenêtres s’étaient tues. Même les vibrations habituelles du bâtiment semblaient retenues.</p>
+
+      <p>Elle s’arrêta devant la porte de l’immeuble.</p>
+
+      <p>Son cœur se mit à battre plus vite.</p>
+
+      <p>Sous ses doigts, le badge d’Akari trembla légèrement.</p>
+
+      <p>Puis elle entendit quelque chose à l’étage.</p>
+
+      <p>Un choc.</p>
+
+      <p>Une respiration coupée.</p>
+
+      <p>Et une voix qu’elle connaissait.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Voix inconnue :</span> — Kira… ne rentre pas.</p>
+      </div>
+
+      <p class="ending">Mais il était déjà trop tard.</p>
+    </article>
+  </main>
+
+  <aside class="music-panel" id="musicPanel">
+    <p>🎵 Musique d’ambiance</p>
+    <iframe
+      title="Musique d’ambiance"
+      src="https://www.youtube.com/embed/lr3G4zTyP50?enablejsapi=1&loop=1&playlist=lr3G4zTyP50"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </aside>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir la musique">🎵</button>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
