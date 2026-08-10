@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partie X — La dernière personne à l’appeler Kira</title>
+
+  <style>
+    :root{
+      --bleu:#162230;
+      --bleu-doux:#91a9c3;
+      --violet:#bd78ff;
+      --violet-clair:#e5caff;
+      --texte:#f4f5f7;
+      --texte-doux:#c5cbd1;
+    }
+
+    *{box-sizing:border-box;}
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0;
+      color:var(--texte);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:#101821;
+      overflow-x:hidden;
+    }
+
+    .page{
+      width:min(920px,92%);
+      margin:0 auto;
+      padding:55px 0 0;
+    }
+
+    .hero{
+      padding:43px 30px 37px;
+      text-align:center;
+      border:1px solid rgba(154,183,211,.4);
+      border-radius:22px 22px 0 0;
+      background:
+        radial-gradient(circle at 50% -20%,rgba(117,157,192,.24),transparent 31rem),
+        linear-gradient(135deg,#182836,#0c121a);
+      box-shadow:0 18px 46px rgba(0,0,0,.34);
+    }
+
+    .chapter-number{
+      margin:0 0 11px;
+      color:var(--bleu-doux);
+      font-size:.82rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,6vw,3.35rem);
+      text-shadow:0 0 22px rgba(163,198,228,.18);
+    }
+
+    .quote{
+      max-width:690px;
+      margin:21px auto 0;
+      color:#cdd8e2;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.05rem;
+      font-style:italic;
+      line-height:1.65;
+    }
+
+    .story-section{
+      margin:0;
+      padding:clamp(28px,5vw,50px);
+      border-left:1px solid rgba(180,194,206,.18);
+      border-right:1px solid rgba(180,194,206,.18);
+      transition:background .6s ease;
+    }
+
+    .section-one{
+      background:
+        linear-gradient(180deg,#111b26,#0d141c);
+    }
+
+    .section-two{
+      background:
+        linear-gradient(180deg,#0d141c,#090c12);
+    }
+
+    .section-three{
+      background:
+        radial-gradient(circle at 50% 0%,rgba(85,54,108,.1),transparent 27rem),
+        linear-gradient(180deg,#090c12,#040406);
+    }
+
+    .section-final{
+      min-height:72vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      border:0;
+      background:#000;
+      box-shadow:0 -20px 42px rgba(0,0,0,.58);
+    }
+
+    p{
+      margin:0 0 20px;
+      color:var(--texte);
+      font-size:1.03rem;
+      line-height:1.9;
+    }
+
+    h2{
+      margin:47px 0 23px;
+      padding-left:16px;
+      color:#c9d8e5;
+      border-left:3px solid #7f9ab2;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.5rem;
+    }
+
+    .section-three h2{
+      color:#d8bfed;
+      border-left-color:#9c6ec1;
+      text-shadow:0 0 14px rgba(165,100,211,.15);
+    }
+
+    .dialogue{
+      margin:20px 0;
+      padding:14px 18px;
+      border-left:2px solid rgba(145,169,195,.7);
+      border-radius:0 10px 10px 0;
+      background:rgba(136,163,187,.07);
+    }
+
+    .section-three .dialogue{
+      border-left-color:rgba(173,113,218,.72);
+      background:rgba(116,59,151,.08);
+    }
+
+    .dialogue p{
+      margin:0;
+      color:#edf0f2;
+      line-height:1.75;
+    }
+
+    .speaker{
+      color:#b9d0e6;
+      font-weight:700;
+    }
+
+    .section-three .speaker{
+      color:#e2c7ff;
+    }
+
+    .fragments{
+      margin:26px 0;
+      padding:22px;
+      border:1px solid rgba(177,194,210,.18);
+      border-radius:13px;
+      color:#d9e1e8;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.06rem;
+      font-style:italic;
+      line-height:1.88;
+      background:rgba(135,155,175,.045);
+    }
+
+    .final-intro{
+      max-width:680px;
+      margin:0 auto 38px;
+      color:#85808d;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.04rem;
+      font-style:italic;
+      line-height:1.9;
+      text-align:center;
+    }
+
+    .neon-quote{
+      max-width:760px;
+      margin:0 auto;
+      color:var(--violet-clair);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.55rem,4vw,2.35rem);
+      font-style:italic;
+      line-height:1.55;
+      text-align:center;
+      text-shadow:
+        0 0 5px rgba(213,165,255,.95),
+        0 0 17px rgba(171,82,255,.65),
+        0 0 43px rgba(128,30,217,.45);
+    }
+
+    .neon-quote strong{
+      display:block;
+      margin-top:13px;
+      color:#dca6ff;
+      font-size:1.18em;
+      font-style:normal;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .final-line{
+      margin:52px auto 0;
+      color:#6a596f;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1rem;
+      font-style:italic;
+      line-height:1.8;
+      text-align:center;
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:1px solid rgba(210,180,242,.65);
+      border-radius:50%;
+      color:#fff;
+      background:linear-gradient(135deg,#46265f,#100a16);
+      box-shadow:0 8px 22px rgba(0,0,0,.52);
+      cursor:pointer;
+      font-size:1.35rem;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+
+    .music-button:hover{
+      transform:translateY(-3px) scale(1.04);
+      box-shadow:0 12px 29px rgba(0,0,0,.7);
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px,calc(100vw - 44px));
+      padding:12px;
+      border:1px solid rgba(211,179,243,.38);
+      border-radius:14px;
+      background:rgba(4,3,6,.96);
+      box-shadow:0 15px 35px rgba(0,0,0,.6);
+      opacity:0;
+      transform:translateY(12px);
+      pointer-events:none;
+      transition:.25s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+
+    .music-panel p{
+      margin:0 0 9px;
+      color:#dec8f4;
+      font-size:.82rem;
+      line-height:1.35;
+      text-align:center;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16 / 9;
+      border:0;
+      border-radius:8px;
+    }
+
+    @media (max-width:600px){
+      .page{padding-top:28px;}
+      .hero{padding:34px 20px 29px;}
+      .story-section{padding:27px 20px;}
+      p{font-size:1rem;line-height:1.82;}
+      h2{font-size:1.32rem;}
+      .section-final{min-height:62vh;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="chapter-number">📖 Partie X</p>
+      <h1>La dernière personne à l’appeler Kira</h1>
+      <p class="quote">« Certains prénoms deviennent trop lourds à porter lorsqu’ils sont les derniers liens avec les personnes qu’on a perdues. »</p>
+    </header>
+
+    <section class="story-section section-one">
+      <p>Plus d’un an passa après la destruction de la base.</p>
+
+      <p>Kira survécut comme elle pouvait : une nuit dans un bâtiment vide, une autre sur le toit d’un immeuble, parfois dans un tunnel de maintenance où personne ne pensait à regarder. Elle ne cherchait pas à voler ou à faire du mal.</p>
+
+      <p>Elle cherchait seulement des endroits où les cœurs battaient assez loin d’elle.</p>
+
+      <p>Mais Akari ne s’était jamais arrêtée de chercher.</p>
+
+      <p>Elle suivait les rumeurs : une enfant aux yeux ambrés aperçue près d’une planque abandonnée, des murs fissurés sans raison, une silhouette trop petite qui disparaissait à travers une porte fermée.</p>
+
+      <p>Un soir, elle la trouva.</p>
+
+      <p>Kira était assise dans l’ossature vide d’un ancien immeuble. Son bras violet reposait contre son genou, partiellement translucide. Elle tenait toujours le petit badge entre ses doigts.</p>
+
+      <p>Akari s’arrêta à plusieurs mètres.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Kira.</p>
+      </div>
+
+      <p>La fillette releva la tête d’un coup.</p>
+
+      <p>Personne ne l’appelait plus ainsi.</p>
+
+      <p>Pendant quelques secondes, elle ne bougea pas. Puis elle recula contre le mur, comme un animal acculé.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Non…</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — C’est moi. C’est Akari.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu devrais pas être là.</p>
+      </div>
+
+      <p>Akari s’agenouilla, sans chercher à l’approcher davantage.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Je sais.</p>
+      </div>
+
+      <p>Sa voix tremblait malgré elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Je t’ai cherchée partout.</p>
+      </div>
+
+      <p>Kira baissa les yeux vers son badge.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Ils sont morts.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Je sais.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Rei a ouvert la porte.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Je sais.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Et moi, j’ai tout détruit.</p>
+      </div>
+
+      <p>Akari prit une inspiration difficile.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tu étais une enfant. Ce qu’ils t’ont fait n’est pas ta faute.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Si. Tout casse quand je suis là.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Non. Tu as été blessée. Ce n’est pas pareil.</p>
+      </div>
+
+      <p>Le silence se posa entre elles.</p>
+
+      <p>Puis Kira tendit le badge vers sa sœur, sans vraiment oser la regarder.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je l’ai gardé.</p>
+      </div>
+
+      <p>Akari sourit à travers ses larmes.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Je savais que tu le ferais.</p>
+      </div>
+    </section>
+
+    <section class="story-section section-two">
+      <p>Elle fit un pas.</p>
+
+      <p>Kira n’eut pas le temps de répondre.</p>
+
+      <p>Son Alter détecta les présences avant que les bruits de pas n’arrivent jusqu’à elles.</p>
+
+      <div class="fragments">
+        Trois battements derrière.<br>
+        Deux au-dessus.<br>
+        Des armes.<br>
+        De la colère.
+      </div>
+
+      <p>Les survivants du réseau yakuza l’avaient retrouvée.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Akari… pars.</p>
+      </div>
+
+      <p>Mais Akari se plaça devant elle.</p>
+
+      <p>Comme lorsqu’elle était enfant.</p>
+
+      <p>Comme si rien n’avait changé.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Cette fois, c’est moi qui te couvre.</p>
+      </div>
+
+      <p>Kira voulut protester. Sa gorge resta bloquée.</p>
+
+      <p>Tout alla trop vite ensuite : un mur qui éclata, la poussière, les battements cardiaques affolés, Akari qui repoussait Kira vers une ouverture dans le bâtiment.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Cours !</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je veux pas te laisser !</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Kira, cours !</p>
+      </div>
+
+      <p>Kira s’enfuit.</p>
+
+      <p>Pas parce qu’elle le voulait.</p>
+
+      <p>Parce qu’Akari le lui avait demandé.</p>
+    </section>
+
+    <section class="story-section section-three">
+      <p>Elle traversa un mur instable, tomba de l’autre côté et continua à courir jusqu’à ne plus entendre que son propre cœur.</p>
+
+      <p>Quand elle revint, il n’y avait plus personne à sauver.</p>
+
+      <p>Seulement le badge, tombé dans la poussière.</p>
+
+      <p>Et le silence.</p>
+
+      <p>Ce soir-là, Kira comprit qu’elle ne pouvait plus porter ce prénom sans avoir l’impression d’étouffer.</p>
+
+      <p>Elle glissa le badge contre sa poitrine, puis murmura, pour la première fois :</p>
+    </section>
+
+    <section class="story-section section-final">
+      <p class="final-intro">Il n’y avait plus de lumière dans le bâtiment.<br>Plus de voix pour répondre à la sienne.</p>
+
+      <p class="neon-quote">
+        « Kira est restée avec elle.<br>
+        Moi… je m’appelle
+        <strong>Mue.</strong> »
+      </p>
+
+      <p class="final-line">C’est ainsi que disparut Kira Hebinuma.<br>Et que commença l’histoire de Mue.</p>
+    </section>
+  </main>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir la musique">🎵</button>
+
+  <div class="music-panel" id="musicPanel">
+    <p>Musique d’ambiance — active-la si tu veux lire avec.</p>
+    <iframe
+      src="https://www.youtube.com/embed/y2wpTynM6-k?enablejsapi=1&loop=1&playlist=y2wpTynM6-k"
+      title="Musique d’ambiance"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
