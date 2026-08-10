@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prologue — Partie V : L’agence au bout de la rue</title>
+
+  <style>
+    :root{
+      --fond:#090d18;
+      --bleu:#155b92;
+      --bleu-clair:#2588c7;
+      --or:#f4c542;
+      --texte:#f5f7ff;
+      --texte-doux:#cbd5e1;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--texte);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(21,91,146,.24), transparent 34rem),
+        var(--fond);
+    }
+
+    .page{
+      width:min(920px, calc(100% - 32px));
+      margin:auto;
+      padding:56px 0 90px;
+    }
+
+    .hero{
+      padding:34px 28px;
+      text-align:center;
+      border:1px solid rgba(244,197,66,.72);
+      border-radius:20px;
+      background:linear-gradient(135deg, rgba(8,45,85,.95), rgba(16,27,46,.96));
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+
+    .chapter-number{
+      margin:0 0 10px;
+      color:var(--or);
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(2rem, 6vw, 3.7rem);
+      line-height:1.08;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:20px auto 0;
+      color:#f8e9a6;
+      line-height:1.7;
+      font-style:italic;
+    }
+
+    .story{
+      margin-top:24px;
+      padding:clamp(23px, 5vw, 48px);
+      border:1px solid rgba(244,197,66,.38);
+      border-radius:20px;
+      background:rgba(16,22,35,.9);
+      box-shadow:0 12px 25px rgba(0,0,0,.22);
+    }
+
+    .story p{
+      margin:0 0 20px;
+      color:var(--texte-doux);
+      font-size:1.04rem;
+      line-height:1.85;
+    }
+
+    .story h2{
+      margin:42px 0 18px;
+      color:var(--or);
+      font-size:1.45rem;
+    }
+
+    .scene-break{
+      width:90px;
+      height:2px;
+      margin:42px auto;
+      background:linear-gradient(90deg, transparent, var(--or), transparent);
+    }
+
+    .dialogue{
+      margin:17px 0;
+      padding:14px 18px;
+      border-left:3px solid var(--or);
+      border-radius:0 12px 12px 0;
+      background:rgba(37,136,199,.09);
+    }
+
+    .dialogue p{margin:0}
+
+    .speaker{
+      color:#fff1ae;
+      font-weight:800;
+    }
+
+    .ending{
+      margin-top:36px !important;
+      padding-top:25px;
+      border-top:1px solid rgba(244,197,66,.35);
+      color:#f8e9a6 !important;
+      font-style:italic;
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:2px solid var(--or);
+      border-radius:50%;
+      color:#101114;
+      background:linear-gradient(135deg,#ffe27a,#eeb62b);
+      cursor:pointer;
+      font-size:1.35rem;
+      box-shadow:0 8px 20px rgba(0,0,0,.35);
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px, calc(100% - 44px));
+      padding:12px;
+      border:1px solid rgba(244,197,66,.7);
+      border-radius:16px;
+      background:#101622;
+      box-shadow:0 12px 28px rgba(0,0,0,.42);
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(12px);
+      transition:.22s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+
+    .music-panel p{
+      margin:0 0 10px;
+      color:#f8e9a6;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      border:0;
+      border-radius:10px;
+    }
+
+    @media (max-width:560px){
+      .page{width:min(100% - 22px, 920px); padding-top:24px}
+      .hero{padding:28px 18px}
+      .story{padding:23px 19px}
+      .story p{font-size:1rem}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="hero">
+      <p class="chapter-number">Prologue — Partie V</p>
+      <h1>🐉 L’agence au bout de la rue</h1>
+      <p>« Certaines rencontres ne changent rien sur le moment. Elles attendent simplement des années avant de prendre tout leur sens. »</p>
+    </header>
+
+    <article class="story">
+
+      <p>Akari avait fini par intégrer un lycée héroïque.</p>
+
+      <p>Elle rentrait moins souvent à la maison, noyée sous les cours, les entraînements et les premiers exercices sur le terrain. Pourtant, dès qu’elle le pouvait, elle retrouvait Kira dans sa chambre ou sur le balcon, toujours avec le même sourire fatigué mais lumineux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — J’ai été acceptée en stage, annonça-t-elle un soir.</p>
+      </div>
+
+      <p>Kira releva brusquement la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Avec qui ?</p>
+      </div>
+
+      <p>Akari essaya de prendre un air détaché.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — L’agence de Ryukyu.</p>
+      </div>
+
+      <p>Kira resta silencieuse une seconde.</p>
+
+      <p>Puis elle se jeta sur elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je le savais ! Je savais que t’allais y arriver !</p>
+      </div>
+
+      <p>Akari rit en la rattrapant de justesse.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Doucement, le soleil.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu vas la revoir ! Et tu vas apprendre avec elle ! Et après tu vas devenir une héroïne encore plus forte !</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — C’est le plan.</p>
+      </div>
+
+      <p>Rei n’était pas là pour l’entendre.</p>
+
+      <p>Depuis plusieurs semaines, il ne rentrait presque plus. Il envoyait parfois un message bref à Sayuri, répondait rarement aux appels et trouvait toujours une excuse lorsqu’Akari demandait à le voir.</p>
+
+      <p>Kira avait cessé de demander où il était.</p>
+
+      <p>Elle entendait seulement son absence.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Le badge</h2>
+
+      <p>La veille du premier jour de stage, Akari posa son uniforme sur son lit et vérifia trois fois qu’elle n’avait rien oublié.</p>
+
+      <p>Kira l’observait depuis le sol, entourée de feuilles, de feutres et de petites perles dorées.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tu fais quoi ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Un nouveau badge.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Le premier est encore très bien.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il est tordu.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — C’est son charme.</p>
+      </div>
+
+      <p>Kira prit un air sérieux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Celui-là sera mieux.</p>
+      </div>
+
+      <p>Elles passèrent la soirée à le fabriquer ensemble. Kira dessina un serpent doré, plus propre que le premier, enroulé autour d’une petite silhouette bleue. Akari ajouta au-dessus une aile immense, puis une étoile minuscule.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — C’est Ryukyu ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Peut-être.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Et le serpent, c’est moi ?</p>
+      </div>
+
+      <p>Akari s’arrêta.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Oui.</p>
+      </div>
+
+      <p>Kira baissa les yeux vers le dessin.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Mais je suis pas forte.</p>
+      </div>
+
+      <p>Akari posa doucement sa main sur la sienne.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tu n’as pas besoin d’être forte comme moi.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Alors comment ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tu es forte comme Kira.</p>
+      </div>
+
+      <p>Elle fixa le badge à l’intérieur de sa veste, juste au-dessus de son cœur.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Voilà. Maintenant, je peux y aller.</p>
+      </div>
+
+      <div class="scene-break"></div>
+
+      <h2>Une visite imprévue</h2>
+
+      <p>Quelques jours plus tard, Kira sortit du collège avec son sac sur une épaule et son casque autour du cou.</p>
+
+      <p>Elle devait rentrer directement à la maison. Sayuri lui avait laissé un message : n’oublie pas de manger quelque chose, Akari rentrera tard.</p>
+
+      <p>Mais Kira connaissait l’adresse de l’agence de Ryukyu.</p>
+
+      <p>Elle avait regardé le trajet sur son téléphone plusieurs fois. Ce n’était pas très loin. Seulement quelques rues, puis une grande avenue. Elle voulait juste voir le bâtiment. Peut-être apercevoir Akari derrière une fenêtre. Peut-être lui faire une surprise.</p>
+
+      <p>Elle ne réfléchit pas plus longtemps.</p>
+
+      <p>À l’accueil, la réceptionniste lui demanda son nom.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Kira Hebinuma.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Réceptionniste :</span> — Tu as rendez-vous ?</p>
+      </div>
+
+      <p>Kira hésita.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Non… mais ma sœur travaille ici. Enfin, elle est en stage.</p>
+      </div>
+
+      <p>La réceptionniste consulta quelque chose sur son écran.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Réceptionniste :</span> — Akari Hebinuma ?</p>
+      </div>
+
+      <p>Kira hocha la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Réceptionniste :</span> — Je vais lui dire que tu es là.</p>
+      </div>
+
+      <p>Kira resta debout près du mur, les doigts serrés autour de la lanière de son sac. Le bâtiment était immense. Trop calme en apparence, mais rempli de vibrations : des gens s’entraînaient à l’étage, quelqu’un courait dans un couloir, un ascenseur montait lentement derrière elle.</p>
+
+      <p>Puis elle sentit une présence différente.</p>
+
+      <p>Lourde. Stable. Impossible à ignorer.</p>
+
+      <p>Elle leva les yeux.</p>
+
+      <p>Ryukyu avançait dans le hall.</p>
+
+      <p>Kira se figea.</p>
+
+      <p>Elle l’avait déjà vue de loin, mais jamais d’aussi près. Sans sa forme de dragon, Ryukyu paraissait toujours aussi imposante. Pourtant, elle ne dégageait pas la même sensation que les gens pressés autour d’elle. Son cœur battait calmement.</p>
+
+      <p>Elle ne faisait pas peur.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Ryukyu :</span> — Tu es perdue ?</p>
+      </div>
+
+      <p>Kira secoua vite la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Non. J’attends Akari.</p>
+      </div>
+
+      <p>Ryukyu s’arrêta.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Ryukyu :</span> — Akari Hebinuma ?</p>
+      </div>
+
+      <p>Kira hocha la tête une nouvelle fois.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — C’est ma sœur.</p>
+      </div>
+
+      <p>Avant que Ryukyu puisse répondre, Akari surgit au bout du couloir, encore en tenue d’entraînement.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Kira ?!</p>
+      </div>
+
+      <p>Elle s’arrêta devant elle, surprise et essoufflée.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Qu’est-ce que tu fais ici ? Tu devais rentrer.</p>
+      </div>
+
+      <p>Kira baissa un peu la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je voulais voir où tu travaillais.</p>
+      </div>
+
+      <p>Akari voulut répondre quelque chose, puis remarqua le sac de collège, le casque autour du cou et l’air nerveux de sa petite sœur.</p>
+
+      <p>Son expression se radoucit aussitôt.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Tu aurais pu me prévenir.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je voulais te faire une surprise.</p>
+      </div>
+
+      <p>Ryukyu observa la scène sans intervenir.</p>
+
+      <p>Puis, presque distraite, Kira murmura :</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il y a sept personnes dans la salle derrière vous.</p>
+      </div>
+
+      <p>Akari cligna des yeux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Quoi ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Six sont calmes. Une personne a mal au bras.</p>
+      </div>
+
+      <p>Ryukyu tourna légèrement la tête vers la porte fermée du couloir. Quelques secondes plus tard, une stagiaire sortit, une main serrée contre son épaule après un entraînement mal maîtrisé.</p>
+
+      <p>Akari regarda Kira, puis Ryukyu.</p>
+
+      <p>Personne ne parla pendant un instant.</p>
+
+      <p>Ryukyu s’accroupit légèrement devant Kira.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Ryukyu :</span> — Ton Alter est sensoriel ?</p>
+      </div>
+
+      <p>Kira ne répondit pas tout de suite.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il est trop bruyant.</p>
+      </div>
+
+      <p>La voix de Ryukyu resta calme.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Ryukyu :</span> — Je comprends.</p>
+      </div>
+
+      <p>Ce n’était pas vrai, pas entièrement. Personne ne pouvait réellement comprendre ce que Kira entendait.</p>
+
+      <p>Mais Ryukyu ne lui demanda pas de faire une démonstration. Elle ne lui demanda pas d’être utile. Elle ne lui demanda pas pourquoi elle avait l’air si fatiguée.</p>
+
+      <p>Elle se contenta de dire :</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Ryukyu :</span> — Tu peux attendre ta sœur dans une salle plus tranquille, si tu veux.</p>
+      </div>
+
+      <p>Kira releva les yeux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — D’accord.</p>
+      </div>
+
+      <p>Akari sourit légèrement, soulagée.</p>
+
+      <p class="ending">Ce jour-là, Ryukyu retint le nom de Kira Hebinuma.</p>
+
+      <p class="ending">Et Kira retint que, dans l’agence de sa sœur, il existait au moins une personne qui savait se taire quand le monde faisait déjà trop de bruit.</p>
+
+    </article>
+  </main>
+
+  <aside class="music-panel" id="musicPanel">
+    <p>🎵 Musique d’ambiance</p>
+    <iframe
+      title="Musique d’ambiance"
+      src="https://www.youtube.com/embed/qSNi0kYQH8Q?enablejsapi=1&loop=1&playlist=qSNi0kYQH8Q"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </aside>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir la musique">🎵</button>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
