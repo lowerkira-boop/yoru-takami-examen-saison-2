@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prologue — Partie VI : La porte restée ouverte</title>
+
+  <style>
+    :root{
+      --fond:#090d18;
+      --bleu:#155b92;
+      --or:#f4c542;
+      --texte:#f5f7ff;
+      --texte-doux:#cbd5e1;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--texte);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(21,91,146,.24), transparent 34rem),
+        var(--fond);
+    }
+
+    .page{
+      width:min(920px, calc(100% - 32px));
+      margin:auto;
+      padding:56px 0 90px;
+    }
+
+    .hero{
+      padding:34px 28px;
+      text-align:center;
+      border:1px solid rgba(244,197,66,.72);
+      border-radius:20px;
+      background:linear-gradient(135deg, rgba(8,45,85,.95), rgba(16,27,46,.96));
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+
+    .chapter-number{
+      margin:0 0 10px;
+      color:var(--or);
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(2rem, 6vw, 3.7rem);
+      line-height:1.08;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:20px auto 0;
+      color:#f8e9a6;
+      line-height:1.7;
+      font-style:italic;
+    }
+
+    .story{
+      margin-top:24px;
+      padding:clamp(23px, 5vw, 48px);
+      border:1px solid rgba(244,197,66,.38);
+      border-radius:20px;
+      background:rgba(16,22,35,.9);
+      box-shadow:0 12px 25px rgba(0,0,0,.22);
+    }
+
+    .story p{
+      margin:0 0 20px;
+      color:var(--texte-doux);
+      font-size:1.04rem;
+      line-height:1.85;
+    }
+
+    .story h2{
+      margin:42px 0 18px;
+      color:var(--or);
+      font-size:1.45rem;
+    }
+
+    .scene-break{
+      width:90px;
+      height:2px;
+      margin:42px auto;
+      background:linear-gradient(90deg, transparent, var(--or), transparent);
+    }
+
+    .dialogue{
+      margin:17px 0;
+      padding:14px 18px;
+      border-left:3px solid var(--or);
+      border-radius:0 12px 12px 0;
+      background:rgba(21,91,146,.16);
+    }
+
+    .dialogue p{margin:0}
+
+    .speaker{
+      color:#fff1ae;
+      font-weight:800;
+    }
+
+    .ending{
+      margin-top:36px !important;
+      padding-top:25px;
+      border-top:1px solid rgba(244,197,66,.35);
+      color:#f8e9a6 !important;
+      font-style:italic;
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:2px solid var(--or);
+      border-radius:50%;
+      color:#101114;
+      background:linear-gradient(135deg,#ffe27a,#eeb62b);
+      cursor:pointer;
+      font-size:1.35rem;
+      box-shadow:0 8px 20px rgba(0,0,0,.35);
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px, calc(100% - 44px));
+      padding:12px;
+      border:1px solid rgba(244,197,66,.7);
+      border-radius:16px;
+      background:#101622;
+      box-shadow:0 12px 28px rgba(0,0,0,.42);
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(12px);
+      transition:.22s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+
+    .music-panel p{
+      margin:0 0 10px;
+      color:#f8e9a6;
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      border:0;
+      border-radius:10px;
+    }
+
+    @media (max-width:560px){
+      .page{width:min(100% - 22px, 920px); padding-top:24px}
+      .hero{padding:28px 18px}
+      .story{padding:23px 19px}
+      .story p{font-size:1rem}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="chapter-number">Prologue — Partie VI</p>
+      <h1>🚪 La porte restée ouverte</h1>
+      <p>« Les catastrophes ne commencent pas toujours par un cri. Parfois, elles entrent simplement par la porte d’entrée. »</p>
+    </header>
+
+    <article class="story">
+      <p>Kira avait onze ans lorsque la maison commença à changer.</p>
+
+      <p>Elle entendait toujours les murs, les voisins et les battements de cœur. Mais, désormais, elle entendait surtout les silences. Ceux de Sayuri lorsqu’elle regardait son téléphone. Ceux de Masato lorsqu’il rentrait du travail et remarquait que Rei n’avait pas dormi à la maison. Ceux d’Akari lorsqu’elle demandait à son frère où il était, sans recevoir de réponse.</p>
+
+      <p>Rei n’était plus vraiment là.</p>
+
+      <p>Parfois, il rentrait au milieu de la nuit. Parfois, il ne revenait pas pendant plusieurs jours. Il avait grandi trop vite, portait des vêtements qu’aucun de ses parents ne lui avait achetés et gardait constamment les mains dans les poches.</p>
+
+      <p>Kira entendait son cœur battre avant même qu’il ouvre la porte.</p>
+
+      <p>Toujours trop vite.</p>
+
+      <p>Toujours comme s’il courait encore.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Une blessure qu’il ne montre pas</h2>
+
+      <p>Un soir, Kira se réveilla en entendant la serrure tourner.</p>
+
+      <p>Elle descendit sans faire de bruit, son pyjama trop grand glissant sur ses épaules. Dans l’entrée, Rei était appuyé contre le mur. Une tache sombre s’étalait sur la manche de sa veste.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Rei ?</p>
+      </div>
+
+      <p>Il sursauta.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Pourquoi t’es réveillée ?</p>
+      </div>
+
+      <p>Kira s’approcha, les yeux fixés sur son bras.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu saignes.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — C’est rien.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Ton cœur fait peur.</p>
+      </div>
+
+      <p>Rei resta silencieux.</p>
+
+      <p>À la cuisine, il passa son bras sous l’eau sans regarder Kira. Elle resta près de la porte, incapable de partir.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — T’as été attaqué ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Non.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu mens.</p>
+      </div>
+
+      <p>Rei ferma les yeux un instant.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Kira… retourne te coucher.</p>
+      </div>
+
+      <p>Elle ne bougea pas.</p>
+
+      <p>Alors il soupira et ouvrit le placard où Sayuri rangeait la trousse de secours. Ses doigts tremblaient légèrement lorsqu’il chercha des compresses.</p>
+
+      <p>Kira finit par s’approcher.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je peux aider.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Non.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je peux tenir le bandage.</p>
+      </div>
+
+      <p>Rei allait refuser. Puis il la regarda. Vraiment.</p>
+
+      <p>Elle était encore petite. Trop petite pour comprendre les gens qu’il fréquentait, les dettes qu’il avait accumulées ou les promesses qu’il avait faites à de mauvaises personnes.</p>
+
+      <p>Il lui tendit le bandage.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Tiens.</p>
+      </div>
+
+      <p>Kira le serra autour de son bras avec une concentration absolue.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Ça fait mal ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Un peu.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Alors arrête.</p>
+      </div>
+
+      <p>Rei eut un rire bref, presque triste.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Si seulement c’était aussi simple.</p>
+      </div>
+
+      <div class="scene-break"></div>
+
+      <h2>Ce que les parents ne disent pas</h2>
+
+      <p>Le lendemain, Sayuri trouva la veste tachée dans l’entrée.</p>
+
+      <p>La dispute commença bas. Trop bas pour que les voisins l’entendent. Mais pas assez pour que Kira ne l’entende pas depuis sa chambre.</p>
+
+      <p>Masato demandait où Rei était allé. Sayuri demandait s’il fallait appeler quelqu’un. Akari répétait qu’ils ne pouvaient pas continuer à faire comme si tout allait bien.</p>
+
+      <p>Puis Rei cria.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Vous comprenez rien.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Je gère.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — C’est pas votre problème.</p>
+      </div>
+
+      <p>La porte claqua.</p>
+
+      <p>Kira sursauta si fort que son casque tomba de son lit.</p>
+
+      <p>Elle attendit plusieurs minutes avant d’oser sortir de sa chambre. Dans le couloir, Akari était déjà là. Elle aussi avait entendu.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il va revenir ?</p>
+      </div>
+
+      <p>Akari hésita.</p>
+
+      <p>Puis elle s’agenouilla devant elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Oui. Il revient toujours.</p>
+      </div>
+
+      <p>Ce n’était pas tout à fait vrai.</p>
+
+      <p>Mais Kira s’accrocha à cette réponse comme à une promesse.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Les inconnus</h2>
+
+      <p>Quelques jours plus tard, deux hommes attendirent devant l’immeuble.</p>
+
+      <p>Kira les remarqua en rentrant du collège. Ils ne parlaient pas fort. Ils ne faisaient rien de visible. Pourtant, leurs cœurs battaient avec une régularité trop calme, trop calculée.</p>
+
+      <p>Elle resta de l’autre côté de la rue, cachée derrière un distributeur.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Inconnu :</span> — C’est bien ici ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Autre inconnu :</span> — Oui. Le garçon vit là.</p>
+      </div>
+
+      <p>Kira ne comprit pas de quel garçon ils parlaient. Mais elle ne bougea pas avant qu’ils partent.</p>
+
+      <p>Ce soir-là, elle attendit Rei dans le couloir.</p>
+
+      <p>Lorsqu’il rentra, elle attrapa la manche de sa veste.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il y avait des gens dehors.</p>
+      </div>
+
+      <p>Rei se figea.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Quels gens ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Deux hommes. Ils parlaient de toi.</p>
+      </div>
+
+      <p>Le visage de Rei changea.</p>
+
+      <p>Pour la première fois, Kira ne l’entendit pas seulement inquiet.</p>
+
+      <p>Elle l’entendit terrifié.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Tu leur as parlé ?</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Non.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Est-ce qu’ils t’ont vue ?</p>
+      </div>
+
+      <p>Kira hésita.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je sais pas.</p>
+      </div>
+
+      <p>Rei posa brusquement ses deux mains sur ses épaules, un peu trop fort.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Si quelqu’un te demande quoi que ce soit sur moi, tu réponds rien. Tu rentres à la maison. Tu comprends ?</p>
+      </div>
+
+      <p>Kira hocha la tête, les yeux grands ouverts.</p>
+
+      <p>Rei relâcha immédiatement sa prise.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Pardon.</p>
+      </div>
+
+      <p>Mais il ne s’excusa pas vraiment.</p>
+
+      <p>Il regarda simplement vers la porte, comme s’il s’attendait à ce que quelqu’un l’ouvre de l’extérieur.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Le bruit devient trop fort</h2>
+
+      <p>Cette nuit-là, Kira ne dormit pas.</p>
+
+      <p>Les murs vibraient. Le sol vibrait. Son propre cœur battait trop vite contre ses côtes. Chaque bruit dans la rue lui semblait annoncer quelque chose.</p>
+
+      <p>Au petit matin, Sayuri la trouva assise dans le salon, les genoux ramenés contre elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Kira ? Tu n’as pas dormi ?</p>
+      </div>
+
+      <p>La jeune fille secoua la tête.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il y a quelque chose qui arrive.</p>
+      </div>
+
+      <p>Sayuri s’assit près d’elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Qu’est-ce qui arrive ?</p>
+      </div>
+
+      <p>Kira posa une main contre le sol.</p>
+
+      <p>Elle ferma les yeux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Je sais pas.</p>
+      </div>
+
+      <p>C’était la première fois qu’elle disait ces mots avec peur.</p>
+
+      <p class="ending">Car jusque-là, son Alter lui avait toujours donné des réponses.</p>
+
+      <p class="ending">Cette fois, il ne faisait que lui répéter qu’un danger approchait.</p>
+    </article>
+  </main>
+
+  <aside class="music-panel" id="musicPanel">
+    <p>🎵 Musique d’ambiance</p>
+    <iframe
+      title="Musique d’ambiance"
+      src="https://www.youtube.com/embed/tTp16NMGlhA?enablejsapi=1&loop=1&playlist=tTp16NMGlhA"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </aside>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir la musique">🎵</button>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
