@@ -6,198 +6,210 @@
   <title>La maison aux cinq battements — Mue</title>
 
   <style>
-    :root{
-      --night:#090d18;
-      --card:#121a29;
-      --blue:#155b92;
-      --blue-light:#2588c7;
-      --gold:#f4c542;
-      --text:#f5f7ff;
-      --muted:#bfd0e6;
+    :root {
+      --night: #090d18;
+      --card: #121a29;
+      --blue: #155b92;
+      --blue-light: #2588c7;
+      --gold: #f4c542;
+      --text: #f5f7ff;
     }
 
-    *{box-sizing:border-box;}
+    * { box-sizing: border-box; }
 
-    body{
-      margin:0;
-      min-height:100vh;
-      font-family:"Segoe UI",Arial,sans-serif;
-      color:var(--text);
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(circle at top,#12375b 0%,transparent 36%),
-        linear-gradient(180deg,#080d17 0%,#101827 100%);
+        radial-gradient(circle at top, #12375b 0%, transparent 36%),
+        linear-gradient(180deg, #080d17 0%, #101827 100%);
     }
 
-    .page{
-      width:min(920px,calc(100% - 32px));
-      margin:0 auto;
-      padding:42px 0 70px;
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 70px;
     }
 
-    .back-link{
-      display:inline-block;
-      margin-bottom:24px;
-      color:var(--gold);
-      font-weight:700;
-      text-decoration:none;
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
     }
 
-    .back-link:hover{
-      color:#fff0a4;
+    .back-link:hover { color: #fff0a4; }
+
+    .hero {
+      padding: 34px 28px;
+      text-align: center;
+      background: linear-gradient(135deg, #082743, #1768a1);
+      border: 2px solid var(--gold);
+      border-radius: 18px 18px 0 0;
     }
 
-    .hero{
-      padding:34px 28px;
-      text-align:center;
-      background:linear-gradient(135deg,#082743,#1768a1);
-      border:2px solid var(--gold);
-      border-radius:18px 18px 0 0;
+    .hero .arc {
+      margin: 0 0 10px;
+      color: #ffe99b;
+      font-weight: 700;
+      letter-spacing: .7px;
     }
 
-    .hero .arc{
-      margin:0 0 10px;
-      color:#ffe99b;
-      font-weight:700;
-      letter-spacing:.7px;
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(27px, 5vw, 42px);
     }
 
-    .hero h1{
-      margin:0;
-      font-size:clamp(27px,5vw,42px);
+    .hero .quote {
+      max-width: 650px;
+      margin: 18px auto 0;
+      color: #e8f5ff;
+      font-style: italic;
+      line-height: 1.6;
     }
 
-    .hero .quote{
-      max-width:650px;
-      margin:18px auto 0;
-      color:#e8f5ff;
-      font-style:italic;
-      line-height:1.6;
+    .story {
+      padding: 34px clamp(20px, 5vw, 52px);
+      background: rgba(18, 26, 41, .97);
+      border: 2px solid var(--gold);
+      border-top: 0;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+      font-size: 17px;
+      line-height: 1.85;
     }
 
-    .story{
-      padding:34px clamp(20px,5vw,52px);
-      background:rgba(18,26,41,.97);
-      border:2px solid var(--gold);
-      border-top:0;
-      border-radius:0 0 18px 18px;
-      box-shadow:0 20px 45px rgba(0,0,0,.35);
-      font-size:17px;
-      line-height:1.85;
+    .story h2 {
+      margin: 42px 0 16px;
+      padding: 10px 14px;
+      font-size: 23px;
+      background: linear-gradient(90deg, #0a3157, transparent);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
     }
 
-    .story h2{
-      margin:42px 0 16px;
-      padding:10px 14px;
-      color:#fff;
-      font-size:23px;
-      background:linear-gradient(90deg,#0a3157,transparent);
-      border-left:4px solid var(--gold);
-      border-radius:0 8px 8px 0;
+    .story h2:first-child { margin-top: 0; }
+
+    .story p { margin: 0 0 20px; }
+
+    .scene-break {
+      width: 95px;
+      height: 2px;
+      margin: 38px auto;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
-    .story h2:first-child{
-      margin-top:0;
+    .dialogue {
+      margin: 26px 0;
+      padding: 17px 20px;
+      background: #0b1320;
+      border-left: 4px solid var(--blue-light);
+      border-radius: 0 10px 10px 0;
     }
 
-    .story p{
-      margin:0 0 20px;
+    .dialogue p {
+      margin: 0 0 12px;
+      color: #edf7ff;
+      font-style: italic;
     }
 
-    .scene-break{
-      width:95px;
-      height:2px;
-      margin:38px auto;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    .dialogue p:last-child { margin-bottom: 0; }
+
+    .speaker {
+      color: #ffe99b;
+      font-style: normal;
+      font-weight: 800;
     }
 
-    .dialogue{
-      margin:26px 0;
-      padding:17px 20px;
-      color:#edf7ff;
-      font-style:italic;
-      background:#0b1320;
-      border-left:4px solid var(--blue-light);
-      border-radius:0 10px 10px 0;
+    .ending {
+      margin-top: 38px;
+      padding: 22px;
+      color: #ffe99b;
+      text-align: center;
+      font-style: italic;
+      background: linear-gradient(135deg, #0a2948, #111726);
+      border: 1px solid rgba(244, 197, 66, .7);
+      border-radius: 12px;
     }
 
-    .ending{
-      margin-top:38px;
-      padding:22px;
-      color:#ffe99b;
-      text-align:center;
-      font-style:italic;
-      background:linear-gradient(135deg,#0a2948,#111726);
-      border:1px solid rgba(244,197,66,.7);
-      border-radius:12px;
+    .music-button {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 56px;
+      height: 56px;
+      color: white;
+      font-size: 23px;
+      background: linear-gradient(135deg, #0a3157, #2588c7);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 7px 19px rgba(0, 0, 0, .4);
+      cursor: pointer;
+      z-index: 10;
     }
 
-    .music-button{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      width:56px;
-      height:56px;
-      color:#fff;
-      font-size:23px;
-      background:linear-gradient(135deg,#0a3157,#2588c7);
-      border:2px solid var(--gold);
-      border-radius:50%;
-      box-shadow:0 7px 19px rgba(0,0,0,.4);
-      cursor:pointer;
-      z-index:10;
+    .music-button:hover {
+      transform: scale(1.07);
+      background: var(--gold);
     }
 
-    .music-button:hover{
-      transform:scale(1.07);
-      background:var(--gold);
+    .music-panel {
+      position: fixed;
+      right: 22px;
+      bottom: 88px;
+      display: none;
+      width: 280px;
+      padding: 10px;
+      background: #0b1320;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .45);
+      z-index: 10;
     }
 
-    .music-panel{
-      position:fixed;
-      right:22px;
-      bottom:88px;
-      width:280px;
-      padding:10px;
-      display:none;
-      background:#0b1320;
-      border:1px solid var(--gold);
-      border-radius:12px;
-      box-shadow:0 10px 28px rgba(0,0,0,.45);
-      z-index:10;
+    .music-panel.open { display: block; }
+
+    .music-panel p {
+      margin: 0 0 8px;
+      color: #ffe99b;
+      font-size: 13px;
+      text-align: center;
     }
 
-    .music-panel.open{
-      display:block;
+    .music-panel iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
     }
 
-    .music-panel p{
-      margin:0 0 8px;
-      color:#ffe99b;
-      font-size:13px;
-      text-align:center;
-    }
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 920px);
+        padding-top: 22px;
+      }
 
-    .music-panel iframe{
-      display:block;
-      width:100%;
-      aspect-ratio:16/9;
-      border:0;
-      border-radius:8px;
-    }
+      .story { font-size: 16px; }
 
-    @media (max-width:600px){
-      .page{width:min(100% - 20px,920px); padding-top:22px;}
-      .story{font-size:16px;}
-      .chapter-nav{flex-direction:column;}
-      .music-panel{right:14px; width:min(280px,calc(100% - 28px));}
-      .music-button{right:14px; bottom:14px;}
+      .music-panel {
+        right: 14px;
+        width: min(280px, calc(100% - 28px));
+      }
+
+      .music-button {
+        right: 14px;
+        bottom: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
   <main class="page">
-
     <a class="back-link" href="index.html">← Retour au prologue</a>
 
     <header class="hero">
@@ -207,7 +219,6 @@
     </header>
 
     <article class="story">
-
       <h2>La famille Hebinuma</h2>
 
       <p>Avant Mue, avant Écdysis, il y avait les Hebinuma.</p>
@@ -231,38 +242,38 @@
       <p>Lorsque Masato les fit entrer, Sayuri tenait une toute petite silhouette emmitouflée dans une couverture claire.</p>
 
       <div class="dialogue">
-        — Elle est… vraiment minuscule, souffla Akari.<br>
-        — C’est un bébé, répondit Rei. Évidemment qu’elle est minuscule.
+        <p><span class="speaker">Akari :</span> — Elle est… vraiment minuscule.</p>
+        <p><span class="speaker">Rei :</span> — C’est un bébé. Évidemment qu’elle est minuscule.</p>
       </div>
 
       <p>Akari s’approcha quand même, lentement, comme si elle craignait de la réveiller. Kira dormait, le visage froissé, une main fermée près de sa joue.</p>
 
       <div class="dialogue">
-        — Je peux la toucher ?
+        <p><span class="speaker">Akari :</span> — Je peux la toucher ?</p>
       </div>
 
       <p>Sayuri hocha la tête. Akari tendit un doigt. À peine son doigt effleura-t-il la petite main de Kira que les doigts du bébé se refermèrent autour de lui.</p>
 
       <div class="dialogue">
-        — Elle m’a attrapée.<br>
-        — Elle attrape tout, expliqua Masato avec un sourire.<br>
-        — Non. Elle m’a choisie.
+        <p><span class="speaker">Akari :</span> — Elle m’a attrapée.</p>
+        <p><span class="speaker">Masato :</span> — Elle attrape tout.</p>
+        <p><span class="speaker">Akari :</span> — Non. Elle m’a choisie.</p>
       </div>
 
       <p>Rei leva les yeux au ciel, mais s’approcha à son tour. Il resta silencieux un moment, observant le bébé qui dormait sans lâcher sa sœur.</p>
 
       <div class="dialogue">
-        — Elle est bizarre, dit-il enfin.<br>
-        — Elle est pas bizarre, protesta Akari.<br>
-        — Si. Elle serre trop fort.
+        <p><span class="speaker">Rei :</span> — Elle est bizarre.</p>
+        <p><span class="speaker">Akari :</span> — Elle est pas bizarre !</p>
+        <p><span class="speaker">Rei :</span> — Si. Elle serre trop fort.</p>
       </div>
 
       <p>Kira relâcha alors Akari… pour attraper maladroitement le bord de la manche de Rei. Cette fois, il ne dit plus rien.</p>
 
       <div class="dialogue">
-        — Tu vois ? Elle t’a choisi aussi.<br>
-        — Elle sait même pas qui je suis.<br>
-        — Alors tu devras lui montrer, répondit Akari. Moi, je vais la protéger.
+        <p><span class="speaker">Akari :</span> — Tu vois ? Elle t’a choisi aussi.</p>
+        <p><span class="speaker">Rei :</span> — Elle sait même pas qui je suis.</p>
+        <p><span class="speaker">Akari :</span> — Alors tu devras lui montrer. Moi, je vais la protéger.</p>
       </div>
 
       <p>Ce jour-là, sans le savoir, les trois enfants se firent une promesse trop grande pour eux.</p>
@@ -276,21 +287,21 @@
       <p>Elle suivait Akari partout dans l’appartement, avec ses petits pas pressés et son rire clair. Akari lui fabriquait des capes avec des serviettes, l’installait debout sur le canapé et annonçait d’une voix héroïque :</p>
 
       <div class="dialogue">
-        — Attention, les vilains ! La grande héroïne Akari et son assistante arrivent !<br>
-        — Je suis pas une assistante ! protestait Kira.<br>
-        — Alors tu es quoi ?
+        <p><span class="speaker">Akari :</span> — Attention, les vilains ! La grande héroïne Akari et son assistante arrivent !</p>
+        <p><span class="speaker">Kira :</span> — Je suis pas une assistante !</p>
+        <p><span class="speaker">Akari :</span> — Alors tu es quoi ?</p>
       </div>
 
       <p>Kira réfléchissait très sérieusement, les poings sur les hanches.</p>
 
       <div class="dialogue">
-        — Je suis le soleil.
+        <p><span class="speaker">Kira :</span> — Je suis le soleil.</p>
       </div>
 
       <p>Akari riait, puis lui attachait une seconde serviette autour du cou.</p>
 
       <div class="dialogue">
-        — D’accord. Le soleil, alors.
+        <p><span class="speaker">Akari :</span> — D’accord. Le soleil, alors.</p>
       </div>
 
       <p>Rei les regardait depuis la porte de sa chambre avec un air fatigué, avant de finir par rejoindre le jeu. Il inventait des pièges avec des coussins, cachait des bonbons dans l’appartement et affirmait que Kira devait les retrouver « sans tricher ».</p>
@@ -306,20 +317,20 @@
       <p>Un jour, dans la cour, un garçon plus grand fit tomber une élève de première année. La petite se mit immédiatement à pleurer. Kira, alors âgée de six ans, posa son sac par terre et se plaça entre eux.</p>
 
       <div class="dialogue">
-        — T’as pas le droit.<br>
-        — Et tu vas faire quoi ?
+        <p><span class="speaker">Kira :</span> — T’as pas le droit.</p>
+        <p><span class="speaker">Le garçon :</span> — Et tu vas faire quoi ?</p>
       </div>
 
       <p>Kira ne répondit pas tout de suite. Elle tremblait un peu, mais ne bougeait pas.</p>
 
       <div class="dialogue">
-        — Je sais pas. Mais t’as pas le droit.
+        <p><span class="speaker">Kira :</span> — Je sais pas. Mais t’as pas le droit.</p>
       </div>
 
       <p>Le garçon finit par partir en soupirant. La petite élève s’essuya le visage et attrapa timidement la manche de Kira.</p>
 
       <div class="dialogue">
-        — Merci.
+        <p><span class="speaker">La petite élève :</span> — Merci.</p>
       </div>
 
       <p>Kira lui adressa un sourire immense.</p>
@@ -327,14 +338,14 @@
       <p>Le soir même, elle raconta l’histoire à table. Akari la félicita comme si elle venait de remporter un combat professionnel, tandis que Masato fit semblant de la gronder.</p>
 
       <div class="dialogue">
-        — Tu ne dois pas te mettre en danger toute seule.<br>
-        — Mais elle pleurait.
+        <p><span class="speaker">Masato :</span> — Tu ne dois pas te mettre en danger toute seule.</p>
+        <p><span class="speaker">Kira :</span> — Mais elle pleurait.</p>
       </div>
 
       <p>Sayuri posa doucement une main dans ses cheveux.</p>
 
       <div class="dialogue">
-        — Alors appelle un adulte. Protéger les autres, ce n’est pas devoir tout porter seule.
+        <p><span class="speaker">Sayuri :</span> — Alors appelle un adulte. Protéger les autres, ce n’est pas devoir tout porter seule.</p>
       </div>
 
       <p>Kira hocha la tête sans vraiment comprendre. Elle était encore trop jeune pour savoir que cette phrase la suivrait toute sa vie.</p>
@@ -360,13 +371,13 @@
       <p>Le lendemain, elle demanda innocemment à Sayuri :</p>
 
       <div class="dialogue">
-        — Maman… pourquoi les maisons respirent ?
+        <p><span class="speaker">Kira :</span> — Maman… pourquoi les maisons respirent ?</p>
       </div>
 
       <p>Sayuri se figea, juste une seconde. Puis elle sourit et embrassa son front.</p>
 
       <div class="dialogue">
-        — Les maisons ne respirent pas, ma chérie.
+        <p><span class="speaker">Sayuri :</span> — Les maisons ne respirent pas, ma chérie.</p>
       </div>
 
       <p>Kira baissa les yeux, confuse.</p>
@@ -374,7 +385,6 @@
       <div class="ending">
         Mais cette nuit-là, lorsqu’elle retourna se coucher, les murs continuaient de battre.
       </div>
-
     </article>
   </main>
 
@@ -383,7 +393,6 @@
   <aside class="music-panel" id="musicPanel">
     <p>Musique d’ambiance — Chapitre I</p>
     <iframe
-      id="musicPlayer"
       title="Musique d’ambiance"
       src="https://www.youtube.com/embed/t_CfWinEcus?enablejsapi=1&loop=1&playlist=t_CfWinEcus"
       allow="autoplay; encrypted-media"
