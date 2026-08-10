@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partie IX — Une année sans lumière</title>
+
+  <style>
+    :root{
+      --fond:#07060b;
+      --fond-2:#100b19;
+      --violet:#a77bdb;
+      --violet-clair:#d8c2ff;
+      --texte:#f3eff9;
+      --texte-doux:#c7bdd5;
+      --bordure:rgba(167,123,219,.45);
+    }
+
+    *{box-sizing:border-box;}
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0;
+      color:var(--texte);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 50% -5%,rgba(109,61,145,.26),transparent 34rem),
+        radial-gradient(circle at 0% 55%,rgba(73,38,95,.15),transparent 28rem),
+        linear-gradient(135deg,var(--fond),var(--fond-2) 55%,#050508);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.38;
+    }
+
+    body::before{
+      inset:0;
+      background:
+        linear-gradient(120deg,transparent 0 43%,rgba(197,156,255,.12) 43.1%,transparent 43.35%),
+        linear-gradient(68deg,transparent 0 76%,rgba(197,156,255,.08) 76.1%,transparent 76.35%),
+        linear-gradient(160deg,transparent 0 30%,rgba(197,156,255,.06) 30.1%,transparent 30.3%);
+    }
+
+    body::after{
+      width:420px;
+      height:420px;
+      right:-190px;
+      bottom:-180px;
+      border-radius:50%;
+      border:1px solid rgba(172,117,231,.2);
+      box-shadow:
+        0 0 0 40px rgba(172,117,231,.025),
+        0 0 0 90px rgba(172,117,231,.02);
+    }
+
+    .page{
+      width:min(920px,92%);
+      margin:0 auto;
+      padding:58px 0 100px;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:42px 30px 35px;
+      text-align:center;
+      border:1px solid var(--bordure);
+      border-radius:22px;
+      background:
+        linear-gradient(130deg,rgba(23,13,33,.96),rgba(7,6,11,.92)),
+        var(--fond);
+      box-shadow:0 22px 55px rgba(0,0,0,.5);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      pointer-events:none;
+      opacity:.42;
+      background:
+        linear-gradient(118deg,transparent 0 48%,rgba(219,190,255,.2) 48.1%,transparent 48.35%),
+        linear-gradient(58deg,transparent 0 78%,rgba(219,190,255,.1) 78.1%,transparent 78.3%);
+    }
+
+    .chapter-number{
+      position:relative;
+      z-index:1;
+      margin:0 0 11px;
+      color:var(--violet-clair);
+      font-size:.82rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      position:relative;
+      z-index:1;
+      margin:0;
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,6vw,3.4rem);
+      font-weight:700;
+      text-shadow:0 0 25px rgba(185,130,255,.24);
+    }
+
+    .quote{
+      position:relative;
+      z-index:1;
+      max-width:680px;
+      margin:21px auto 0;
+      color:var(--texte-doux);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.05rem;
+      font-style:italic;
+      line-height:1.65;
+    }
+
+    .story{
+      margin-top:28px;
+      padding:clamp(24px,5vw,48px);
+      border:1px solid rgba(167,123,219,.27);
+      border-radius:18px;
+      background:rgba(10,8,15,.78);
+      box-shadow:0 18px 45px rgba(0,0,0,.32);
+    }
+
+    p{
+      margin:0 0 20px;
+      color:var(--texte);
+      font-size:1.03rem;
+      line-height:1.9;
+    }
+
+    h2{
+      margin:48px 0 22px;
+      padding-left:16px;
+      color:var(--violet-clair);
+      border-left:3px solid var(--violet);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.55rem;
+      text-shadow:0 0 16px rgba(167,123,219,.18);
+    }
+
+    .dialogue{
+      margin:20px 0;
+      padding:14px 18px;
+      border-left:2px solid rgba(167,123,219,.72);
+      border-radius:0 10px 10px 0;
+      background:rgba(141,90,192,.08);
+    }
+
+    .dialogue p{
+      margin:0;
+      color:#eee6fa;
+      line-height:1.75;
+    }
+
+    .speaker{
+      color:var(--violet-clair);
+      font-weight:700;
+    }
+
+    .fragments{
+      margin:25px 0;
+      padding:22px 23px;
+      border:1px solid rgba(180,133,231,.25);
+      border-radius:13px;
+      color:#e2d1fa;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.08rem;
+      font-style:italic;
+      line-height:1.9;
+      background:
+        linear-gradient(135deg,rgba(119,70,165,.13),rgba(5,4,8,.25));
+    }
+
+    .ending{
+      margin:37px 0 0;
+      padding:25px 22px;
+      border-top:1px solid rgba(194,152,243,.45);
+      border-bottom:1px solid rgba(194,152,243,.28);
+      color:#f5efff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.14rem;
+      font-style:italic;
+      line-height:1.85;
+      text-align:center;
+      text-shadow:0 0 15px rgba(167,123,219,.17);
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:1px solid rgba(221,197,255,.68);
+      border-radius:50%;
+      color:#fff;
+      background:linear-gradient(135deg,#5f357b,#170d22);
+      box-shadow:0 8px 22px rgba(0,0,0,.45);
+      cursor:pointer;
+      font-size:1.35rem;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+
+    .music-button:hover{
+      transform:translateY(-3px) scale(1.04);
+      box-shadow:0 12px 28px rgba(0,0,0,.58);
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px,calc(100vw - 44px));
+      padding:12px;
+      border:1px solid rgba(221,197,255,.4);
+      border-radius:14px;
+      background:rgba(9,6,14,.96);
+      box-shadow:0 15px 35px rgba(0,0,0,.52);
+      opacity:0;
+      transform:translateY(12px);
+      pointer-events:none;
+      transition:.25s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+
+    .music-panel p{
+      margin:0 0 9px;
+      color:var(--violet-clair);
+      font-size:.82rem;
+      line-height:1.35;
+      text-align:center;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16 / 9;
+      border:0;
+      border-radius:8px;
+    }
+
+    @media (max-width:600px){
+      .page{padding-top:28px;}
+      .hero{padding:34px 20px 29px;}
+      .story{padding:25px 20px;}
+      p{font-size:1rem;line-height:1.82;}
+      h2{font-size:1.35rem;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="chapter-number">📖 Partie IX</p>
+      <h1>Une année sans lumière</h1>
+      <p class="quote">« Certaines prisons ne possèdent pas de barreaux. Elles apprennent simplement à une enfant à ne plus chercher la sortie. »</p>
+    </header>
+
+    <article class="story">
+      <p>Les hommes ne l’emmenèrent pas très loin.</p>
+
+      <p>Après la nuit où sa maison avait disparu, Kira fut enfermée dans une base dissimulée derrière les murs d’un ancien entrepôt. Les pièces y étaient trop propres, trop silencieuses, éclairées par des néons qui ne s’éteignaient jamais complètement.</p>
+
+      <p>Au début, elle demandait ses parents.</p>
+
+      <p>Puis Akari.</p>
+
+      <p>Puis Rei.</p>
+
+      <p>Personne ne répondait.</p>
+
+      <p>Alors, au bout de quelques semaines, elle cessa de poser des questions.</p>
+
+      <p>Ils avaient compris ce que son Alter pouvait faire. Pas entièrement — Kira elle-même ne le comprenait pas — mais assez pour savoir qu’elle entendait ce qu’ils voulaient cacher. Les hommes derrière les portes. Les conversations étouffées dans les bureaux. Les battements de cœur qui accéléraient avant un mensonge.</p>
+
+      <p>Ils ne la forçaient pas à combattre. Elle n’était ni assez forte ni assez stable pour ça.</p>
+
+      <p>Ils l’utilisaient autrement.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Un homme :</span> — Dis-nous combien ils sont.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Un homme :</span> — Écoute cette pièce.</p>
+      </div>
+
+      <div class="dialogue">
+        <p><span class="speaker">Un homme :</span> — Tu sais s’il ment, pas vrai ?</p>
+      </div>
+
+      <p>Et Kira répondait.</p>
+
+      <p>Parce qu’à chaque refus, les voix devenaient plus dures. Parce qu’ils lui répétaient que personne ne la cherchait. Que son frère les avait conduits jusqu’à elle. Que ses parents étaient morts à cause d’elle.</p>
+
+      <p>Elle ne les croyait pas toujours.</p>
+
+      <p>Mais elle finissait par ne plus savoir quoi croire.</p>
+
+      <p>Son bras gauche traversait parfois le bord du lit lorsqu’elle dormait. Elle se réveillait en sursaut, avec l’impression de tomber. Elle gardait le badge fabriqué avec Akari caché contre elle, sous ses vêtements, comme si ce petit morceau de métal pouvait empêcher le reste de disparaître.</p>
+
+      <p>Les jours se ressemblaient tous.</p>
+
+      <div class="fragments">
+        On l’appelait.<br>
+        On lui demandait d’écouter.<br>
+        On la ramenait dans sa chambre.
+      </div>
+
+      <p>Elle mangeait à peine. Parlait encore moins.</p>
+
+      <p>À douze ans, Kira avait déjà appris à faire disparaître sa présence dans une pièce.</p>
+
+      <h2>📖 Le dernier mensonge</h2>
+
+      <p>Un soir, un homme entra dans sa chambre sans frapper.</p>
+
+      <p>Il tenait le badge entre ses doigts.</p>
+
+      <p>Kira se redressa aussitôt.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Rends-le-moi.</p>
+      </div>
+
+      <p>Sa voix était faible, mais nette.</p>
+
+      <p>L’homme observa le serpent doré gravé sur le métal, puis eut un petit rire.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">L’homme :</span> — Ta sœur, c’est ça ? La future héroïne ?</p>
+      </div>
+
+      <p>Kira ne répondit pas.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">L’homme :</span> — Elle te cherche peut-être encore. Ou alors elle a compris que c’était inutile.</p>
+      </div>
+
+      <p>Il posa le badge sur la table, hors de sa portée.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">L’homme :</span> — Tu sais ce qui arrive aux gens qui s’accrochent à des choses mortes, Kira ?</p>
+      </div>
+
+      <p>Elle fixa l’objet sans cligner des yeux.</p>
+
+      <p>L’homme se pencha vers elle.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">L’homme :</span> — Ils finissent par se briser avec.</p>
+      </div>
+
+      <p>Ce fut une phrase de trop.</p>
+
+      <p>Pas parce qu’elle était particulièrement cruelle.</p>
+
+      <p>Parce qu’elle ressemblait à toutes les autres.</p>
+
+      <p>À celles qui lui disaient que ses parents étaient partis. Que Rei l’avait vendue. Qu’Akari ne viendrait jamais. Que tout ce qu’elle aimait était déjà perdu.</p>
+
+      <p>Kira entendit son cœur battre.</p>
+
+      <p>Puis les autres.</p>
+
+      <div class="fragments">
+        Un.<br>
+        Deux.<br>
+        Dix.<br>
+        Vingt.
+      </div>
+
+      <p>Chaque respiration dans la base lui traversa l’esprit d’un seul coup. Les murs vibrèrent sous les pas. Les tuyaux gémirent. Les néons bourdonnèrent jusqu’à devenir insupportables.</p>
+
+      <p>Elle porta ses mains à ses oreilles.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Arrêtez…</p>
+      </div>
+
+      <p>Personne ne l’écouta.</p>
+
+      <p>Alors quelque chose en elle céda.</p>
+
+      <h2>📖 La mue</h2>
+
+      <p>Kira ne se souvint jamais clairement de ce qui suivit.</p>
+
+      <p>Elle fut consciente, quelque part, mais son esprit refusa de remettre les images dans l’ordre.</p>
+
+      <div class="fragments">
+        Le sol qui se fissure.<br>
+        Des cris derrière les portes.<br>
+        Les murs qui deviennent fragiles, comme du papier mouillé.<br>
+        Son bras violet traversant la matière sans qu’elle puisse le retenir.
+      </div>
+
+      <p>La base entière sembla réagir à sa panique.</p>
+
+      <p>Les cloisons cédèrent les unes après les autres. Des pièces se vidèrent dans le noir. Les hommes fuyaient, mais Kira n’entendait plus leurs paroles : seulement leurs cœurs affolés, beaucoup trop forts, beaucoup trop proches.</p>
+
+      <p>Elle ne voulait pas les poursuivre.</p>
+
+      <p>Elle voulait que tout s’arrête.</p>
+
+      <p>Quand le silence revint enfin, elle était au milieu des décombres, à genoux, les mains tremblantes. Son bras gauche n’était plus tout à fait solide. Une fumée violette glissait sous sa peau comme si son corps hésitait encore à rester réel.</p>
+
+      <p>Le badge d’Akari reposait près d’elle.</p>
+
+      <p>Kira le ramassa et le serra contre sa poitrine.</p>
+
+      <p>Puis elle se leva.</p>
+
+      <p>Autour d’elle, la base qui l’avait retenue pendant une année n’existait plus vraiment.</p>
+
+      <p>Et pour la première fois depuis la mort de ses parents, personne ne lui disait où aller.</p>
+
+      <p>Elle franchit un mur fissuré sans réfléchir.</p>
+
+      <p>Et disparut dans la nuit.</p>
+
+      <p class="ending">Cette nuit-là, Kira Hebinuma cessa d’attendre qu’on vienne la sauver.<br>Peu après, il ne resta plus que Mue.</p>
+    </article>
+  </main>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir la musique">🎵</button>
+
+  <div class="music-panel" id="musicPanel">
+    <p>Musique d’ambiance — active-la si tu veux lire avec.</p>
+    <iframe
+      src="https://www.youtube.com/embed/ZcYU4q2G0Qk?enablejsapi=1&loop=1&playlist=ZcYU4q2G0Qk"
+      title="Musique d’ambiance"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
