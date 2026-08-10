@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apprendre à vivre avec le bruit — Mue</title>
+
+  <style>
+    :root {
+      --blue: #155b92;
+      --blue-light: #2588c7;
+      --gold: #f4c542;
+      --text: #f5f7ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #12375b 0%, transparent 36%),
+        linear-gradient(180deg, #080d17 0%, #101827 100%);
+    }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 70px;
+    }
+
+    .hero {
+      padding: 34px 28px;
+      text-align: center;
+      background: linear-gradient(135deg, #082743, #1768a1);
+      border: 2px solid var(--gold);
+      border-radius: 18px 18px 0 0;
+    }
+
+    .hero .arc {
+      margin: 0 0 10px;
+      color: #ffe99b;
+      font-weight: 700;
+      letter-spacing: .7px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(27px, 5vw, 42px);
+    }
+
+    .hero .quote {
+      max-width: 650px;
+      margin: 18px auto 0;
+      color: #e8f5ff;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .story {
+      padding: 34px clamp(20px, 5vw, 52px);
+      background: rgba(18, 26, 41, .97);
+      border: 2px solid var(--gold);
+      border-top: 0;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .story h2 {
+      margin: 42px 0 16px;
+      padding: 10px 14px;
+      font-size: 23px;
+      background: linear-gradient(90deg, #0a3157, transparent);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .story h2:first-child { margin-top: 0; }
+    .story p { margin: 0 0 20px; }
+
+    .scene-break {
+      width: 95px;
+      height: 2px;
+      margin: 38px auto;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .dialogue {
+      margin: 26px 0;
+      padding: 17px 20px;
+      background: #0b1320;
+      border-left: 4px solid var(--blue-light);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .dialogue p {
+      margin: 0 0 12px;
+      color: #edf7ff;
+      font-style: italic;
+    }
+
+    .dialogue p:last-child { margin-bottom: 0; }
+
+    .speaker {
+      color: #ffe99b;
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .ending {
+      margin-top: 38px;
+      padding: 22px;
+      color: #ffe99b;
+      text-align: center;
+      font-style: italic;
+      background: linear-gradient(135deg, #0a2948, #111726);
+      border: 1px solid rgba(244, 197, 66, .7);
+      border-radius: 12px;
+    }
+
+    .music-button {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 56px;
+      height: 56px;
+      color: white;
+      font-size: 23px;
+      background: linear-gradient(135deg, #0a3157, #2588c7);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 7px 19px rgba(0, 0, 0, .4);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .music-button:hover {
+      transform: scale(1.07);
+      background: var(--gold);
+    }
+
+    .music-panel {
+      position: fixed;
+      right: 22px;
+      bottom: 88px;
+      display: none;
+      width: 280px;
+      padding: 10px;
+      background: #0b1320;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .45);
+      z-index: 10;
+    }
+
+    .music-panel.open { display: block; }
+
+    .music-panel p {
+      margin: 0 0 8px;
+      color: #ffe99b;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .music-panel iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 920px);
+        padding-top: 22px;
+      }
+
+      .story { font-size: 16px; }
+
+      .music-panel {
+        right: 14px;
+        width: min(280px, calc(100% - 28px));
+      }
+
+      .music-button {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="arc">🎬 Arc : Avant Yuei — Prologue</p>
+      <h1>🌙 Chapitre III — Apprendre à vivre avec le bruit</h1>
+      <p class="quote">« On ne peut pas faire taire le monde. Mais on peut apprendre à ne pas le laisser nous emporter. »</p>
+    </header>
+
+    <article class="story">
+      <h2>Les petits changements</h2>
+
+      <p>Après l’incident de l’alarme, les parents de Kira cessèrent de traiter ses perceptions comme une simple imagination d’enfant.</p>
+
+      <p>Ils ne savaient toujours pas exactement ce qu’elle entendait, ni pourquoi cela devenait parfois si violent. Mais ils commencèrent à modifier de petites choses dans leur quotidien.</p>
+
+      <p>Masato posa des patins sous les chaises pour qu’elles grincent moins. Sayuri remplaça la vieille pendule du salon, dont le tic-tac rendait Kira nerveuse, par une horloge silencieuse. Rei lui donna son ancien casque audio. Akari, elle, inventa des « missions de calme » : elles devaient rester assises cinq minutes sur le balcon et trouver les trois sons les plus doux de la rue.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Un oiseau.</p>
+        <p><span class="speaker">Kira :</span> — Le vent dans les feuilles.</p>
+        <p><span class="speaker">Rei :</span> — Et… le voisin qui ronfle.</p>
+      </div>
+
+      <p>Kira éclatait de rire.</p>
+
+      <p>Pendant quelques minutes, le bruit ne ressemblait plus à une menace.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Les règles de Masato</h2>
+
+      <p>Masato ne comprenait pas les Alters sensoriels. Il n’avait jamais eu besoin de faire face à quelque chose d’aussi envahissant.</p>
+
+      <p>Mais il connaissait les machines trop sensibles, les fils sous tension et les murs qui finissaient par céder lorsqu’on ignorait les premiers craquements.</p>
+
+      <p>Alors il créa des règles pour Kira.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Masato :</span> — Si ça devient trop fort, tu me le dis.</p>
+        <p><span class="speaker">Kira :</span> — Même si vous travaillez ?</p>
+        <p><span class="speaker">Masato :</span> — Même si je travaille.</p>
+        <p><span class="speaker">Kira :</span> — Même si Maman dort ?</p>
+        <p><span class="speaker">Masato :</span> — Même si elle dort.</p>
+        <p><span class="speaker">Kira :</span> — Même si Akari fait semblant d’être une héroïne et qu’elle est très occupée ?</p>
+        <p><span class="speaker">Masato :</span> — Surtout si Akari fait semblant d’être une héroïne.</p>
+      </div>
+
+      <p>Akari protesta immédiatement depuis le salon.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Je fais pas semblant !</p>
+      </div>
+
+      <p>Masato sourit, puis revint à Kira.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Masato :</span> — Et si tu ne peux pas parler, tu fais ça.</p>
+      </div>
+
+      <p>Il posa doucement deux doigts contre son poignet, puis serra sa main une fois.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Masato :</span> — Une fois : ça commence à être trop. Deux fois : tu as besoin de sortir. Trois fois : tu as besoin qu’on reste avec toi.</p>
+      </div>
+
+      <p>Kira répéta le geste avec sérieux.</p>
+
+      <p>Ce petit code devint leur secret.</p>
+
+      <p>Bien plus tard, elle oublierait presque les mots de Masato. Mais elle se souviendrait toujours de la chaleur de sa main autour de la sienne.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Akari et le rêve de héros</h2>
+
+      <p>À mesure que les années passaient, Akari grandissait vite.</p>
+
+      <p>Elle était devenue plus grande que Sayuri, plus rapide que Rei, et beaucoup trop fière de son Alter. Elle parlait désormais de l’agence de Ryukyu comme si elle y travaillait déjà, accrochait des coupures de journaux sur le mur de sa chambre et s’entraînait jusqu’à tomber de fatigue.</p>
+
+      <p>Kira la regardait avec admiration.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu crois que je pourrais être héroïne aussi ?</p>
+        <p><span class="speaker">Akari :</span> — Évidemment.</p>
+        <p><span class="speaker">Kira :</span> — Même si j’entends trop de choses ?</p>
+        <p><span class="speaker">Akari :</span> — Les héros ont tous quelque chose de difficile à porter.</p>
+      </div>
+
+      <p>Kira baissa les yeux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Et si je rate ?</p>
+      </div>
+
+      <p>Akari s’approcha et posa son front contre le sien.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Akari :</span> — Alors tu recommenceras. Mais tu ne seras pas seule.</p>
+      </div>
+
+      <p>Kira hocha lentement la tête.</p>
+
+      <p>Elle voulait croire Akari. Elle voulait croire qu’il suffisait d’être courageuse, de recommencer et de ne pas abandonner.</p>
+
+      <p>À cet âge-là, elle ne savait pas encore que certains enfants n’ont jamais le temps d’apprendre à recommencer.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Rei prend de la distance</h2>
+
+      <p>Rei, lui, n’était plus vraiment un enfant.</p>
+
+      <p>Il rentrait plus tard, parlait moins et gardait son téléphone retourné sur la table lorsqu’il mangeait avec eux. Il répondait qu’il était avec des amis, puis s’enfermait dans sa chambre avant que Sayuri puisse poser d’autres questions.</p>
+
+      <p>Kira ne comprenait pas tout, mais elle remarquait les changements.</p>
+
+      <p>Son cœur battait parfois trop vite lorsqu’il franchissait la porte. Ses vêtements portaient des odeurs de fumée, de pluie et de rues qu’elle ne connaissait pas. Il y avait aussi, certaines nuits, des voix d’hommes qui l’attendaient plus bas dans la rue.</p>
+
+      <p>Une fois, alors qu’elle n’arrivait pas à dormir, Kira retrouva Rei assis seul dans la cuisine.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Tu vas sortir ?</p>
+      </div>
+
+      <p>Il sursauta légèrement.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Non. Retourne dormir.</p>
+        <p><span class="speaker">Kira :</span> — Ton cœur fait du bruit.</p>
+      </div>
+
+      <p>Rei resta immobile.</p>
+
+      <p>Kira s’approcha, inquiète.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — T’as peur ?</p>
+        <p><span class="speaker">Rei :</span> — Non.</p>
+        <p><span class="speaker">Kira :</span> — Tu mens.</p>
+      </div>
+
+      <p>Cette fois, Rei la regarda vraiment. Puis il tira la chaise près de lui.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Viens là.</p>
+      </div>
+
+      <p>Kira grimpa sur ses genoux, comme lorsqu’elle était plus petite. Rei posa une main maladroite dans ses cheveux.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Rei :</span> — Je suis pas quelqu’un de bien, Kira.</p>
+      </div>
+
+      <p>Elle leva les yeux vers lui, confuse.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Si.</p>
+        <p><span class="speaker">Rei :</span> — Tu peux pas savoir ça.</p>
+        <p><span class="speaker">Kira :</span> — Si. Je t’entends.</p>
+      </div>
+
+      <p>Rei détourna le regard.</p>
+
+      <p>Il ne lui expliqua rien ce soir-là. Il ne lui parla ni de ses fréquentations, ni de l’argent facile, ni des portes qu’il commençait déjà à ouvrir sans savoir comment les refermer.</p>
+
+      <p>Mais il resta à la maison jusqu’au matin.</p>
+
+      <div class="scene-break"></div>
+
+      <h2>Le marché</h2>
+
+      <p>Quelques mois plus tard, Sayuri emmena Kira au marché du quartier.</p>
+
+      <p>C’était un samedi, et les rues étaient pleines. Des vendeurs criaient les prix. Des enfants couraient entre les stands. Des sacs froissaient, des vélos passaient, des conversations se superposaient dans tous les sens.</p>
+
+      <p>Kira essaya de tenir.</p>
+
+      <p>Elle serrait la main de Sayuri, avançait sans se plaindre et répondait lorsque sa mère lui demandait si elle voulait des fraises ou des mandarines.</p>
+
+      <p>Puis quelqu’un fit tomber une caisse.</p>
+
+      <p>Le bruit sec éclata au milieu de la foule.</p>
+
+      <p>Kira se figea.</p>
+
+      <p>Tout le reste arriva en même temps : les pas, les voix, les respirations, les battements de cœur trop rapides. Elle sentit ses jambes se dérober et posa une main contre le mur le plus proche.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Kira ?</p>
+      </div>
+
+      <p>Elle ne parvenait plus à répondre.</p>
+
+      <p>Sayuri s’accroupit devant elle sans la toucher tout de suite.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Regarde-moi.</p>
+      </div>
+
+      <p>Kira tremblait.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Kira :</span> — Il y a trop de gens.</p>
+        <p><span class="speaker">Sayuri :</span> — Je sais. On va sortir d’ici.</p>
+        <p><span class="speaker">Kira :</span> — Mais je les entends encore.</p>
+        <p><span class="speaker">Sayuri :</span> — Alors écoute seulement ma voix.</p>
+      </div>
+
+      <p>Sayuri posa doucement ses deux mains autour du visage de Kira.</p>
+
+      <div class="dialogue">
+        <p><span class="speaker">Sayuri :</span> — Une chose à la fois. Ma voix. Ma respiration. Ta main dans la mienne.</p>
+      </div>
+
+      <p>Kira mit plusieurs minutes à reprendre son souffle.</p>
+
+      <p>Lorsqu’elles rentrèrent, Akari apporta des fraises sans poser de question. Rei posa son casque audio sur la table, près d’elle. Masato éteignit toutes les lumières du salon.</p>
+
+      <p>Personne ne lui demanda de s’excuser.</p>
+
+      <div class="ending">
+        Et pendant un court instant, Kira eut l’impression que sa famille pouvait vraiment tout réparer.<br><br>
+        Elle ne savait pas encore que certaines fissures restent invisibles jusqu’au jour où la maison entière s’effondre.
+      </div>
+    </article>
+  </main>
+
+  <button class="music-button" id="musicButton" aria-label="Ouvrir ou fermer la musique">🎵</button>
+
+ <aside class="music-panel" id="musicPanel">
+  <p>Musique d’ambiance — Chapitre III</p>
+  <iframe
+    title="Musique d’ambiance"
+    src="https://www.youtube.com/embed/bsrI9NRFQgQ?enablejsapi=1&loop=1&playlist=bsrI9NRFQgQ"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</aside>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+
+    musicButton.addEventListener("click", () => {
+      musicPanel.classList.toggle("open");
+      musicButton.textContent = musicPanel.classList.contains("open") ? "🔊" : "🎵";
+    });
+  </script>
+</body>
+</html>
