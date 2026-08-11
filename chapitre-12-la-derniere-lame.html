@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapitre 12 — La dernière lame</title>
+
+  <style>
+    :root {
+      --violet-clair: #b79cff;
+      --texte: #f4efff;
+      --texte-doux: #c9bddf;
+      --bordure: rgba(183, 156, 255, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--texte);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top, rgba(83, 45, 122, 0.42), transparent 38%),
+        linear-gradient(135deg, #080612 0%, #151025 48%, #0b0814 100%);
+    }
+
+    .etoiles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(194,164,255,0.7) 1px, transparent 1px);
+      background-size: 95px 95px, 153px 153px;
+      background-position: 0 0, 35px 48px;
+    }
+
+    main {
+      position: relative;
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 55px 0 80px;
+    }
+
+    .chapitre {
+      overflow: hidden;
+      border: 1px solid var(--bordure);
+      border-radius: 24px;
+      background: rgba(19, 14, 35, 0.88);
+      box-shadow: 0 0 35px rgba(110, 64, 165, 0.18);
+    }
+
+    .entete {
+      padding: 52px 28px 40px;
+      text-align: center;
+      border-bottom: 1px solid rgba(183, 156, 255, 0.2);
+      background:
+        linear-gradient(180deg, rgba(106, 58, 150, 0.27), transparent),
+        rgba(28, 17, 47, 0.62);
+    }
+
+    .saison {
+      margin: 0 0 14px;
+      color: var(--violet-clair);
+      font-family: Arial, sans-serif;
+      font-size: 0.76rem;
+      font-weight: bold;
+      letter-spacing: 0.23em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(2rem, 7vw, 3.55rem);
+      font-weight: normal;
+      text-shadow: 0 0 17px rgba(183, 156, 255, 0.4);
+    }
+
+    .sous-titre {
+      margin: 18px auto 0;
+      max-width: 520px;
+      color: var(--texte-doux);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    .contenu {
+      padding: clamp(28px, 6vw, 65px);
+      font-size: 1.08rem;
+      line-height: 1.95;
+    }
+
+    .contenu p {
+      margin: 0 0 1.55em;
+    }
+
+    .contenu h2 {
+      margin: 3.3em 0 1.4em;
+      color: var(--violet-clair);
+      font-size: 1.35rem;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    .contenu h2::before,
+    .contenu h2::after {
+      content: " ── ";
+      color: #6b438c;
+    }
+
+    .dialogue {
+      margin-left: 5%;
+      color: #f8f5ff;
+    }
+
+    .pensée {
+      color: #dccaff;
+      font-style: italic;
+    }
+
+    .musique {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 5;
+      width: 58px;
+      height: 58px;
+      border: 1px solid rgba(232, 217, 255, 0.65);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      background: linear-gradient(135deg, #5d2975, #211137);
+      box-shadow: 0 0 20px rgba(169, 105, 255, 0.45);
+      transition: 0.25s ease;
+    }
+
+    .musique:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 28px rgba(202, 158, 255, 0.8);
+    }
+
+    .lecteur {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(4, 2, 10, 0.84);
+    }
+
+    .lecteur.ouvert {
+      display: flex;
+    }
+
+    .boite-musique {
+      position: relative;
+      width: min(700px, 100%);
+      padding: 20px;
+      border: 1px solid var(--bordure);
+      border-radius: 18px;
+      background: #120d20;
+      box-shadow: 0 0 45px rgba(135, 75, 196, 0.35);
+    }
+
+    .fermer {
+      position: absolute;
+      top: 9px;
+      right: 13px;
+      z-index: 1;
+      border: 0;
+      color: white;
+      font-size: 1.6rem;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .boite-musique p {
+      margin: 3px 0 16px;
+      color: var(--texte-doux);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(100% - 20px, 900px);
+        padding-top: 24px;
+      }
+
+      .entete {
+        padding: 40px 18px 32px;
+      }
+
+      .contenu {
+        font-size: 1rem;
+        line-height: 1.85;
+      }
+
+      .musique {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="etoiles"></div>
+
+  <main>
+    <article class="chapitre">
+      <header class="entete">
+        <p class="saison">Mue — Arc de Hosu</p>
+        <h1>La dernière lame</h1>
+        <p class="sous-titre">« Elle n’avait déplacé qu’une seconde. Une seule. Assez pour qu’il reste vivant. »</p>
+      </header>
+
+      <section class="contenu">
+        <p>Ce soir-là, Hosu semblait vivre au rythme du Festival Sportif de Yuei.</p>
+
+        <p>Dans les cafés encore ouverts, derrière les vitrines éclairées et dans les appartements dont les fenêtres donnaient sur les rues, les gens s’étaient regroupés devant les écrans. On entendait par moments les commentaires enthousiastes des présentateurs, les applaudissements du public, puis les discussions animées de ceux qui essayaient déjà de deviner quels élèves deviendraient les grands héros de demain.</p>
+
+        <p>Mue, elle, était restée loin des avenues principales.</p>
+
+        <p>Elle progressait sur les toits des vieux bâtiments, là où les bruits de la ville ne disparaissaient jamais vraiment, mais finissaient au moins par se mélanger assez pour devenir supportables. Son manteau noir charbon flottait légèrement derrière elle à chacun de ses pas. Ses cheveux désordonnés, traversés de quelques mèches jaune doré, retombaient devant son visage fatigué.</p>
+
+        <p>Elle n’avait pas prévu de s’arrêter.</p>
+
+        <p>Puis elle perçut un choc.</p>
+
+        <p>Un son bref, brutal, suivi d’un battement cardiaque qui s’affola soudainement.</p>
+
+        <p>Mue s’immobilisa au bord du toit.</p>
+
+        <p>Elle ferma les yeux.</p>
+
+        <p>Plus bas, entre deux bâtiments anciens, une ruelle étroite renvoyait les vibrations avec une précision presque douloureuse. Elle pouvait entendre une respiration difficile, le frottement d’un tissu contre le béton humide, le faible crépitement d’un moteur endommagé.</p>
+
+        <p>Et un autre cœur.</p>
+
+        <p>Calme.</p>
+
+        <p>Étrangement calme.</p>
+
+        <p>Ce n’était pas le calme de quelqu’un qui n’avait peur de rien. C’était celui d’une personne qui avait déjà décidé de ce qu’elle allait faire et qui ne voyait aucune raison de changer d’avis.</p>
+
+        <p>Mue s’approcha du rebord.</p>
+
+        <p>En contrebas, Ingenium était étendu sur le sol.</p>
+
+        <p>Son costume était déchiré au niveau des jambes. L’un de ses réacteurs fumait encore faiblement, tandis que l’autre émettait par instants un bruit sec et irrégulier, comme une machine qui essayait de fonctionner malgré des dégâts trop importants. Une main crispée contre sa cuisse, il tentait de reprendre son souffle sans parvenir à se relever.</p>
+
+        <p>Face à lui, Stain tenait sa lame.</p>
+
+        <p>Mue connaissait son nom.</p>
+
+        <p>Elle l’avait entendu dans les conversations de certains réseaux criminels, dans les rumeurs qui circulaient dès qu’un héros était blessé dans une ruelle sans témoins. Le Tueur de Héros. Un homme qui parlait de convictions, de faux héros et de justice comme si ces mots lui appartenaient.</p>
+
+        <p>Elle resta parfaitement immobile.</p>
+
+        <p>Elle ne connaissait pas Ingenium. Elle n’avait aucune raison de prendre sa défense.</p>
+
+        <p>Mais elle écoutait son cœur.</p>
+
+        <p>Il battait vite. Trop vite. La douleur et la peur le faisaient trembler jusque dans sa respiration. Pourtant, même à terre, même avec ses réacteurs détruits et ses jambes incapables de le porter, il essayait encore de bouger.</p>
+
+        <p>Stain leva lentement sa lame.</p>
+
+        <p class="dialogue">— Tu n’es pas digne de porter ce nom.</p>
+
+        <p>Ingenium serra les dents. Sa voix n’était plus qu’un souffle rauque.</p>
+
+        <p class="dialogue">— Je… ne te laisserai pas…</p>
+
+        <p>Il n’eut pas la force de terminer.</p>
+
+        <p>Mue baissa les yeux vers les rues voisines.</p>
+
+        <p>Les secours étaient en route, elle les entendait déjà. Deux voitures de police approchaient par l’ouest, encore suffisamment loin pour que leurs sirènes soient étouffées par les immeubles. Trois autres présences avançaient depuis l’avenue principale. Des héros, sans doute alertés par des témoins.</p>
+
+        <p>Ils arriveraient, mais pas avant que Stain ait eu le temps de frapper.</p>
+
+        <p>Mue glissa une main dans la poche de son manteau et en sortit une petite fiole violette. Elle observa brièvement la canalisation rouillée qui courait au-dessus de la ruelle, puis lança le flacon d’un geste précis.</p>
+
+        <p>Le verre heurta le métal et se brisa. Le liquide se répandit sur la canalisation dans un mince filet violet, presque lumineux dans l’obscurité. Pendant une seconde, il ne se passa rien.</p>
+
+        <p>Puis le métal, déjà fragilisé par la rouille, céda.</p>
+
+        <p>La canalisation se détacha brusquement du mur dans un grincement violent. Un mélange d’eau stagnante et de poussière tomba entre Stain et Ingenium, éclaboussant le sol et coupant le mouvement de la lame avant qu’elle ne puisse descendre.</p>
+
+        <p>Stain fit un pas en arrière.</p>
+
+        <p>Il ne se précipita pas. Il ne jura pas. Il leva simplement les yeux vers le toit, là où Mue était toujours accroupie sur le rebord.</p>
+
+        <p>Dans l’ombre, elle paraissait plus jeune encore que ce qu’elle était réellement. Ses cernes marquaient son visage et son regard ambré, rétracté en deux fines fentes, ne quittait pas la ruelle.</p>
+
+        <p>Ingenium tourna difficilement la tête dans sa direction.</p>
+
+        <p>Il ne la connaissait pas.</p>
+
+        <p>Il voyait seulement une adolescente en manteau sombre, trop petite, trop fatiguée, avec des fioles accrochées à la ceinture et un bras gauche dont la couleur violet fumé tranchait avec le reste de son corps.</p>
+
+        <p>Stain la fixa sans bouger.</p>
+
+        <p class="dialogue">— Qui es-tu ?</p>
+
+        <p>Mue ne répondit pas à cette question.</p>
+
+        <p>Ses yeux se posèrent brièvement sur la sortie de la ruelle, puis elle parla d’une voix basse, presque neutre.</p>
+
+        <p class="dialogue">— Deux voitures arrivent par l’ouest.</p>
+
+        <p>Stain ne dit rien.</p>
+
+        <p class="dialogue">— Trois héros viennent par l’avenue principale. Ils seront là dans moins d’une minute.</p>
+
+        <p>Cette fois, Ingenium fronça légèrement les sourcils.</p>
+
+        <p>Elle venait d’empêcher Stain de le tuer. Et maintenant, elle lui indiquait exactement par où les renforts arrivaient.</p>
+
+        <p>Stain semblait avoir compris la même chose.</p>
+
+        <p class="dialogue">— Tu l’as sauvé, dit-il enfin.</p>
+
+        <p>Mue baissa les yeux vers la canalisation brisée.</p>
+
+        <p class="dialogue">— Il allait mourir.</p>
+
+        <p class="dialogue">— Et maintenant, tu m’aides à fuir.</p>
+
+        <p>Elle resta silencieuse quelques instants. Les sirènes se rapprochaient et leur vibration montait progressivement dans les murs autour d’elle. Ses doigts remontèrent jusqu’à sa tempe, comme si elle essayait de repousser le bruit avant qu’il ne devienne insupportable.</p>
+
+        <p class="dialogue">— Je t’ai donné une information, répondit-elle simplement.</p>
+
+        <p>Stain serra un peu plus fort la garde de son arme.</p>
+
+        <p class="dialogue">— Pourquoi ?</p>
+
+        <p>Mue le regarda à nouveau. Son expression ne changea presque pas, mais son regard passa un instant sur Ingenium, toujours au sol.</p>
+
+        <p class="dialogue">— Parce que tu allais le tuer.</p>
+
+        <p class="dialogue">— C’était une sentence.</p>
+
+        <p class="dialogue">— Peut-être. Mais il était déjà à terre.</p>
+
+        <p>Stain inclina légèrement la tête.</p>
+
+        <p class="dialogue">— Tu ignores qui il est.</p>
+
+        <p class="dialogue">— Toi aussi.</p>
+
+        <p>Le silence s’installa de nouveau.</p>
+
+        <p>Mue percevait le cœur d’Ingenium, affolé mais toujours accroché à la vie. Elle percevait celui de Stain, plus lourd maintenant, légèrement irrité. Pas assez pour le déstabiliser, mais suffisamment pour qu’elle sache que ses paroles l’avaient atteint.</p>
+
+        <p class="dialogue">— Il a peur, reprit-elle doucement. Il souffre. Mais il essayait encore de se relever.</p>
+
+        <p>Elle ne disait pas cela avec admiration. Elle énonçait simplement un fait, comme elle l’aurait fait pour une présence derrière un mur ou une blessure qu’elle aurait entendue dans la respiration d’un inconnu.</p>
+
+        <p class="dialogue">— Ça ne ressemble pas à quelqu’un qui est venu ici pour être regardé.</p>
+
+        <p>Ingenium resta immobile.</p>
+
+        <p>Il ne comprenait pas ce qu’elle percevait exactement. Il ne savait pas pourquoi elle avait choisi d’intervenir. Mais il entendait la fatigue dans sa voix ; pas une fatigue passagère, mais quelque chose de plus profond, comme si elle avait déjà passé trop de nuits à rester éveillée pour surveiller le monde autour d’elle.</p>
+
+        <p>Stain ne la quittait pas des yeux.</p>
+
+        <p class="dialogue">— Tu crois qu’un cœur suffit à rendre quelqu’un juste ?</p>
+
+        <p class="dialogue">— Non.</p>
+
+        <p class="dialogue">— Alors pourquoi t’interposer ?</p>
+
+        <p>La question resta suspendue entre eux.</p>
+
+        <p>Mue regarda les lumières rouges et bleues qui commençaient à se refléter au bout de la rue. Elle avait déjà repéré sa fuite : un mur assez fin derrière elle, un étage abandonné, puis les toits qui rejoignaient le quartier voisin.</p>
+
+        <p>Elle savait toujours comment partir.</p>
+
+        <p>Mais elle ne savait jamais très bien pourquoi elle restait.</p>
+
+        <p class="dialogue">— Je sais pas, murmura-t-elle.</p>
+
+        <p>Stain la regarda comme s’il avait espéré une autre réponse.</p>
+
+        <p class="dialogue">— Tu risques ta vie pour une décision dont tu ne comprends même pas le sens.</p>
+
+        <p>Mue eut un mouvement presque imperceptible des épaules.</p>
+
+        <p class="dialogue">— J’ai pas vraiment risqué ma vie.</p>
+
+        <p>Le regard de Stain descendit vers son bras gauche, devenu légèrement translucide sous la manche. Un léger grésillement violet parcourait sa peau.</p>
+
+        <p>Mue le ramena rapidement contre elle.</p>
+
+        <p class="dialogue">— Pas beaucoup.</p>
+
+        <p>Les premiers véhicules n’étaient plus loin.</p>
+
+        <p>Stain pouvait encore achever Ingenium, mais il perdrait les quelques secondes qui lui restaient. Et Mue venait de lui donner tout ce dont il avait besoin pour éviter les renforts.</p>
+
+        <p>Il recula d’un pas.</p>
+
+        <p class="dialogue">— Tu n’as pas de camp.</p>
+
+        <p class="dialogue">— Non.</p>
+
+        <p class="dialogue">— Tu empêches une mort, mais tu protèges la fuite de celui qui devait être arrêté.</p>
+
+        <p>Mue détourna légèrement la tête, gênée par une sirène qui se rapprochait trop vite.</p>
+
+        <p class="dialogue">— Je t’ai juste dit où étaient les gens.</p>
+
+        <p>Stain resta silencieux, puis demanda :</p>
+
+        <p class="dialogue">— Ton nom.</p>
+
+        <p>Cette fois, Mue se figea.</p>
+
+        <p>L’ancienne identité lui traversa l’esprit une fraction de seconde. Kira. Un prénom qu’elle n’arrivait plus à porter depuis la mort d’Akari, comme s’il appartenait à quelqu’un d’autre, à une fille qui avait existé avant elle.</p>
+
+        <p class="dialogue">— Mue.</p>
+
+        <p>Stain répéta le mot à voix basse.</p>
+
+        <p class="dialogue">— Mue.</p>
+
+        <p class="dialogue">— C’est tout.</p>
+
+        <p>Les secours approchaient désormais de l’entrée de la ruelle.</p>
+
+        <p>Stain rangea finalement sa lame.</p>
+
+        <p class="dialogue">— Trouve une raison de choisir, Mue. Sinon, un jour, quelqu’un choisira à ta place.</p>
+
+        <p>Puis il se détourna.</p>
+
+        <p>Il prit appui contre le mur, se hissa sur une toiture basse et disparut de l’autre côté avant que les premiers héros ne puissent atteindre la ruelle. Mue suivit son départ à son rythme cardiaque, jusqu’à ce qu’il se perde dans le bruit plus vaste de la ville.</p>
+
+        <p>Elle resta seule au-dessus d’Ingenium.</p>
+
+        <p>Le héros respirait encore.</p>
+
+        <p>Ses réacteurs étaient détruits. Ses blessures étaient graves. Elle n’avait rien réparé, rien empêché du combat qui venait de se produire.</p>
+
+        <p>Elle avait seulement empêché la dernière lame de tomber.</p>
+
+        <p>En bas, Ingenium leva une dernière fois les yeux vers elle.</p>
+
+        <p class="dialogue">— Mue…</p>
+
+        <p>Elle l’entendit.</p>
+
+        <p>Mais elle ne répondit pas.</p>
+
+        <p>Lorsque les premiers héros apparurent enfin au bout de la rue, son bras gauche traversa le béton du toit. Son corps suivit dans un grésillement violet, disparaissant dans l’étage abandonné avant que quelqu’un puisse la voir.</p>
+
+        <p>Les secours ne trouvèrent qu’Ingenium, grièvement blessé, et une canalisation arrachée dont le métal portait encore une trace violette.</p>
+
+        <h2>Plus tard — Hôpital de Hosu</h2>
+
+        <p>La chambre était calme.</p>
+
+        <p>Ou du moins, elle l’aurait été pour quelqu’un d’autre.</p>
+
+        <p>Pour Tensei Iida, il y avait le bip régulier des machines, le froissement discret des blouses dans le couloir, les pas des infirmières et la douleur sourde qui remontait parfois dans ses jambes malgré les médicaments.</p>
+
+        <p>Il regardait le plafond sans parvenir à dormir.</p>
+
+        <p>Chaque fois qu’il fermait les yeux, il revoyait Stain.</p>
+
+        <p>La lame.</p>
+
+        <p>La ruelle.</p>
+
+        <p>Puis cette fille sur le toit.</p>
+
+        <p>Mue.</p>
+
+        <p>Elle aurait pu ne rien faire. Elle aurait pu le laisser mourir. Elle aurait même pu aider Stain sans jamais se montrer, si c’était réellement ce qu’elle voulait.</p>
+
+        <p>À la place, elle avait interrompu le coup final.</p>
+
+        <p>Puis elle avait donné à Stain les informations nécessaires pour s’enfuir.</p>
+
+        <p>Tensei ne savait pas dans quelle case la placer.</p>
+
+        <p>Elle n’avait pas agi comme une héroïne. Elle n’avait pas non plus agi comme une vilaine qui cherchait simplement à profiter de la situation. Elle avait eu l’air d’une enfant épuisée, coincée entre deux choix contradictoires, incapable de dire lequel était le bon.</p>
+
+        <p>Il repensa à sa voix.</p>
+
+        <p>À son visage marqué par le manque de sommeil.</p>
+
+        <p>À cette réponse si simple : <em>Je sais pas.</em></p>
+
+        <p class="pensée">Elle aurait pu être dans la classe de mon frère…</p>
+
+        <p>Elle aurait pu regarder le Festival avec les autres élèves de Yuei. Elle aurait pu s’entraîner, se tromper, grandir, apprendre à maîtriser ce qu’elle était entourée de gens capables de l’aider.</p>
+
+        <p>Au lieu de cela, elle était seule sur un toit, à décider si un inconnu devait vivre ou mourir.</p>
+
+        <p>Et cette pensée, plus que ses blessures, lui laissa une lourdeur étrange dans la poitrine.</p>
+      </section>
+    </article>
+  </main>
+
+  <button class="musique" onclick="ouvrirMusique()" title="Lancer la musique">🎵</button>
+
+  <div class="lecteur" id="lecteurMusique">
+    <div class="boite-musique">
+      <button class="fermer" onclick="fermerMusique()" title="Fermer">×</button>
+      <p>Ambiance du chapitre — clique sur lecture dans le lecteur.</p>
+
+      <iframe
+        id="youtubePlayer"
+        src="https://www.youtube.com/embed/-7s_0GN9eoo?enablejsapi=1"
+        title="Musique d'ambiance — La dernière lame"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    function ouvrirMusique() {
+      document.getElementById("lecteurMusique").classList.add("ouvert");
+    }
+
+    function fermerMusique() {
+      document.getElementById("lecteurMusique").classList.remove("ouvert");
+
+      document.getElementById("youtubePlayer").contentWindow.postMessage(
+        '{"event":"command","func":"pauseVideo","args":""}',
+        "*"
+      );
+    }
+  </script>
+</body>
+</html>
