@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mue rencontre Tenya Iida et Manual dans les rues de Hosu.">
+  <title>Partie XIII — Ce que le cœur trahit</title>
+
+  <style>
+    :root{
+      --fond:#080d16;
+      --fond-2:#101827;
+      --bleu:#6f9fca;
+      --or:#d7ae62;
+      --or-clair:#f2d99a;
+      --violet:#a574d6;
+      --texte:#f2f4f7;
+      --doux:#bdc6d2;
+    }
+
+    *{box-sizing:border-box;}
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--texte);
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 82% 4%,rgba(215,174,98,.13),transparent 26rem),
+        radial-gradient(circle at 12% 68%,rgba(91,134,176,.15),transparent 30rem),
+        linear-gradient(135deg,var(--fond),var(--fond-2) 56%,#06080d);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.2;
+      background:
+        linear-gradient(116deg,transparent 0 49%,rgba(215,174,98,.13) 49.1%,transparent 49.35%),
+        linear-gradient(151deg,transparent 0 72%,rgba(111,159,202,.14) 72.1%,transparent 72.35%);
+    }
+
+    .page{
+      width:min(920px,92%);
+      margin:0 auto;
+      padding:58px 0 100px;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:43px 30px 36px;
+      text-align:center;
+      border:1px solid rgba(215,174,98,.42);
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 50% -20%,rgba(215,174,98,.16),transparent 27rem),
+        linear-gradient(135deg,rgba(17,29,44,.97),rgba(8,13,22,.96));
+      box-shadow:0 20px 50px rgba(0,0,0,.44);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:330px;
+      height:330px;
+      top:-230px;
+      right:-80px;
+      border:1px solid rgba(239,208,143,.24);
+      border-radius:50%;
+      box-shadow:
+        0 0 0 35px rgba(239,208,143,.025),
+        0 0 0 75px rgba(239,208,143,.02);
+    }
+
+    .chapter-number,
+    h1,
+    .quote{
+      position:relative;
+      z-index:1;
+    }
+
+    .chapter-number{
+      margin:0 0 11px;
+      color:var(--or-clair);
+      font-size:.82rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,6vw,3.35rem);
+      text-shadow:0 0 23px rgba(215,174,98,.18);
+    }
+
+    .quote{
+      max-width:680px;
+      margin:21px auto 0;
+      color:#d9d3c6;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.05rem;
+      font-style:italic;
+      line-height:1.65;
+    }
+
+    .story{
+      margin-top:28px;
+      padding:clamp(25px,5vw,48px);
+      border:1px solid rgba(151,168,187,.23);
+      border-radius:18px;
+      background:rgba(8,14,24,.8);
+      box-shadow:0 18px 45px rgba(0,0,0,.34);
+    }
+
+    p{
+      margin:0 0 20px;
+      color:var(--texte);
+      font-size:1.03rem;
+      line-height:1.9;
+    }
+
+    .thought{
+      color:#e8d8af;
+      font-family:Georgia,"Times New Roman",serif;
+      font-style:italic;
+    }
+
+    .dialogue{
+      margin:20px 0;
+      padding:14px 18px;
+      border-left:2px solid rgba(215,174,98,.74);
+      border-radius:0 10px 10px 0;
+      background:linear-gradient(90deg,rgba(215,174,98,.09),rgba(92,132,171,.04));
+    }
+
+    .dialogue p{
+      margin:0;
+      color:#f5f2eb;
+      line-height:1.75;
+    }
+
+    .ending{
+      margin:38px 0 0;
+      padding:24px 20px;
+      border-top:1px solid rgba(215,174,98,.38);
+      border-bottom:1px solid rgba(111,159,202,.24);
+      color:#f0dfb9;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.1rem;
+      font-style:italic;
+      line-height:1.85;
+      text-align:center;
+      text-shadow:0 0 14px rgba(215,174,98,.13);
+    }
+
+    .music-button{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:10;
+      width:54px;
+      height:54px;
+      border:1px solid rgba(242,217,154,.68);
+      border-radius:50%;
+      color:#fff;
+      background:linear-gradient(135deg,#71572e,#172844);
+      box-shadow:0 8px 22px rgba(0,0,0,.48);
+      cursor:pointer;
+      font-size:1.35rem;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+
+    .music-button:hover{
+      transform:translateY(-3px) scale(1.04);
+      box-shadow:0 12px 28px rgba(0,0,0,.64);
+    }
+
+    .music-button:focus-visible{
+      outline:3px solid rgba(242,217,154,.6);
+      outline-offset:4px;
+    }
+
+    .music-panel{
+      position:fixed;
+      right:22px;
+      bottom:88px;
+      z-index:9;
+      width:min(330px,calc(100vw - 44px));
+      padding:12px;
+      border:1px solid rgba(215,174,98,.4);
+      border-radius:14px;
+      background:rgba(5,10,18,.97);
+      box-shadow:0 15px 35px rgba(0,0,0,.58);
+      opacity:0;
+      transform:translateY(12px);
+      pointer-events:none;
+      transition:.25s ease;
+    }
+
+    .music-panel.open{
+      opacity:1;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+
+    .music-panel p{
+      margin:0 0 9px;
+      color:#ead9b4;
+      font-size:.82rem;
+      line-height:1.35;
+      text-align:center;
+    }
+
+    .music-panel iframe{
+      display:block;
+      width:100%;
+      aspect-ratio:16 / 9;
+      border:0;
+      border-radius:8px;
+    }
+
+    @media (max-width:600px){
+      .page{padding-top:28px;}
+      .hero{padding:34px 20px 29px;}
+      .story{padding:25px 20px;}
+      p{font-size:1rem;line-height:1.82;}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto;}
+      *,*::before,*::after{transition:none!important;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="chapter-number">📖 Partie XIII</p>
+      <h1>Ce que le cœur trahit</h1>
+      <p class="quote">« Ton cœur fait beaucoup de bruit quand tu mens. »</p>
+    </header>
+
+    <article class="story">
+      <p>La fin d’après-midi enveloppait Hosu d’une lumière orangée lorsque Mue sortit de la pharmacie.</p>
+
+      <p>Une immense écharpe dissimulait la moitié de son visage et le col de sa veste colorée remontait jusque sous ses oreilles. Dans une main, elle tenait un petit sachet en papier rempli de médicaments. Son sac bleu-vert reposait contre sa hanche.</p>
+
+      <p>La ville était trop bruyante.</p>
+
+      <p>Les moteurs des voitures. Les conversations. Les pas précipités sur le trottoir. Les battements de dizaines de cœurs entassés autour d’elle.</p>
+
+      <p>Mue baissa la tête et accéléra.</p>
+
+      <p>Deux vibrations métalliques se détachèrent soudain du reste.</p>
+
+      <p>Rapides. Régulières.</p>
+
+      <p>Elles se rapprochaient.</p>
+
+      <p>Elle eut juste le temps de tourner la tête avant qu’une silhouette en armure blanche et bleue la percute de plein fouet.</p>
+
+      <p>Le sachet lui échappa.</p>
+
+      <p>Plusieurs boîtes tombèrent sur le trottoir.</p>
+
+      <div class="dialogue"><p>— Mes excuses !</p></div>
+
+      <p>Le jeune homme se baissa aussitôt pour les ramasser.</p>
+
+      <div class="dialogue"><p>— Je ne vous avais pas vue.</p></div>
+
+      <p>Mue resta immobile.</p>
+
+      <p>Il disait vrai.</p>
+
+      <p>Son cœur n’avait pas produit la moindre accélération avant le choc. Son attention se trouvait ailleurs, dirigée vers la ruelle sombre située derrière elle.</p>
+
+      <div class="dialogue"><p>— Iida, l’appela l’homme qui patrouillait avec lui. Je t’avais demandé de rester à côté de moi.</p></div>
+
+      <p>Le jeune homme se raidit.</p>
+
+      <div class="dialogue"><p>— Pardonnez-moi, monsieur Manual.</p></div>
+
+      <p>Mue releva lentement les yeux.</p>
+
+      <p class="thought">Iida.</p>
+
+      <p>Elle observa les protections métalliques qui recouvraient ses jambes, puis son casque. La ressemblance ne venait pas seulement de l’armure.</p>
+
+      <p>Elle venait de sa manière de se tenir.</p>
+
+      <p>De ses gestes trop droits.</p>
+
+      <p>De cette volonté presque douloureuse de paraître parfaitement maître de lui-même.</p>
+
+      <div class="dialogue"><p>— Ah, murmura-t-elle.</p></div>
+
+      <p>Tenya lui tendit les boîtes qu’il avait ramassées.</p>
+
+      <div class="dialogue"><p>— Quelque chose ne va pas ?</p></div>
+
+      <p>Mue récupéra ses médicaments sans répondre. Sa main gauche grésilla faiblement sous sa manche lorsqu’elle frôla le carton.</p>
+
+      <p>Tenya le remarqua, mais son regard revint rapidement vers la ruelle.</p>
+
+      <div class="dialogue"><p>— Nous nous connaissons ? demanda-t-il.</p></div>
+
+      <div class="dialogue"><p>— Non.</p></div>
+
+      <div class="dialogue"><p>— Vous avez pourtant réagi en entendant mon nom.</p></div>
+
+      <p>Les yeux ambrés de Mue descendirent une nouvelle fois vers les moteurs de ses jambes.</p>
+
+      <div class="dialogue"><p>— J’ai reconnu la ressemblance.</p></div>
+
+      <p>Tenya s’immobilisa.</p>
+
+      <div class="dialogue"><p>— Avec mon frère ?</p></div>
+
+      <p>Elle hocha légèrement la tête.</p>
+
+      <div class="dialogue"><p>— Vous connaissez Ingenium ?</p></div>
+
+      <div class="dialogue"><p>— Tout le monde le connaît.</p></div>
+
+      <p>Sa réponse était simple.</p>
+
+      <p>Crédible.</p>
+
+      <p>Manual rejoignit son stagiaire, sans toutefois intervenir. Il observait désormais Mue avec davantage d’attention.</p>
+
+      <p>Tenya, lui, semblait avoir oublié le sachet tombé et ses excuses.</p>
+
+      <div class="dialogue"><p>— L’avez-vous déjà rencontré ?</p></div>
+
+      <div class="dialogue"><p>— Non.</p></div>
+
+      <p>La réponse était sortie un peu trop vite.</p>
+
+      <p>Mue resserra aussitôt les doigts autour du papier.</p>
+
+      <p>Le cœur de Manual ralentit.</p>
+
+      <p>Il venait de le remarquer.</p>
+
+      <p>Tenya regarda encore la ruelle par-dessus son épaule.</p>
+
+      <p>Mue laissa passer quelques secondes de silence.</p>
+
+      <div class="dialogue"><p>— Il est pas là.</p></div>
+
+      <p>Le casque du garçon se retourna brusquement vers elle.</p>
+
+      <div class="dialogue"><p>— Qui ?</p></div>
+
+      <div class="dialogue"><p>— Celui que tu cherches.</p></div>
+
+      <p>Manual se redressa légèrement.</p>
+
+      <p>Tenya serra les poings.</p>
+
+      <div class="dialogue"><p>— Je ne cherche personne.</p></div>
+
+      <p>Les pupilles de Mue se rétractèrent en deux fines fentes.</p>
+
+      <div class="dialogue"><p>— Ton cœur fait beaucoup de bruit quand tu mens.</p></div>
+
+      <p>Un silence tomba entre eux.</p>
+
+      <p>Manual se déplaça calmement pour se rapprocher de son stagiaire.</p>
+
+      <div class="dialogue"><p>— Iida.</p></div>
+
+      <div class="dialogue"><p>— Je maîtrise parfaitement la situation, monsieur Manual.</p></div>
+
+      <div class="dialogue"><p>— J’ai pas dit le contraire, murmura Mue.</p></div>
+
+      <p>Son regard passa de nouveau sur Tenya.</p>
+
+      <p>Il se tenait droit. Sa voix restait contrôlée. Pourtant, son cœur frappait contre sa poitrine avec une violence que son armure ne pouvait pas dissimuler.</p>
+
+      <div class="dialogue"><p>— Tu regardes toutes les ruelles, reprit-elle. T’écoutes presque plus ton maître. T’as même pas vu quelqu’un juste devant toi.</p></div>
+
+      <p>Tenya baissa les yeux vers le sachet qu’elle tenait.</p>
+
+      <div class="dialogue"><p>— Je me suis déjà excusé.</p></div>
+
+      <div class="dialogue"><p>— C’est pas ce que je voulais dire.</p></div>
+
+      <div class="dialogue"><p>— Alors qu’insinuez-vous ?</p></div>
+
+      <p>Mue pencha légèrement la tête.</p>
+
+      <div class="dialogue"><p>— T’es pas venu à Hosu seulement pour ton stage.</p></div>
+
+      <p>La respiration de Tenya se bloqua.</p>
+
+      <p>Manual posa une main ferme sur son épaule avant qu’il ne puisse avancer.</p>
+
+      <div class="dialogue"><p>— Cela suffit.</p></div>
+
+      <p>Mue observa aussitôt sa position.</p>
+
+      <p>Manual ne lui barrait pas encore la route. Sa main libre restait néanmoins proche du communicateur fixé à son costume.</p>
+
+      <p>Il n’avait aucune preuve.</p>
+
+      <p>Mais il commençait à se méfier.</p>
+
+      <div class="dialogue"><p>— Mademoiselle, demanda-t-il, comment vous appelez-vous ?</p></div>
+
+      <div class="dialogue"><p>— Personne.</p></div>
+
+      <div class="dialogue"><p>— Ce n’est pas un nom.</p></div>
+
+      <div class="dialogue"><p>— Ça suffit comme réponse.</p></div>
+
+      <div class="dialogue"><p>— Vous semblez très intéressée par les raisons de notre présence à Hosu.</p></div>
+
+      <div class="dialogue"><p>— Non.</p></div>
+
+      <p>Elle désigna Tenya d’un léger mouvement du menton.</p>
+
+      <div class="dialogue"><p>— C’est lui qui fait trop de bruit.</p></div>
+
+      <p>Tenya releva brusquement la tête.</p>
+
+      <div class="dialogue"><p>— Stain a attaqué mon frère.</p></div>
+
+      <p>Manual resserra légèrement sa main sur son épaule.</p>
+
+      <p>Mue ne réagit presque pas.</p>
+
+      <p>L’information était connue. Toute la ville parlait de l’agression d’Ingenium depuis plusieurs jours.</p>
+
+      <div class="dialogue"><p>— Je sais, répondit-elle.</p></div>
+
+      <div class="dialogue"><p>— Alors vous devriez comprendre que je souhaite contribuer à son arrestation.</p></div>
+
+      <div class="dialogue"><p>— C’est pas ça que tu veux.</p></div>
+
+      <p>Cette fois, la colère traversa ouvertement le regard de Tenya.</p>
+
+      <div class="dialogue"><p>— Vous ne savez rien de ce que je veux.</p></div>
+
+      <div class="dialogue"><p>— Si.</p></div>
+
+      <p>La voix de Mue devint plus basse encore.</p>
+
+      <div class="dialogue"><p>— Tu veux le trouver avant les autres.</p></div>
+
+      <p>Tenya ne répondit pas.</p>
+
+      <p>Il n’en avait pas besoin.</p>
+
+      <p>Son cœur venait de le faire à sa place.</p>
+
+      <p>Mue recula d’un pas.</p>
+
+      <div class="dialogue"><p>— Tu lui ressembles beaucoup.</p></div>
+
+      <p>Le jeune homme resta figé.</p>
+
+      <div class="dialogue"><p>— À mon frère ?</p></div>
+
+      <div class="dialogue"><p>— Oui.</p></div>
+
+      <p>Son regard glissa une dernière fois vers la ruelle qu’il surveillait depuis le début.</p>
+
+      <div class="dialogue"><p>— Mais pas maintenant.</p></div>
+
+      <p>Tenya fit un mouvement vers elle.</p>
+
+      <p>Manual le retint immédiatement.</p>
+
+      <div class="dialogue"><p>— Que voulez-vous dire par là ?</p></div>
+
+      <p>Mue aurait dû partir sans répondre.</p>
+
+      <p>Elle connaissait les risques. Manual était déjà sur ses gardes et il ne lui faudrait pas longtemps pour transmettre son signalement. Une phrase de trop pouvait suffire à transformer une rencontre étrange en véritable interrogatoire.</p>
+
+      <p>Pourtant, elle revit brièvement un autre homme portant les mêmes moteurs.</p>
+
+      <p>Une armure brisée.</p>
+
+      <p>Un corps étendu dans une ruelle humide.</p>
+
+      <p>Une lame suspendue au-dessus de lui.</p>
+
+      <p>Mue baissa les yeux.</p>
+
+      <div class="dialogue"><p>— Ton frère voulait sauver des gens, murmura-t-elle. Toi, là… tu veux seulement en faire souffrir un.</p></div>
+
+      <p>La colère de Tenya vacilla.</p>
+
+      <p>Pendant une seconde, il parut surtout blessé.</p>
+
+      <p>Manual se plaça complètement devant lui.</p>
+
+      <div class="dialogue"><p>— Cette discussion est terminée.</p></div>
+
+      <p>Mue hocha faiblement la tête.</p>
+
+      <div class="dialogue"><p>— Enfin.</p></div>
+
+      <p>Elle se détourna.</p>
+
+      <div class="dialogue"><p>— Attendez, ordonna Manual.</p></div>
+
+      <p>Sa main venait d’atteindre son communicateur.</p>
+
+      <p>Mue s’arrêta, sans se retourner.</p>
+
+      <div class="dialogue"><p>— Je souhaite seulement vous poser quelques questions.</p></div>
+
+      <div class="dialogue"><p>— J’ai rien à dire.</p></div>
+
+      <div class="dialogue"><p>— Vous semblez avoir compris les intentions de mon stagiaire avec une précision inhabituelle.</p></div>
+
+      <div class="dialogue"><p>— Il est pas très discret.</p></div>
+
+      <div class="dialogue"><p>— Et votre réaction au nom d’Ingenium m’interpelle.</p></div>
+
+      <p>Le bras gauche de Mue grésilla sous sa manche.</p>
+
+      <p>Elle repéra l’entrée de service d’un immeuble à quelques mètres. Une porte métallique la séparait d’un couloir vide.</p>
+
+      <p>Assez fine.</p>
+
+      <div class="dialogue"><p>— Je ne vous accuse de rien, ajouta Manual.</p></div>
+
+      <p>Mue regarda la main posée sur son communicateur.</p>
+
+      <div class="dialogue"><p>— Pas encore.</p></div>
+
+      <p>Tenya parla derrière lui.</p>
+
+      <div class="dialogue"><p>— Si vous savez quoi que ce soit sur Stain, vous devez nous le dire.</p></div>
+
+      <p>Elle tourna légèrement la tête.</p>
+
+      <div class="dialogue"><p>— J’ai dit que je savais rien.</p></div>
+
+      <div class="dialogue"><p>— Alors pourquoi vous souciez-vous autant de ce que je cherche ?</p></div>
+
+      <p>Mue resta silencieuse.</p>
+
+      <p>Elle aurait pu continuer à marcher.</p>
+
+      <p>À la place, une question lui échappa.</p>
+
+      <div class="dialogue"><p>— Est-ce que ton frère va vivre ?</p></div>
+
+      <p>Tenya se figea.</p>
+
+      <p>Manual ne bougea plus non plus.</p>
+
+      <p>Cette question n’avait rien de confidentiel. N’importe qui aurait pu la poser après avoir entendu parler de l’agression.</p>
+
+      <p>Mais venant d’elle, elle sonnait différemment.</p>
+
+      <p>Trop importante.</p>
+
+      <p>Trop urgente.</p>
+
+      <div class="dialogue"><p>— Oui, répondit finalement Tenya.</p></div>
+
+      <p>Sa voix s’était fragilisée.</p>
+
+      <div class="dialogue"><p>— Les médecins pensent qu’il survivra. Mais il ne pourra peut-être plus exercer son métier de héros.</p></div>
+
+      <p>Mue baissa légèrement le menton dans son écharpe.</p>
+
+      <div class="dialogue"><p>— Je demandais seulement s’il allait vivre.</p></div>
+
+      <p>Puis elle se dirigea vers l’entrée de l’immeuble.</p>
+
+      <div class="dialogue"><p>— Attendez !</p></div>
+
+      <p>Manual activa son communicateur.</p>
+
+      <p>Mue posa sa main gauche contre la porte métallique.</p>
+
+      <p>Ses doigts la traversèrent dans un grésillement violet.</p>
+
+      <p>Le reste de son bras suivit.</p>
+
+      <div class="dialogue"><p>— Iida, reste derrière moi !</p></div>
+
+      <p>Lorsque Manual atteignit la porte, la petite silhouette avait déjà disparu de l’autre côté.</p>
+
+      <div class="dialogue"><p>— Possible témoin lié à l’affaire Ingenium, annonça-t-il dans son communicateur. Adolescente, environ un mètre cinquante-cinq, cheveux noirs avec des mèches jaunes, veste colorée et grande écharpe. Alter de type perméation. Elle se dirige probablement vers le nord.</p></div>
+
+      <p>Tenya s’approcha.</p>
+
+      <div class="dialogue"><p>— Nous devons la poursuivre.</p></div>
+
+      <p>Manual lui barra immédiatement le passage.</p>
+
+      <div class="dialogue"><p>— Non.</p></div>
+
+      <div class="dialogue"><p>— Elle sait quelque chose !</p></div>
+
+      <div class="dialogue"><p>— Peut-être.</p></div>
+
+      <div class="dialogue"><p>— Alors pourquoi rester ici ?</p></div>
+
+      <p>Manual soutint son regard.</p>
+
+      <div class="dialogue"><p>— Parce qu’elle avait raison.</p></div>
+
+      <p>Tenya se raidit.</p>
+
+      <div class="dialogue"><p>— À quel sujet ?</p></div>
+
+      <div class="dialogue"><p>— Depuis le début de notre patrouille, tu observes les ruelles davantage que les civils.</p></div>
+
+      <p>Le jeune homme resta silencieux.</p>
+
+      <div class="dialogue"><p>— Tu es trop impliqué pour te lancer à la poursuite d’une personne potentiellement liée à l’agression de ton frère, poursuivit Manual. Les autorités s’en chargeront.</p></div>
+
+      <div class="dialogue"><p>— Mais elle pourrait nous conduire à Stain.</p></div>
+
+      <div class="dialogue"><p>— Et c’est précisément pour cette raison que tu ne la suivras pas.</p></div>
+
+      <p>Tenya regarda la porte derrière laquelle Mue avait disparu.</p>
+
+      <div class="dialogue"><p>— Compris, murmura-t-il enfin.</p></div>
+
+      <p>De l’autre côté du bâtiment, Mue avançait déjà dans un couloir désert.</p>
+
+      <p>Elle entendait encore leurs voix à travers les murs.</p>
+
+      <p>Le signalement de Manual.</p>
+
+      <p>Les protestations de Tenya.</p>
+
+      <p>Puis le cœur du jeune homme, toujours trop rapide.</p>
+
+      <p>Elle ouvrit une seconde porte en faisant passer sa main à travers la serrure, puis rejoignit une ruelle parallèle.</p>
+
+      <p>Sous sa veste, deux petites fioles s’entrechoquèrent.</p>
+
+      <p>La verte.</p>
+
+      <p>Puis la violette.</p>
+
+      <p>Mue s’arrêta.</p>
+
+      <p>Elle revit la lame de Stain descendre vers Tensei Iida.</p>
+
+      <p>La canalisation qu’elle avait fait céder entre eux.</p>
+
+      <p>Puis les lumières des renforts approchant au bout de la rue.</p>
+
+      <p>Elle avait empêché Stain d’achever Ingenium.</p>
+
+      <p>Quelques secondes plus tard, elle lui avait indiqué par où fuir.</p>
+
+      <p>Tenya ignorait tout de cette nuit.</p>
+
+      <p>Il ignorait même qu’il venait de parler à la personne qui avait laissé son frère en vie.</p>
+
+      <p>Mue serra le sachet de médicaments contre sa poitrine.</p>
+
+      <p>Au moins, Tensei avait survécu.</p>
+
+      <p>Cela aurait dû la soulager.</p>
+
+      <p>Pourtant, derrière les murs et le tumulte de la ville, elle entendait encore son petit frère chercher Stain dans chaque ruelle.</p>
+
+      <div class="dialogue"><p>— Idiot, murmura-t-elle.</p></div>
+
+      <p>Elle ne savait pas si elle parlait de Tenya.</p>
+
+      <p>De Stain.</p>
+
+      <p>Ou d’elle-même.</p>
+
+      <p class="ending">Puis elle disparut dans les rues de Hosu.</p>
+    </article>
+  </main>
+
+  <button
+    class="music-button"
+    id="musicButton"
+    type="button"
+    aria-label="Lancer la musique d’ambiance"
+    aria-controls="musicPanel"
+    aria-expanded="false">🎵</button>
+
+  <div class="music-panel" id="musicPanel" aria-hidden="true">
+    <p>Musique d’ambiance — clique sur 🎵 pour lancer ou mettre en pause.</p>
+    <iframe
+      id="musicPlayer"
+      src="https://www.youtube.com/embed/9qHeRQYgtwY?enablejsapi=1&amp;loop=1&amp;playlist=9qHeRQYgtwY"
+      title="Musique d’ambiance — Ce que le cœur trahit"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    const musicButton = document.getElementById("musicButton");
+    const musicPanel = document.getElementById("musicPanel");
+    const musicPlayer = document.getElementById("musicPlayer");
+
+    function controlMusic(command){
+      musicPlayer.contentWindow.postMessage(
+        JSON.stringify({event:"command",func:command,args:[]}),
+        "https://www.youtube.com"
+      );
+    }
+
+    musicButton.addEventListener("click", () => {
+      const isOpen = musicPanel.classList.toggle("open");
+
+      musicPanel.setAttribute("aria-hidden", String(!isOpen));
+      musicButton.setAttribute("aria-expanded", String(isOpen));
+      musicButton.setAttribute(
+        "aria-label",
+        isOpen ? "Mettre la musique en pause" : "Lancer la musique d’ambiance"
+      );
+      musicButton.textContent = isOpen ? "🔊" : "🎵";
+
+      window.setTimeout(() => {
+        controlMusic(isOpen ? "playVideo" : "pauseVideo");
+      }, 120);
+    });
+  </script>
+</body>
+</html>
